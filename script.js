@@ -118,18 +118,77 @@ function buildThumbSrc(model, filename) {
   return encodeURI(path);
 }
 
-function getThumbForSitePart(model, sitePartName) {
-  const modelMap = partThumbIndex[model];
-  if (!modelMap) return null;
+function parseIphoneModel(model) {
+  if (model === "iPhone X") return { gen: 10, variant: "base" };
+  if (model === "iPhone Air") return { gen: 17, variant: "air" };
 
-  if (sitePartName === "扬声器/听筒") {
-    return modelMap["扬声器"] || modelMap["听筒"] || null;
+  const match = model.match(/iPhone\s+(\d+)\s*(.*)$/i);
+  if (!match) return { gen: 0, variant: "base" };
+
+  const variantRaw = (match[2] || "").trim().toLowerCase();
+  let variant = "base";
+  if (variantRaw.includes("pro max")) variant = "pro max";
+  else if (variantRaw.includes("pro")) variant = "pro";
+  else if (variantRaw.includes("plus")) variant = "plus";
+  else if (variantRaw.includes("mini")) variant = "mini";
+  else if (variantRaw.includes("air")) variant = "air";
+
+  return { gen: parseInt(match[1], 10), variant };
+}
+
+function variantSimilarity(a, b) {
+  if (a === b) return 0;
+  const proFamily = new Set(["pro", "pro max"]);
+  if (proFamily.has(a) && proFamily.has(b)) return 1;
+  if ((a === "base" && b === "plus") || (a === "plus" && b === "base")) return 1;
+  if ((a === "base" && b === "mini") || (a === "mini" && b === "base")) return 1;
+  return 2;
+}
+
+function modelSimilarity(targetModel, candidateModel) {
+  const target = parseIphoneModel(targetModel);
+  const candidate = parseIphoneModel(candidateModel);
+  const genDiff = Math.abs(target.gen - candidate.gen);
+  const variantDiff = variantSimilarity(target.variant, candidate.variant);
+  const inSidebar =
+    models.includes(candidateModel) && models.includes(targetModel) ? 0 : 1;
+  return genDiff * 10 + variantDiff * 3 + inSidebar;
+}
+
+function getModelSearchOrder(targetModel) {
+  return Object.keys(partThumbIndex)
+    .filter(model => partThumbIndex[model])
+    .sort(
+      (a, b) =>
+        modelSimilarity(targetModel, a) - modelSimilarity(targetModel, b)
+    );
+}
+
+function getCanonicalKeysForSitePart(sitePartName) {
+  if (sitePartName === "扬声器/听筒") return ["扬声器", "听筒"];
+  const canonical = findCanonicalPart(sitePartName);
+  if (canonical) return [canonical];
+  return [sitePartName];
+}
+
+function getThumbForSitePart(model, sitePartName) {
+  const partKeys = getCanonicalKeysForSitePart(sitePartName);
+
+  for (const candidateModel of getModelSearchOrder(model)) {
+    const modelMap = partThumbIndex[candidateModel];
+    if (!modelMap) continue;
+
+    for (const key of partKeys) {
+      if (modelMap[key]) {
+        return {
+          src: modelMap[key],
+          fromModel: candidateModel !== model ? candidateModel : null
+        };
+      }
+    }
   }
 
-  if (modelMap[sitePartName]) return modelMap[sitePartName];
-
-  const canonical = findCanonicalPart(sitePartName);
-  return canonical ? modelMap[canonical] || null : null;
+  return null;
 }
 
 async function loadPartThumbs() {
@@ -488,13 +547,16 @@ function renderParts() {
       button.classList.add("active");
     }
 
-    const thumbSrc = getThumbForSitePart(currentModel, part.name);
-    if (thumbSrc) {
+    const thumb = getThumbForSitePart(currentModel, part.name);
+    if (thumb) {
       const img = document.createElement("img");
       img.className = "part-thumb";
-      img.src = thumbSrc;
+      img.src = thumb.src;
       img.alt = "";
       img.loading = "lazy";
+      if (thumb.fromModel) {
+        img.title = `示意图来自 ${thumb.fromModel}`;
+      }
       img.onerror = () => img.remove();
       button.appendChild(img);
     }
