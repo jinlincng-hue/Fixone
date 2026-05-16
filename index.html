@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>手机维修视频站</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>手机维修视频站</h1>
+      <p>按品牌、型号、故障部位查找维修视频</p>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <section class="panel">
+        <h2>品牌</h2>
+
+        <button class="brand-btn active" data-brand="apple">Apple / iPhone</button>
+        <button class="brand-btn disabled">Samsung / 待扩展</button>
+        <button class="brand-btn disabled">Huawei / 待扩展</button>
+        <button class="brand-btn disabled">Xiaomi / 待扩展</button>
+        <button class="brand-btn disabled">OPPO / 待扩展</button>
+        <button class="brand-btn disabled">vivo / 待扩展</button>
+      </section>
+
+      <section class="panel">
+        <h2>iPhone 型号</h2>
+        <div id="modelList" class="model-list"></div>
+      </section>
+    </aside>
+
+    <section class="content">
+      <section class="panel">
+        <p class="breadcrumb">
+          Apple > <span id="currentModel">iPhone 15</span> > <span id="currentPart">屏幕</span>
+        </p>
+
+        <h2 id="pageTitle">iPhone 15 维修视频</h2>
+
+        <input
+          id="searchInput"
+          class="search"
+          type="text"
+          placeholder="搜索型号、故障、视频标题"
+        />
+      </section>
+
+      <section class="panel">
+        <h2>故障部位</h2>
+        <div id="partList" class="part-grid"></div>
+      </section>
+
+      <section class="panel">
+        <h2>对应维修视频</h2>
+        <div id="videoList" class="video-grid"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
