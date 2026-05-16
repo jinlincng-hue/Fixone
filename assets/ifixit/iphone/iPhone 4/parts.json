@@ -1,0 +1,222 @@
+[
+  {
+    "model": "iPhone 4",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_4",
+    "part_name": "Cellular Antenna",
+    "guide_title": "iPhone 4 Cellular Antenna Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+4+Cellular+Antenna+Replacement/4359?lang=en",
+    "guide_id": "4359",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/LcuqfoHDh5pxKqat.large",
+    "local_image_filename": "Cellular Antenna.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 4\\Cellular Antenna.jpg"
+  },
+  {
+    "model": "iPhone 4",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_4",
+    "part_name": "Contact Clip",
+    "guide_title": "iPhone 4 Contact Clip Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+4+Contact+Clip+Replacement/6727?lang=en",
+    "guide_id": "6727",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/ccJYRJJvaQOE1SGc.large",
+    "local_image_filename": "Contact Clip.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 4\\Contact Clip.jpg"
+  },
+  {
+    "model": "iPhone 4",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_4",
+    "part_name": "Dock Connector",
+    "guide_title": "iPhone 4 Dock Connector Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+4+Dock+Connector+Replacement/3147?lang=en",
+    "guide_id": "3147",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/iABgn5EvVnCTXOTB.large",
+    "local_image_filename": "Dock Connector.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 4\\Dock Connector.jpg"
+  },
+  {
+    "model": "iPhone 4",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_4",
+    "part_name": "Earpiece Speaker",
+    "guide_title": "iPhone 4 Earpiece Speaker Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+4+Earpiece+Speaker+Replacement/4333?lang=en",
+    "guide_id": "4333",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/qV35fCGFMYeHrhYe.large",
+    "local_image_filename": "Earpiece Speaker.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 4\\Earpiece Speaker.jpg"
+  },
+  {
+    "model": "iPhone 4",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_4",
+    "part_name": "Front Facing Camera",
+    "guide_title": "iPhone 4 Front Facing Camera Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+4+Front+Facing+Camera+Replacement/3146?lang=en",
+    "guide_id": "3146",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/aIH6JyP2XsAIcOqC.large",
+    "local_image_filename": "Front Facing Camera.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 4\\Front Facing Camera.jpg"
+  },
+  {
+    "model": "iPhone 4",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_4",
+    "part_name": "Headphone Jack & Volume Control Cable",
+    "guide_title": "iPhone 4 Headphone Jack & Volume Control Cable Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+4+Headphone+Jack+&+Volume+Control+Cable+Replacement/4337?lang=en",
+    "guide_id": "4337",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/RBJmAlCy2cc5abhw.large",
+    "local_image_filename": "Headphone Jack & Volume Control Cable.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 4\\Headphone Jack & Volume Control Cable.jpg"
+  },
+  {
+    "model": "iPhone 4",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_4",
+    "part_name": "Home 键",
+    "guide_title": "iPhone 4 Home 键更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+4++Home+%E9%94%AE%E6%9B%B4%E6%8D%A2/3144",
+    "guide_id": "3144",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/q6Vr5RGaYemBLj1J.large",
+    "local_image_filename": "Home 键.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 4\\Home 键.jpg"
+  },
+  {
+    "model": "iPhone 4",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_4",
+    "part_name": "Pentalobe Screws",
+    "guide_title": "iPhone 4 Pentalobe Screws Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+4+Pentalobe+Screws+Replacement/4493?lang=en",
+    "guide_id": "4493",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/BiJxhaTMaVwf5aUl.large",
+    "local_image_filename": "Pentalobe Screws.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 4\\Pentalobe Screws.jpg"
+  },
+  {
+    "model": "iPhone 4",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_4",
+    "part_name": "Power & Lock Button",
+    "guide_title": "iPhone 4 Power & Lock Button Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+4+Power+&+Lock+Button+Replacement/4332?lang=en",
+    "guide_id": "4332",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/HjbUaVU4hUwLfAHj.large",
+    "local_image_filename": "Power & Lock Button.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 4\\Power & Lock Button.jpg"
+  },
+  {
+    "model": "iPhone 4",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_4",
+    "part_name": "Power & Sensor Cable",
+    "guide_title": "iPhone 4 Power & Sensor Cable Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+4+Power+&+Sensor+Cable+Replacement/4336?lang=en",
+    "guide_id": "4336",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/Dgv4llDRNdsEaNka.large",
+    "local_image_filename": "Power & Sensor Cable.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 4\\Power & Sensor Cable.jpg"
+  },
+  {
+    "model": "iPhone 4",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_4",
+    "part_name": "Rear Camera",
+    "guide_title": "iPhone 4 Rear Camera Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+4+Rear+Camera+Replacement/3142?lang=en",
+    "guide_id": "3142",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/2BOiWWDxsATNPXIW.large",
+    "local_image_filename": "Rear Camera.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 4\\Rear Camera.jpg"
+  },
+  {
+    "model": "iPhone 4",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_4",
+    "part_name": "Speaker Enclosure",
+    "guide_title": "iPhone 4 Speaker Enclosure Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+4+Speaker+Enclosure+Replacement/4360?lang=en",
+    "guide_id": "4360",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/1xgKUlYmOLBtoQPb.large",
+    "local_image_filename": "Speaker Enclosure.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 4\\Speaker Enclosure.jpg"
+  },
+  {
+    "model": "iPhone 4",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_4",
+    "part_name": "Vibrate Ring Switch",
+    "guide_title": "iPhone 4 Vibrate Ring Switch Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+4+Vibrate+Ring+Switch+Replacement/4334?lang=en",
+    "guide_id": "4334",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/yXo4ERHLQ6xbSlqI.large",
+    "local_image_filename": "Vibrate Ring Switch.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 4\\Vibrate Ring Switch.jpg"
+  },
+  {
+    "model": "iPhone 4",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_4",
+    "part_name": "Vibrator",
+    "guide_title": "iPhone 4 Vibrator Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+4+Vibrator+Replacement/3145?lang=en",
+    "guide_id": "3145",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/ax34pDXKMnJSBoPe.large",
+    "local_image_filename": "Vibrator.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 4\\Vibrator.jpg"
+  },
+  {
+    "model": "iPhone 4",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_4",
+    "part_name": "Volume Button",
+    "guide_title": "iPhone 4 Volume Button Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+4+Volume+Button+Replacement/4335?lang=en",
+    "guide_id": "4335",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/tDNVsW6v3vxgfp5O.large",
+    "local_image_filename": "Volume Button.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 4\\Volume Button.jpg"
+  },
+  {
+    "model": "iPhone 4",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_4",
+    "part_name": "Wi-Fi Antenna",
+    "guide_title": "iPhone 4 Wi-Fi Antenna Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+4+Wi-Fi+Antenna+Replacement/6846?lang=en",
+    "guide_id": "6846",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/diPxJJbPrKTKJUSq.large",
+    "local_image_filename": "Wi-Fi Antenna.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 4\\Wi-Fi Antenna.jpg"
+  },
+  {
+    "model": "iPhone 4",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_4",
+    "part_name": "主板",
+    "guide_title": "iPhone 4 主板更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+4+%E4%B8%BB%E6%9D%BF%E6%9B%B4%E6%8D%A2/3143",
+    "guide_id": "3143",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/d1q6haylDHiMPXfw.large",
+    "local_image_filename": "主板.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 4\\主板.jpg"
+  },
+  {
+    "model": "iPhone 4",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_4",
+    "part_name": "后盖",
+    "guide_title": "iPhone 4 后盖更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+4+%E5%90%8E%E7%9B%96%E6%9B%B4%E6%8D%A2/3140",
+    "guide_id": "3140",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/BJdD5veOHITij2Jx.large",
+    "local_image_filename": "后盖.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 4\\后盖.jpg"
+  },
+  {
+    "model": "iPhone 4",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_4",
+    "part_name": "屏幕总成",
+    "guide_title": "iPhone4屏幕总成更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone4%E5%B1%8F%E5%B9%95%E6%80%BB%E6%88%90%E6%9B%B4%E6%8D%A2/11755",
+    "guide_id": "11755",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/aNBl6IvZDvcCPqG1.large",
+    "local_image_filename": "屏幕总成.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 4\\屏幕总成.jpg"
+  },
+  {
+    "model": "iPhone 4",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_4",
+    "part_name": "电池",
+    "guide_title": "iPhone4 电池更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone4+%E7%94%B5%E6%B1%A0%E6%9B%B4%E6%8D%A2/3141",
+    "guide_id": "3141",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/2duZfGtv2FSF1BtJ.large",
+    "local_image_filename": "电池.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 4\\电池.jpg"
+  }
+]

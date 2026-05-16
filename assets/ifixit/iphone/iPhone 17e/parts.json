@@ -1,0 +1,101 @@
+[
+  {
+    "model": "iPhone 17e",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_17e",
+    "part_name": "Back Glass",
+    "guide_title": "iPhone 17e Back Glass Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+17e+Back+Glass+Replacement/212406?lang=en",
+    "guide_id": "212406",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/jVGEuqtHXfXjCM5C.large",
+    "local_image_filename": "Back Glass.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 17e\\Back Glass.jpg"
+  },
+  {
+    "model": "iPhone 17e",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_17e",
+    "part_name": "Battery",
+    "guide_title": "iPhone 17e Battery Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+17e+Battery+Replacement/212408?lang=en",
+    "guide_id": "212408",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/wrM1FnC5XEe1F1Rj.large",
+    "local_image_filename": "Battery.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 17e\\Battery.jpg"
+  },
+  {
+    "model": "iPhone 17e",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_17e",
+    "part_name": "Earpiece Speaker",
+    "guide_title": "iPhone 17e Earpiece Speaker Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+17e+Earpiece+Speaker+Replacement/212434?lang=en",
+    "guide_id": "212434",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/LPEE3OVCWqdY5iwK.large",
+    "local_image_filename": "Earpiece Speaker.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 17e\\Earpiece Speaker.jpg"
+  },
+  {
+    "model": "iPhone 17e",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_17e",
+    "part_name": "Front Camera Assembly",
+    "guide_title": "iPhone 17e Front Camera Assembly Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+17e+Front+Camera+Assembly+Replacement/212438?lang=en",
+    "guide_id": "212438",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/J2QWnVyCNqIPJY2Z.large",
+    "local_image_filename": "Front Camera Assembly.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 17e\\Front Camera Assembly.jpg"
+  },
+  {
+    "model": "iPhone 17e",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_17e",
+    "part_name": "Loudspeaker",
+    "guide_title": "iPhone 17e Loudspeaker Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+17e+Loudspeaker+Replacement/212443?lang=en",
+    "guide_id": "212443",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/mMfP6RTZYi6HATlQ.large",
+    "local_image_filename": "Loudspeaker.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 17e\\Loudspeaker.jpg"
+  },
+  {
+    "model": "iPhone 17e",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_17e",
+    "part_name": "Microphone",
+    "guide_title": "iPhone 17e Microphone Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+17e+Microphone+Replacement/212445?lang=en",
+    "guide_id": "212445",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/D4gVrdfyLccERZLD.large",
+    "local_image_filename": "Microphone.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 17e\\Microphone.jpg"
+  },
+  {
+    "model": "iPhone 17e",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_17e",
+    "part_name": "Rear Camera Assembly",
+    "guide_title": "iPhone 17e Rear Camera Assembly Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+17e+Rear+Camera+Assembly+Replacement/212446?lang=en",
+    "guide_id": "212446",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/EqIfOCeCTOIZQSea.large",
+    "local_image_filename": "Rear Camera Assembly.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 17e\\Rear Camera Assembly.jpg"
+  },
+  {
+    "model": "iPhone 17e",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_17e",
+    "part_name": "Screen",
+    "guide_title": "iPhone 17e Screen Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+17e+Screen+Replacement/212404?lang=en",
+    "guide_id": "212404",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/FyRmQxJwwYPNXVDF.large",
+    "local_image_filename": "Screen.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 17e\\Screen.jpg"
+  },
+  {
+    "model": "iPhone 17e",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_17e",
+    "part_name": "Taptic Engine",
+    "guide_title": "iPhone 17e Taptic Engine Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+17e+Taptic+Engine+Replacement/212447?lang=en",
+    "guide_id": "212447",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/IQAOBFtRQAfLK6g6.large",
+    "local_image_filename": "Taptic Engine.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 17e\\Taptic Engine.jpg"
+  }
+]

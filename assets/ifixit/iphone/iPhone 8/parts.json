@@ -1,0 +1,167 @@
+[
+  {
+    "model": "iPhone 8",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_8",
+    "part_name": "Home键/Touch ID传感器",
+    "guide_title": "iPhone 8的Home键/Touch ID传感器的更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+8%E7%9A%84Home%E9%94%AE-Touch+ID%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E6%9B%B4%E6%8D%A2/101011",
+    "guide_id": "101011",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/GaNrxlAPphwZjjSU.large",
+    "local_image_filename": "Home键_Touch ID传感器.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 8\\Home键_Touch ID传感器.jpg"
+  },
+  {
+    "model": "iPhone 8",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_8",
+    "part_name": "LCD 屏幕和触摸感应器",
+    "guide_title": "iPhone 8 LCD 屏幕和触摸感应器更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+8+LCD+%E5%B1%8F%E5%B9%95%E5%92%8C%E8%A7%A6%E6%91%B8%E6%84%9F%E5%BA%94%E5%99%A8%E6%9B%B4%E6%8D%A2/111552",
+    "guide_id": "111552",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/6evY5EDKUAmVqYvY.large",
+    "local_image_filename": "LCD 屏幕和触摸感应器.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 8\\LCD 屏幕和触摸感应器.jpg"
+  },
+  {
+    "model": "iPhone 8",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_8",
+    "part_name": "Lightning Connector Assembly",
+    "guide_title": "iPhone 8 Lightning Connector Assembly Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+8+Lightning+Connector+Assembly+Replacement/111207?lang=en",
+    "guide_id": "111207",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/sduCIYLvF1Z1EBgD.large",
+    "local_image_filename": "Lightning Connector Assembly.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 8\\Lightning Connector Assembly.jpg"
+  },
+  {
+    "model": "iPhone 8",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_8",
+    "part_name": "Logic Board",
+    "guide_title": "iPhone 8 Logic Board Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+8+Logic+Board+Replacement/111172?lang=en",
+    "guide_id": "111172",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/LAWYw6XyJ5IdyU5I.large",
+    "local_image_filename": "Logic Board.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 8\\Logic Board.jpg"
+  },
+  {
+    "model": "iPhone 8",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_8",
+    "part_name": "Rear Camera",
+    "guide_title": "iPhone 8 Rear Camera Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+8+Rear+Camera+Replacement/111656?lang=en",
+    "guide_id": "111656",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/EMXMNr1wRkvVDqDY.large",
+    "local_image_filename": "Rear Camera.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 8\\Rear Camera.jpg"
+  },
+  {
+    "model": "iPhone 8",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_8",
+    "part_name": "SIM 卡",
+    "guide_title": "iPhone 8 SIM 卡更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+8+SIM+%E5%8D%A1%E6%9B%B4%E6%8D%A2/111174",
+    "guide_id": "111174",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/PchxmUALMrvwKZX1.large",
+    "local_image_filename": "SIM 卡.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 8\\SIM 卡.jpg"
+  },
+  {
+    "model": "iPhone 8",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_8",
+    "part_name": "Speaker",
+    "guide_title": "iPhone 8 Speaker Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+8+Speaker+Replacement/179405?lang=en",
+    "guide_id": "179405",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/Q4lPZIWgSkrcYcHN.large",
+    "local_image_filename": "Speaker.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 8\\Speaker.jpg"
+  },
+  {
+    "model": "iPhone 8",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_8",
+    "part_name": "Taptic Engine（苹果线性马达）",
+    "guide_title": "更换您的iPhone 8 Taptic Engine（苹果线性马达）",
+    "guide_link": "https://zh.ifixit.com/Guide/%E6%9B%B4%E6%8D%A2%E6%82%A8%E7%9A%84iPhone+8+Taptic+Engine%EF%BC%88%E8%8B%B9%E6%9E%9C%E7%BA%BF%E6%80%A7%E9%A9%AC%E8%BE%BE%EF%BC%89/110867",
+    "guide_id": "110867",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/kn3M4eNFAFe3cEpS.large",
+    "local_image_filename": "Taptic Engine（苹果线性马达）.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 8\\Taptic Engine（苹果线性马达）.jpg"
+  },
+  {
+    "model": "iPhone 8",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_8",
+    "part_name": "五角螺丝",
+    "guide_title": "更换iPhone 8的五角螺丝",
+    "guide_link": "https://zh.ifixit.com/Guide/%E6%9B%B4%E6%8D%A2iPhone+8%E7%9A%84%E4%BA%94%E8%A7%92%E8%9E%BA%E4%B8%9D/100567",
+    "guide_id": "100567",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/SD2T4yUtdoqltDLx.large",
+    "local_image_filename": "五角螺丝.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 8\\五角螺丝.jpg"
+  },
+  {
+    "model": "iPhone 8",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_8",
+    "part_name": "充电端口柔性电缆",
+    "guide_title": "iPhone 8 充电口柔性电缆更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+8+%E5%85%85%E7%94%B5%E5%8F%A3%E6%9F%94%E6%80%A7%E7%94%B5%E7%BC%86%E6%9B%B4%E6%8D%A2/133204",
+    "guide_id": "133204",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/LuPtdeBVB2LfCFhi.large",
+    "local_image_filename": "充电端口柔性电缆.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 8\\充电端口柔性电缆.jpg"
+  },
+  {
+    "model": "iPhone 8",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_8",
+    "part_name": "分集式Wi-Fi天线",
+    "guide_title": "更换iPhone8的分集式Wi-Fi天线",
+    "guide_link": "https://zh.ifixit.com/Guide/%E6%9B%B4%E6%8D%A2iPhone8%E7%9A%84%E5%88%86%E9%9B%86%E5%BC%8FWi-Fi%E5%A4%A9%E7%BA%BF/111299",
+    "guide_id": "111299",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/lbiYjQAqxSnKerXF.large",
+    "local_image_filename": "分集式Wi-Fi天线.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 8\\分集式Wi-Fi天线.jpg"
+  },
+  {
+    "model": "iPhone 8",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_8",
+    "part_name": "前置摄像头和传感器",
+    "guide_title": "iPhone 8 前置摄像头和感应器更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+8+%E5%89%8D%E7%BD%AE%E6%91%84%E5%83%8F%E5%A4%B4%E5%92%8C%E6%84%9F%E5%BA%94%E5%99%A8%E6%9B%B4%E6%8D%A2/111547",
+    "guide_id": "111547",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/keHa2JIPVYBYXYKQ.large",
+    "local_image_filename": "前置摄像头和传感器.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 8\\前置摄像头和传感器.jpg"
+  },
+  {
+    "model": "iPhone 8",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_8",
+    "part_name": "听筒",
+    "guide_title": "iPhone 8 听筒更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+8+%E5%90%AC%E7%AD%92%E6%9B%B4%E6%8D%A2/111548",
+    "guide_id": "111548",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/CmPRaosdPaZcsjY2.large",
+    "local_image_filename": "听筒.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 8\\听筒.jpg"
+  },
+  {
+    "model": "iPhone 8",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_8",
+    "part_name": "屏幕",
+    "guide_title": "iPhone 8 屏幕更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+8+%E5%B1%8F%E5%B9%95%E6%9B%B4%E6%8D%A2/98255",
+    "guide_id": "98255",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/sBw3sfn2YrvOFBKS.large",
+    "local_image_filename": "屏幕.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 8\\屏幕.jpg"
+  },
+  {
+    "model": "iPhone 8",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_8",
+    "part_name": "电池",
+    "guide_title": "iPhone 8电池更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+8%E7%94%B5%E6%B1%A0%E6%9B%B4%E6%8D%A2/101279",
+    "guide_id": "101279",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/tNhIExDLO3ewc1hB.large",
+    "local_image_filename": "电池.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 8\\电池.jpg"
+  }
+]

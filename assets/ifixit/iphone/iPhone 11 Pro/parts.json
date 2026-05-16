@@ -1,0 +1,156 @@
+[
+  {
+    "model": "iPhone 11 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_11_Pro",
+    "part_name": "Back Glass",
+    "guide_title": "iPhone 11 Pro Back Glass Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+11+Pro+Back+Glass+Replacement/154626?lang=en",
+    "guide_id": "154626",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/QvyU3ETp2ZHJ6EUV.large",
+    "local_image_filename": "Back Glass.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 11 Pro\\Back Glass.jpg"
+  },
+  {
+    "model": "iPhone 11 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_11_Pro",
+    "part_name": "Front Camera Only",
+    "guide_title": "iPhone 11 Pro Front Camera Replacement Without Losing Face ID",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+11+Pro+Front+Camera+Replacement+Without+Losing+Face+ID/143157?lang=en",
+    "guide_id": "143157",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/22YCnoACRVMBvKom.large",
+    "local_image_filename": "Front Camera Only.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 11 Pro\\Front Camera Only.jpg"
+  },
+  {
+    "model": "iPhone 11 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_11_Pro",
+    "part_name": "Lightning Connector Assembly",
+    "guide_title": "iPhone 11 Pro Lightning Connector Assembly Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+11+Pro+Lightning+Connector+Assembly+Replacement/129075?lang=en",
+    "guide_id": "129075",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/kiTl3cU15EwEny6f.large",
+    "local_image_filename": "Lightning Connector Assembly.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 11 Pro\\Lightning Connector Assembly.jpg"
+  },
+  {
+    "model": "iPhone 11 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_11_Pro",
+    "part_name": "Logic Board",
+    "guide_title": "iPhone 11 Pro Logic Board Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+11+Pro+Logic+Board+Replacement/127623?lang=en",
+    "guide_id": "127623",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/ZLVZNsfVx2MpMQoA.large",
+    "local_image_filename": "Logic Board.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 11 Pro\\Logic Board.jpg"
+  },
+  {
+    "model": "iPhone 11 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_11_Pro",
+    "part_name": "Lower Speaker",
+    "guide_title": "iPhone 11 Pro Lower Speaker Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+11+Pro+Lower+Speaker+Replacement/129199?lang=en",
+    "guide_id": "129199",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/TxTNYPFddnjxPRAY.large",
+    "local_image_filename": "Lower Speaker.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 11 Pro\\Lower Speaker.jpg"
+  },
+  {
+    "model": "iPhone 11 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_11_Pro",
+    "part_name": "Rear Case",
+    "guide_title": "iPhone 11 Pro Rear Case Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+11+Pro+Rear+Case+Replacement/129128?lang=en",
+    "guide_id": "129128",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/dhUEMGRujD4jIbcJ.large",
+    "local_image_filename": "Rear Case.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 11 Pro\\Rear Case.jpg"
+  },
+  {
+    "model": "iPhone 11 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_11_Pro",
+    "part_name": "SIM Card",
+    "guide_title": "iPhone 11 Pro SIM Card Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+11+Pro+SIM+Card+Replacement/126761?lang=en",
+    "guide_id": "126761",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/vvh6SHupP5NDXqiE.large",
+    "local_image_filename": "SIM Card.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 11 Pro\\SIM Card.jpg"
+  },
+  {
+    "model": "iPhone 11 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_11_Pro",
+    "part_name": "Taptic Engine",
+    "guide_title": "iPhone 11 Pro Taptic Engine 更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+11+Pro+Taptic+Engine+%E6%9B%B4%E6%8D%A2/129249",
+    "guide_id": "129249",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/fVmEAyOWrTslpetp.large",
+    "local_image_filename": "Taptic Engine.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 11 Pro\\Taptic Engine.jpg"
+  },
+  {
+    "model": "iPhone 11 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_11_Pro",
+    "part_name": "五角螺丝",
+    "guide_title": "iPhone 11 Pro 五角螺丝更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+11+Pro+%E4%BA%94%E8%A7%92%E8%9E%BA%E4%B8%9D%E6%9B%B4%E6%8D%A2/127416",
+    "guide_id": "127416",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/DaTW1KMhaBRUPdTq.large",
+    "local_image_filename": "五角螺丝.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 11 Pro\\五角螺丝.jpg"
+  },
+  {
+    "model": "iPhone 11 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_11_Pro",
+    "part_name": "前置摄像头",
+    "guide_title": "iPhone 11 Pro 前置摄像头更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+11+Pro+%E5%89%8D%E7%BD%AE%E6%91%84%E5%83%8F%E5%A4%B4%E6%9B%B4%E6%8D%A2/129684",
+    "guide_id": "129684",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/oU1VNkIeETludDFt.large",
+    "local_image_filename": "前置摄像头.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 11 Pro\\前置摄像头.jpg"
+  },
+  {
+    "model": "iPhone 11 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_11_Pro",
+    "part_name": "后置摄像头",
+    "guide_title": "iPhone 11 Pro 后置摄像头更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+11+Pro+%E5%90%8E%E7%BD%AE%E6%91%84%E5%83%8F%E5%A4%B4%E6%9B%B4%E6%8D%A2/127647",
+    "guide_id": "127647",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/ksUaETrvGWpw4vpv.large",
+    "local_image_filename": "后置摄像头.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 11 Pro\\后置摄像头.jpg"
+  },
+  {
+    "model": "iPhone 11 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_11_Pro",
+    "part_name": "屏幕",
+    "guide_title": "iPhone 11 Pro 屏幕更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+11+Pro+%E5%B1%8F%E5%B9%95%E6%9B%B4%E6%8D%A2/127512",
+    "guide_id": "127512",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/EfBobUlggOh5JPmf.large",
+    "local_image_filename": "屏幕.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 11 Pro\\屏幕.jpg"
+  },
+  {
+    "model": "iPhone 11 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_11_Pro",
+    "part_name": "电池",
+    "guide_title": "iPhone 11 Pro 电池更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+11+Pro+%E7%94%B5%E6%B1%A0%E6%9B%B4%E6%8D%A2/127686",
+    "guide_id": "127686",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/2sSDSmS1f1AXwvgq.large",
+    "local_image_filename": "电池.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 11 Pro\\电池.jpg"
+  },
+  {
+    "model": "iPhone 11 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_11_Pro",
+    "part_name": "耳机扬声器和前传感器组件",
+    "guide_title": "iPhone 11 Pro 耳机扬声器和前传感器组件更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+11+Pro+%E8%80%B3%E6%9C%BA%E6%89%AC%E5%A3%B0%E5%99%A8%E5%92%8C%E5%89%8D%E4%BC%A0%E6%84%9F%E5%99%A8%E7%BB%84%E4%BB%B6%E6%9B%B4%E6%8D%A2/128656",
+    "guide_id": "128656",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/LaoEDLPJM3tsXMYD.large",
+    "local_image_filename": "耳机扬声器和前传感器组件.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 11 Pro\\耳机扬声器和前传感器组件.jpg"
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "model": "iPhone 13 mini",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_13_mini",
+    "part_name": "SIM 卡托",
+    "guide_title": "iPhone 13 mini SIM 卡托更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+13+mini+SIM+%E5%8D%A1%E6%89%98%E6%9B%B4%E6%8D%A2/145503",
+    "guide_id": "145503",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/rCN4lQIGWjPYceiJ.large",
+    "local_image_filename": "SIM 卡托.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 13 mini\\SIM 卡托.jpg"
+  },
+  {
+    "model": "iPhone 13 mini",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_13_mini",
+    "part_name": "五角螺丝",
+    "guide_title": "iPhone 13 mini 五角螺丝更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+13+mini+%E4%BA%94%E8%A7%92%E8%9E%BA%E4%B8%9D%E6%9B%B4%E6%8D%A2/145502",
+    "guide_id": "145502",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/1tQMjXucoEFEwl4w.large",
+    "local_image_filename": "五角螺丝.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 13 mini\\五角螺丝.jpg"
+  },
+  {
+    "model": "iPhone 13 mini",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_13_mini",
+    "part_name": "前面板传感器组件",
+    "guide_title": "iPhone 13 mini 前面板传感器组件更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+13+mini+%E5%89%8D%E9%9D%A2%E6%9D%BF%E4%BC%A0%E6%84%9F%E5%99%A8%E7%BB%84%E4%BB%B6%E6%9B%B4%E6%8D%A2/145628",
+    "guide_id": "145628",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/CyxPAaNZw2u2hEmj.large",
+    "local_image_filename": "前面板传感器组件.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 13 mini\\前面板传感器组件.jpg"
+  },
+  {
+    "model": "iPhone 13 mini",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_13_mini",
+    "part_name": "屏幕",
+    "guide_title": "iPhone 13 mini 屏幕更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+13+mini+%E5%B1%8F%E5%B9%95%E6%9B%B4%E6%8D%A2/145630",
+    "guide_id": "145630",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/LANQb2Npugnn6iLe.large",
+    "local_image_filename": "屏幕.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 13 mini\\屏幕.jpg"
+  },
+  {
+    "model": "iPhone 13 mini",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_13_mini",
+    "part_name": "底部扬声器",
+    "guide_title": "iPhone 13 mini 底部扬声器更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+13+mini+%E5%BA%95%E9%83%A8%E6%89%AC%E5%A3%B0%E5%99%A8%E6%9B%B4%E6%8D%A2/145507",
+    "guide_id": "145507",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/o2CvGTvAd2CucSCG.large",
+    "local_image_filename": "底部扬声器.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 13 mini\\底部扬声器.jpg"
+  },
+  {
+    "model": "iPhone 13 mini",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_13_mini",
+    "part_name": "电池",
+    "guide_title": "iPhone 13 mini 电池更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+13+mini+%E7%94%B5%E6%B1%A0%E6%9B%B4%E6%8D%A2/145508",
+    "guide_id": "145508",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/JEKnl5Jf3kdwgQhQ.large",
+    "local_image_filename": "电池.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 13 mini\\电池.jpg"
+  },
+  {
+    "model": "iPhone 13 mini",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_13_mini",
+    "part_name": "震动马达",
+    "guide_title": "iPhone 13 mini 震动马达更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+13+mini+%E9%9C%87%E5%8A%A8%E9%A9%AC%E8%BE%BE%E6%9B%B4%E6%8D%A2/145506",
+    "guide_id": "145506",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/CV5V2HNYJL6R2fgK.large",
+    "local_image_filename": "震动马达.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 13 mini\\震动马达.jpg"
+  }
+]

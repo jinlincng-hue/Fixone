@@ -1,0 +1,35 @@
+[
+  {
+    "model": "iPhone Air",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_Air",
+    "part_name": "屏幕",
+    "guide_title": "iPhone Air 屏幕更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+Air+%E5%B1%8F%E5%B9%95%E6%9B%B4%E6%8D%A2/196410",
+    "guide_id": "196410",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/Nhidj6Zds5eAZUsO.large",
+    "local_image_filename": "屏幕.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone Air\\屏幕.jpg"
+  },
+  {
+    "model": "iPhone Air",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_Air",
+    "part_name": "玻璃背板",
+    "guide_title": "iPhone Air 玻璃背板更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+Air+%E7%8E%BB%E7%92%83%E8%83%8C%E6%9D%BF%E6%9B%B4%E6%8D%A2/196411",
+    "guide_id": "196411",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/KwZXWVoIYZDeqnWB.large",
+    "local_image_filename": "玻璃背板.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone Air\\玻璃背板.jpg"
+  },
+  {
+    "model": "iPhone Air",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_Air",
+    "part_name": "电池",
+    "guide_title": "iPhone Air 电池更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+Air+%E7%94%B5%E6%B1%A0%E6%9B%B4%E6%8D%A2/196436",
+    "guide_id": "196436",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/rUCKeCXJZV2KhrhI.large",
+    "local_image_filename": "电池.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone Air\\电池.jpg"
+  }
+]

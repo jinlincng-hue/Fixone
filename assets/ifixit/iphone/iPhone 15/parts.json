@@ -1,0 +1,145 @@
+[
+  {
+    "model": "iPhone 15",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_15",
+    "part_name": "guide_191703",
+    "guide_title": "(New) iPhone 15 Logic Board Removal",
+    "guide_link": "https://zh.ifixit.com/Guide/191703",
+    "guide_id": "191703",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/udJbVJcu15XXJSjv.large",
+    "local_image_filename": "guide_191703.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 15\\guide_191703.jpg"
+  },
+  {
+    "model": "iPhone 15",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_15",
+    "part_name": "Logic Board",
+    "guide_title": "iPhone 15 Logic Board Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+15+Logic+Board+Replacement/165728?lang=en",
+    "guide_id": "165728",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/udJbVJcu15XXJSjv.large",
+    "local_image_filename": "Logic Board.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 15\\Logic Board.jpg"
+  },
+  {
+    "model": "iPhone 15",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_15",
+    "part_name": "Loudspeaker",
+    "guide_title": "iPhone 15 Loudspeaker Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+15+Loudspeaker+Replacement/165724?lang=en",
+    "guide_id": "165724",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/UILJOJ2QlWv4UUBp.large",
+    "local_image_filename": "Loudspeaker.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 15\\Loudspeaker.jpg"
+  },
+  {
+    "model": "iPhone 15",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_15",
+    "part_name": "Microphone",
+    "guide_title": "iPhone 15 Microphone Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+15+Microphone+Replacement/165725?lang=en",
+    "guide_id": "165725",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/f4wUBOxiLEFL1Pnr.large",
+    "local_image_filename": "Microphone.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 15\\Microphone.jpg"
+  },
+  {
+    "model": "iPhone 15",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_15",
+    "part_name": "Rear Cameras",
+    "guide_title": "iPhone 15 Rear Cameras Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+15+Rear+Cameras+Replacement/165721?lang=en",
+    "guide_id": "165721",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/IuP4LfVJ6yovrYoU.large",
+    "local_image_filename": "Rear Cameras.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 15\\Rear Cameras.jpg"
+  },
+  {
+    "model": "iPhone 15",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_15",
+    "part_name": "SIM Card",
+    "guide_title": "iPhone 15 SIM Card Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+15+SIM+Card+Replacement/205069?lang=en",
+    "guide_id": "205069",
+    "image_url": "https://assets.cdn.ifixit.com/static/images/default_images/GuideNoImage_300x225.jpg",
+    "local_image_filename": "SIM Card.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 15\\SIM Card.jpg"
+  },
+  {
+    "model": "iPhone 15",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_15",
+    "part_name": "Taptic Engine",
+    "guide_title": "iPhone 15 Taptic Engine Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+15+Taptic+Engine+Replacement/165723?lang=en",
+    "guide_id": "165723",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/SnISdkDU5pIJMk12.large",
+    "local_image_filename": "Taptic Engine.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 15\\Taptic Engine.jpg"
+  },
+  {
+    "model": "iPhone 15",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_15",
+    "part_name": "前置摄像头组件",
+    "guide_title": "更换 iPhone 15 前置摄像头组件",
+    "guide_link": "https://zh.ifixit.com/Guide/%E6%9B%B4%E6%8D%A2+iPhone+15+%E5%89%8D%E7%BD%AE%E6%91%84%E5%83%8F%E5%A4%B4%E7%BB%84%E4%BB%B6/165718",
+    "guide_id": "165718",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/qOxnRYYdZnI2VcB2.large",
+    "local_image_filename": "前置摄像头组件.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 15\\前置摄像头组件.jpg"
+  },
+  {
+    "model": "iPhone 15",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_15",
+    "part_name": "听筒扬声器",
+    "guide_title": "iPhone 15 听筒扬声器更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+15+%E5%90%AC%E7%AD%92%E6%89%AC%E5%A3%B0%E5%99%A8%E6%9B%B4%E6%8D%A2/165762",
+    "guide_id": "165762",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/E1xpfY2EnKbBKWwQ.large",
+    "local_image_filename": "听筒扬声器.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 15\\听筒扬声器.jpg"
+  },
+  {
+    "model": "iPhone 15",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_15",
+    "part_name": "屏幕",
+    "guide_title": "iPhone 15 更换屏幕",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+15+%E6%9B%B4%E6%8D%A2%E5%B1%8F%E5%B9%95/191696",
+    "guide_id": "191696",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/p2O5VQl4OAEmhTML.large",
+    "local_image_filename": "屏幕.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 15\\屏幕.jpg"
+  },
+  {
+    "model": "iPhone 15",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_15",
+    "part_name": "屏幕",
+    "guide_title": "iPhone 15 Screen Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+15+%E6%9B%B4%E6%8D%A2%E5%B1%8F%E5%B9%95/165669",
+    "guide_id": "165669",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/p2O5VQl4OAEmhTML.large",
+    "local_image_filename": "屏幕_165669.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 15\\屏幕_165669.jpg"
+  },
+  {
+    "model": "iPhone 15",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_15",
+    "part_name": "後玻璃",
+    "guide_title": "iPhone 15 後玻璃更換",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+15+%E5%BE%8C%E7%8E%BB%E7%92%83%E6%9B%B4%E6%8F%9B/165686",
+    "guide_id": "165686",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/AbBvNxIqbXtQrKE5.large",
+    "local_image_filename": "後玻璃.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 15\\後玻璃.jpg"
+  },
+  {
+    "model": "iPhone 15",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_15",
+    "part_name": "電池",
+    "guide_title": "iPhone 15 電池更換",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+15+%E9%9B%BB%E6%B1%A0%E6%9B%B4%E6%8F%9B/165733",
+    "guide_id": "165733",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/IGGcLVknZaV3gXwB.large",
+    "local_image_filename": "電池.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 15\\電池.jpg"
+  }
+]

@@ -91,6 +91,22 @@ body {
 
 .part-btn {
   margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.part-thumb {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  background: #e5e7eb;
+}
+
+.part-btn.active .part-thumb {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .search {

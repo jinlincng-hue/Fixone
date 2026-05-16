@@ -1,0 +1,90 @@
+[
+  {
+    "model": "iPhone 15 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_15_Pro",
+    "part_name": "Earpiece Speaker",
+    "guide_title": "iPhone 15 Pro Earpiece Speaker Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+15+Pro+Earpiece+Speaker+Replacement/166369?lang=en",
+    "guide_id": "166369",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/Vdu3gMPuMx5wo3CP.large",
+    "local_image_filename": "Earpiece Speaker.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 15 Pro\\Earpiece Speaker.jpg"
+  },
+  {
+    "model": "iPhone 15 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_15_Pro",
+    "part_name": "Front Camera Assembly",
+    "guide_title": "iPhone 15 Pro Front Camera Assembly Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+15+Pro+Front+Camera+Assembly+Replacement/166370?lang=en",
+    "guide_id": "166370",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/UmZwfN6V5cRjwsER.large",
+    "local_image_filename": "Front Camera Assembly.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 15 Pro\\Front Camera Assembly.jpg"
+  },
+  {
+    "model": "iPhone 15 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_15_Pro",
+    "part_name": "Rear Cameras",
+    "guide_title": "iPhone 15 Pro Rear Cameras Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+15+Pro+Rear+Cameras+Replacement/166366?lang=en",
+    "guide_id": "166366",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/BEEFGEN1qMuyhFhL.large",
+    "local_image_filename": "Rear Cameras.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 15 Pro\\Rear Cameras.jpg"
+  },
+  {
+    "model": "iPhone 15 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_15_Pro",
+    "part_name": "Taptic Engine",
+    "guide_title": "iPhone 15 Pro Taptic Engine Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+15+Pro+Taptic+Engine+Replacement/168185?lang=en",
+    "guide_id": "168185",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/HyLwBISDGWGEcQIu.large",
+    "local_image_filename": "Taptic Engine.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 15 Pro\\Taptic Engine.jpg"
+  },
+  {
+    "model": "iPhone 15 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_15_Pro",
+    "part_name": "后玻璃",
+    "guide_title": "iPhone 15 Pro 后玻璃更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+15+Pro+%E5%90%8E%E7%8E%BB%E7%92%83%E6%9B%B4%E6%8D%A2/166397",
+    "guide_id": "166397",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/YLdQRRZGTk5fWPYI.large",
+    "local_image_filename": "后玻璃.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 15 Pro\\后玻璃.jpg"
+  },
+  {
+    "model": "iPhone 15 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_15_Pro",
+    "part_name": "屏幕",
+    "guide_title": "iPhone 15 Pro的屏幕更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+15+Pro%E7%9A%84%E5%B1%8F%E5%B9%95%E6%9B%B4%E6%8D%A2/166303",
+    "guide_id": "166303",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/yehrPtQOjvYhdwkp.large",
+    "local_image_filename": "屏幕.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 15 Pro\\屏幕.jpg"
+  },
+  {
+    "model": "iPhone 15 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_15_Pro",
+    "part_name": "扬声器",
+    "guide_title": "iPhone 15 Pro 扬声器更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+15+Pro+%E6%89%AC%E5%A3%B0%E5%99%A8%E6%9B%B4%E6%8D%A2/166372",
+    "guide_id": "166372",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/YvYaSpGSTxNDfATE.large",
+    "local_image_filename": "扬声器.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 15 Pro\\扬声器.jpg"
+  },
+  {
+    "model": "iPhone 15 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_15_Pro",
+    "part_name": "电池",
+    "guide_title": "iPhone 15 Pro 电池更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+15+Pro+%E7%94%B5%E6%B1%A0%E6%9B%B4%E6%8D%A2/166394",
+    "guide_id": "166394",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/MmnlyZanLKXdOPSU.large",
+    "local_image_filename": "电池.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 15 Pro\\电池.jpg"
+  }
+]

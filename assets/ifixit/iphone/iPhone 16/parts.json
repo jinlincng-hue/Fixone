@@ -1,0 +1,112 @@
+[
+  {
+    "model": "iPhone 16",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_16",
+    "part_name": "5G mmWave Antenna",
+    "guide_title": "iPhone 16 5G mmWave Antenna Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+16+5G+mmWave+Antenna+Replacement/177618?lang=en",
+    "guide_id": "177618",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/rd4QePZgobB1mJ6Q.large",
+    "local_image_filename": "5G mmWave Antenna.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 16\\5G mmWave Antenna.jpg"
+  },
+  {
+    "model": "iPhone 16",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_16",
+    "part_name": "Earpiece Speaker",
+    "guide_title": "iPhone 16 Earpiece Speaker Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+16+Earpiece+Speaker+Replacement/177490?lang=en",
+    "guide_id": "177490",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/mUyWEwJAPOSEJgQ2.large",
+    "local_image_filename": "Earpiece Speaker.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 16\\Earpiece Speaker.jpg"
+  },
+  {
+    "model": "iPhone 16",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_16",
+    "part_name": "Front Camera Assembly",
+    "guide_title": "iPhone 16 Front Camera Assembly Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+16+Front+Camera+Assembly+Replacement/177394?lang=en",
+    "guide_id": "177394",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/QlQJBI4ysRk4AeGS.large",
+    "local_image_filename": "Front Camera Assembly.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 16\\Front Camera Assembly.jpg"
+  },
+  {
+    "model": "iPhone 16",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_16",
+    "part_name": "Loudspeaker",
+    "guide_title": "iPhone 16 Loudspeaker Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+16+Loudspeaker+Replacement/177494?lang=en",
+    "guide_id": "177494",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/2CqCHddOX6ge1hjo.large",
+    "local_image_filename": "Loudspeaker.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 16\\Loudspeaker.jpg"
+  },
+  {
+    "model": "iPhone 16",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_16",
+    "part_name": "Microphone",
+    "guide_title": "iPhone 16 Microphone Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+16+Microphone+Replacement/177640?lang=en",
+    "guide_id": "177640",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/IPCyYHdBQgaK11Aq.large",
+    "local_image_filename": "Microphone.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 16\\Microphone.jpg"
+  },
+  {
+    "model": "iPhone 16",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_16",
+    "part_name": "Rear Camera Assembly",
+    "guide_title": "iPhone 16 Rear Camera Assembly Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+16+Rear+Camera+Assembly+Replacement/177395?lang=en",
+    "guide_id": "177395",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/jABANE2M2HKmMGHI.large",
+    "local_image_filename": "Rear Camera Assembly.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 16\\Rear Camera Assembly.jpg"
+  },
+  {
+    "model": "iPhone 16",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_16",
+    "part_name": "Screen",
+    "guide_title": "iPhone 16 Screen Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+16+Screen+Replacement/177288?lang=en",
+    "guide_id": "177288",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/W6NfFuv2xIbEQFIt.large",
+    "local_image_filename": "Screen.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 16\\Screen.jpg"
+  },
+  {
+    "model": "iPhone 16",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_16",
+    "part_name": "后盖玻璃",
+    "guide_title": "iPhone 16 后盖玻璃更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+16+%E5%90%8E%E7%9B%96%E7%8E%BB%E7%92%83%E6%9B%B4%E6%8D%A2/177281",
+    "guide_id": "177281",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/YyZLKteOVxQyUtN1.large",
+    "local_image_filename": "后盖玻璃.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 16\\后盖玻璃.jpg"
+  },
+  {
+    "model": "iPhone 16",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_16",
+    "part_name": "电池",
+    "guide_title": "iPhone 16 电池更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+16+%E7%94%B5%E6%B1%A0%E6%9B%B4%E6%8D%A2/177286",
+    "guide_id": "177286",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/MwKraTtjCYHDmTck.large",
+    "local_image_filename": "电池.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 16\\电池.jpg"
+  },
+  {
+    "model": "iPhone 16",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_16",
+    "part_name": "触感引擎",
+    "guide_title": "iPhone 16 触感引擎更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+16+%E8%A7%A6%E6%84%9F%E5%BC%95%E6%93%8E%E6%9B%B4%E6%8D%A2/177450",
+    "guide_id": "177450",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/rSLpymtlrCDvGLRW.large",
+    "local_image_filename": "触感引擎.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 16\\触感引擎.jpg"
+  }
+]

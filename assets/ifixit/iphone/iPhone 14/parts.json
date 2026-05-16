@@ -1,0 +1,134 @@
+[
+  {
+    "model": "iPhone 14",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_14",
+    "part_name": "SIM 卡",
+    "guide_title": "iPhone 14 SIM 卡更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+14+SIM+%E5%8D%A1%E6%9B%B4%E6%8D%A2/153352",
+    "guide_id": "153352",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/FhYEhjySWXSt61uL.large",
+    "local_image_filename": "SIM 卡.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 14\\SIM 卡.jpg"
+  },
+  {
+    "model": "iPhone 14",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_14",
+    "part_name": "五角螺丝",
+    "guide_title": "iPhone 14 五角螺丝替换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+14+%E4%BA%94%E8%A7%92%E8%9E%BA%E4%B8%9D%E6%9B%BF%E6%8D%A2/152974",
+    "guide_id": "152974",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/vtEJ36dNpnbieC5w.large",
+    "local_image_filename": "五角螺丝.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 14\\五角螺丝.jpg"
+  },
+  {
+    "model": "iPhone 14",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_14",
+    "part_name": "前置镜头模组",
+    "guide_title": "iPhone 14 前置镜头模组更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+14+%E5%89%8D%E7%BD%AE%E9%95%9C%E5%A4%B4%E6%A8%A1%E7%BB%84%E6%9B%B4%E6%8D%A2/153350",
+    "guide_id": "153350",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/HVZVieCBGNaKBTPi.large",
+    "local_image_filename": "前置镜头模组.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 14\\前置镜头模组.jpg"
+  },
+  {
+    "model": "iPhone 14",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_14",
+    "part_name": "后置镜头组",
+    "guide_title": "iPhone 14 后置镜头组更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+14+%E5%90%8E%E7%BD%AE%E9%95%9C%E5%A4%B4%E7%BB%84%E6%9B%B4%E6%8D%A2/153351",
+    "guide_id": "153351",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/ypxwcStyJuBrIMov.large",
+    "local_image_filename": "后置镜头组.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 14\\后置镜头组.jpg"
+  },
+  {
+    "model": "iPhone 14",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_14",
+    "part_name": "听筒扬声器",
+    "guide_title": "iPhone 14 听筒扬声器更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+14+%E5%90%AC%E7%AD%92%E6%89%AC%E5%A3%B0%E5%99%A8%E6%9B%B4%E6%8D%A2/153349",
+    "guide_id": "153349",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/rIkfASP32xpYXJsb.large",
+    "local_image_filename": "听筒扬声器.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 14\\听筒扬声器.jpg"
+  },
+  {
+    "model": "iPhone 14",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_14",
+    "part_name": "屏幕",
+    "guide_title": "iPhone 14 屏幕替换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+14+%E5%B1%8F%E5%B9%95%E6%9B%BF%E6%8D%A2/152975",
+    "guide_id": "152975",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/SSSHufTqlhuQIpYZ.large",
+    "local_image_filename": "屏幕.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 14\\屏幕.jpg"
+  },
+  {
+    "model": "iPhone 14",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_14",
+    "part_name": "屏幕保护膜",
+    "guide_title": "iPhone 14屏幕保护膜更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+14%E5%B1%8F%E5%B9%95%E4%BF%9D%E6%8A%A4%E8%86%9C%E6%9B%B4%E6%8D%A2/183902",
+    "guide_id": "183902",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/oUOKsGUTKiBEf1pc.large",
+    "local_image_filename": "屏幕保护膜.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 14\\屏幕保护膜.jpg"
+  },
+  {
+    "model": "iPhone 14",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_14",
+    "part_name": "扬声器",
+    "guide_title": "iPhone 14 扬声器更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+14+%E6%89%AC%E5%A3%B0%E5%99%A8%E6%9B%B4%E6%8D%A2/152976",
+    "guide_id": "152976",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/Nt1FieSYAQc4t1Tf.large",
+    "local_image_filename": "扬声器.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 14\\扬声器.jpg"
+  },
+  {
+    "model": "iPhone 14",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_14",
+    "part_name": "无线充电线圈模组",
+    "guide_title": "iPhone 14 无线充电线圈模组更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+14+%E6%97%A0%E7%BA%BF%E5%85%85%E7%94%B5%E7%BA%BF%E5%9C%88%E6%A8%A1%E7%BB%84%E6%9B%B4%E6%8D%A2/176580",
+    "guide_id": "176580",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/EPChyJkYUiCm4oIL.large",
+    "local_image_filename": "无线充电线圈模组.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 14\\无线充电线圈模组.jpg"
+  },
+  {
+    "model": "iPhone 14",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_14",
+    "part_name": "玻璃背板",
+    "guide_title": "iPhone 14 玻璃背板更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+14+%E7%8E%BB%E7%92%83%E8%83%8C%E6%9D%BF%E6%9B%B4%E6%8D%A2/153210",
+    "guide_id": "153210",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/eIeeuyhLUNWED5FE.large",
+    "local_image_filename": "玻璃背板.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 14\\玻璃背板.jpg"
+  },
+  {
+    "model": "iPhone 14",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_14",
+    "part_name": "电池",
+    "guide_title": "iPhone 14 电池更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+14+%E7%94%B5%E6%B1%A0%E6%9B%B4%E6%8D%A2/152966",
+    "guide_id": "152966",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/2qpgDse6XOHTCuJY.large",
+    "local_image_filename": "电池.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 14\\电池.jpg"
+  },
+  {
+    "model": "iPhone 14",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_14",
+    "part_name": "触感引擎",
+    "guide_title": "iPhone 14 触感引擎更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+14+%E8%A7%A6%E6%84%9F%E5%BC%95%E6%93%8E%E6%9B%B4%E6%8D%A2/153354",
+    "guide_id": "153354",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/BiwviXLvXufgUVLi.large",
+    "local_image_filename": "触感引擎.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 14\\触感引擎.jpg"
+  }
+]

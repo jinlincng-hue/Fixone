@@ -1,0 +1,101 @@
+[
+  {
+    "model": "iPhone 13 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_13_Pro",
+    "part_name": "SIM 卡",
+    "guide_title": "iPhone 13 Pro SIM 卡更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+13+Pro+SIM+%E5%8D%A1%E6%9B%B4%E6%8D%A2/146374",
+    "guide_id": "146374",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/LQJyxr2RxGXxaIyg.large",
+    "local_image_filename": "SIM 卡.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 13 Pro\\SIM 卡.jpg"
+  },
+  {
+    "model": "iPhone 13 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_13_Pro",
+    "part_name": "Screen",
+    "guide_title": "iPhone 13 Pro Screen Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+13+Pro+Screen+Replacement/201754?lang=en",
+    "guide_id": "201754",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/husfw6nKk2VmuGfd.large",
+    "local_image_filename": "Screen.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 13 Pro\\Screen.jpg"
+  },
+  {
+    "model": "iPhone 13 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_13_Pro",
+    "part_name": "Taptic Engine",
+    "guide_title": "iPhone 13 Pro Taptic Engine 更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+13+Pro+Taptic+Engine+%E6%9B%B4%E6%8D%A2/146600",
+    "guide_id": "146600",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/iG5GhmWHgZtBR6Sa.large",
+    "local_image_filename": "Taptic Engine.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 13 Pro\\Taptic Engine.jpg"
+  },
+  {
+    "model": "iPhone 13 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_13_Pro",
+    "part_name": "五角螺丝",
+    "guide_title": "iPhone 13 Pro 五角螺钉更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+13+Pro+%E4%BA%94%E8%A7%92%E8%9E%BA%E9%92%89%E6%9B%B4%E6%8D%A2/146556",
+    "guide_id": "146556",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/TmXQHnnPXwrgVlFh.large",
+    "local_image_filename": "五角螺丝.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 13 Pro\\五角螺丝.jpg"
+  },
+  {
+    "model": "iPhone 13 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_13_Pro",
+    "part_name": "后置摄像头",
+    "guide_title": "iPhone 13 Pro 后置摄像头更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+13+Pro+%E5%90%8E%E7%BD%AE%E6%91%84%E5%83%8F%E5%A4%B4%E6%9B%B4%E6%8D%A2/146603",
+    "guide_id": "146603",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/hQgmgiErVdFhDQfl.large",
+    "local_image_filename": "后置摄像头.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 13 Pro\\后置摄像头.jpg"
+  },
+  {
+    "model": "iPhone 13 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_13_Pro",
+    "part_name": "屏幕",
+    "guide_title": "iPhone 13 Pro 屏幕更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+13+Pro+%E5%B1%8F%E5%B9%95%E6%9B%B4%E6%8D%A2/146552",
+    "guide_id": "146552",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/wJoU5B6DZ4keLoDC.large",
+    "local_image_filename": "屏幕.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 13 Pro\\屏幕.jpg"
+  },
+  {
+    "model": "iPhone 13 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_13_Pro",
+    "part_name": "扬声器",
+    "guide_title": "iPhone 13 Pro 扬声器更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+13+Pro+%E6%89%AC%E5%A3%B0%E5%99%A8%E6%9B%B4%E6%8D%A2/146598",
+    "guide_id": "146598",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/F4ZlTCJIJQtXgWG4.large",
+    "local_image_filename": "扬声器.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 13 Pro\\扬声器.jpg"
+  },
+  {
+    "model": "iPhone 13 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_13_Pro",
+    "part_name": "激光雷达传感器",
+    "guide_title": "iPhone 13 Pro 激光雷达传感器",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+13+Pro+%E6%BF%80%E5%85%89%E9%9B%B7%E8%BE%BE%E4%BC%A0%E6%84%9F%E5%99%A8/146605",
+    "guide_id": "146605",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/HEKbKyEJYWsSKLtg.large",
+    "local_image_filename": "激光雷达传感器.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 13 Pro\\激光雷达传感器.jpg"
+  },
+  {
+    "model": "iPhone 13 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_13_Pro",
+    "part_name": "电池",
+    "guide_title": "iPhone 13 Pro 电池更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+13+Pro+%E7%94%B5%E6%B1%A0%E6%9B%B4%E6%8D%A2/146608",
+    "guide_id": "146608",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/lV2MpQVRE1FRvpUB.large",
+    "local_image_filename": "电池.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 13 Pro\\电池.jpg"
+  }
+]

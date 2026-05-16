@@ -1,0 +1,101 @@
+[
+  {
+    "model": "iPhone 16e",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_16e",
+    "part_name": "Back Glass",
+    "guide_title": "iPhone 16e Back Glass Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+16e+Back+Glass+Replacement/186613?lang=en",
+    "guide_id": "186613",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/FxPAak1lwF5qAC1L.large",
+    "local_image_filename": "Back Glass.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 16e\\Back Glass.jpg"
+  },
+  {
+    "model": "iPhone 16e",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_16e",
+    "part_name": "Battery",
+    "guide_title": "iPhone 16e Battery Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+16e+Battery+Replacement/186615?lang=en",
+    "guide_id": "186615",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/PRJpHkVjNgZflOUm.large",
+    "local_image_filename": "Battery.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 16e\\Battery.jpg"
+  },
+  {
+    "model": "iPhone 16e",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_16e",
+    "part_name": "Earpiece Speaker",
+    "guide_title": "iPhone 16e Earpiece Speaker Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+16e+Earpiece+Speaker+Replacement/186616?lang=en",
+    "guide_id": "186616",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/pWfhIJpxvedYJekv.large",
+    "local_image_filename": "Earpiece Speaker.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 16e\\Earpiece Speaker.jpg"
+  },
+  {
+    "model": "iPhone 16e",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_16e",
+    "part_name": "Front Camera Assembly",
+    "guide_title": "iPhone 16e Front Camera Assembly Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+16e+Front+Camera+Assembly+Replacement/186617?lang=en",
+    "guide_id": "186617",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/RSMXrNXFsJMJVeRH.large",
+    "local_image_filename": "Front Camera Assembly.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 16e\\Front Camera Assembly.jpg"
+  },
+  {
+    "model": "iPhone 16e",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_16e",
+    "part_name": "Loudspeaker",
+    "guide_title": "iPhone 16e Loudspeaker Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+16e+Loudspeaker+Replacement/186618?lang=en",
+    "guide_id": "186618",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/AtqZ43vVNqIDKvSN.large",
+    "local_image_filename": "Loudspeaker.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 16e\\Loudspeaker.jpg"
+  },
+  {
+    "model": "iPhone 16e",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_16e",
+    "part_name": "Microphone",
+    "guide_title": "iPhone 16e Microphone Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+16e+Microphone+Replacement/186619?lang=en",
+    "guide_id": "186619",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/LmIwQ3ITsaCMAfX1.large",
+    "local_image_filename": "Microphone.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 16e\\Microphone.jpg"
+  },
+  {
+    "model": "iPhone 16e",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_16e",
+    "part_name": "Rear Camera Assembly",
+    "guide_title": "iPhone 16e Rear Camera Assembly Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+16e+Rear+Camera+Assembly+Replacement/186671?lang=en",
+    "guide_id": "186671",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/KACIWTAdNYITjwZk.large",
+    "local_image_filename": "Rear Camera Assembly.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 16e\\Rear Camera Assembly.jpg"
+  },
+  {
+    "model": "iPhone 16e",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_16e",
+    "part_name": "Screen",
+    "guide_title": "iPhone 16e Screen Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+16e+Screen+Replacement/186614?lang=en",
+    "guide_id": "186614",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/XGpqC3OOnrWJBfrd.large",
+    "local_image_filename": "Screen.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 16e\\Screen.jpg"
+  },
+  {
+    "model": "iPhone 16e",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_16e",
+    "part_name": "Taptic Engine",
+    "guide_title": "iPhone 16e Taptic Engine Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+16e+Taptic+Engine+Replacement/186673?lang=en",
+    "guide_id": "186673",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/gRccjimmA5MQRITd.large",
+    "local_image_filename": "Taptic Engine.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 16e\\Taptic Engine.jpg"
+  }
+]

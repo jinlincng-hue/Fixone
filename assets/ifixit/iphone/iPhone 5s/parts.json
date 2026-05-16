@@ -1,0 +1,211 @@
+[
+  {
+    "model": "iPhone 5s",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_5s",
+    "part_name": "Home键",
+    "guide_title": "iPhone 5s Home键更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+5s+Home%E9%94%AE%E6%9B%B4%E6%8D%A2/24983",
+    "guide_id": "24983",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/FvlVGVL1caPct4FQ.large",
+    "local_image_filename": "Home键.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 5s\\Home键.jpg"
+  },
+  {
+    "model": "iPhone 5s",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_5s",
+    "part_name": "LCD及数字转换器",
+    "guide_title": "iPhone 5s LCD及数字转换器更换教程",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+5s+LCD%E5%8F%8A%E6%95%B0%E5%AD%97%E8%BD%AC%E6%8D%A2%E5%99%A8%E6%9B%B4%E6%8D%A2%E6%95%99%E7%A8%8B/22096",
+    "guide_id": "22096",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/DPanYTsys6muX1CL.large",
+    "local_image_filename": "LCD及数字转换器.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 5s\\LCD及数字转换器.jpg"
+  },
+  {
+    "model": "iPhone 5s",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_5s",
+    "part_name": "Lightning 连接口",
+    "guide_title": "iPhone 5s Lightning连接口更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+5s+Lightning%E8%BF%9E%E6%8E%A5%E5%8F%A3%E6%9B%B4%E6%8D%A2/20261",
+    "guide_id": "20261",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/xjKCTB3XlaXyCvfF.large",
+    "local_image_filename": "Lightning 连接口.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 5s\\Lightning 连接口.jpg"
+  },
+  {
+    "model": "iPhone 5s",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_5s",
+    "part_name": "SIM卡",
+    "guide_title": "iPhone 5s SIM卡更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+5s+SIM%E5%8D%A1%E6%9B%B4%E6%8D%A2/20241",
+    "guide_id": "20241",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/TVtXGmX5XHKFBkEp.large",
+    "local_image_filename": "SIM卡.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 5s\\SIM卡.jpg"
+  },
+  {
+    "model": "iPhone 5s",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_5s",
+    "part_name": "SIM卡槽弹出杠杆",
+    "guide_title": "iPhone 5s 替换SIM卡槽弹出杠杆",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+5s+%E6%9B%BF%E6%8D%A2SIM%E5%8D%A1%E6%A7%BD%E5%BC%B9%E5%87%BA%E6%9D%A0%E6%9D%86/38103",
+    "guide_id": "38103",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/XIIvYxu2eEWwXPMJ.large",
+    "local_image_filename": "SIM卡槽弹出杠杆.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 5s\\SIM卡槽弹出杠杆.jpg"
+  },
+  {
+    "model": "iPhone 5s",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_5s",
+    "part_name": "前置摄像头和传感器排线",
+    "guide_title": "iPhone 5s 前置摄像头和传感器排线更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+5s+%E5%89%8D%E7%BD%AE%E6%91%84%E5%83%8F%E5%A4%B4%E5%92%8C%E4%BC%A0%E6%84%9F%E5%99%A8%E6%8E%92%E7%BA%BF%E6%9B%B4%E6%8D%A2/22106",
+    "guide_id": "22106",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/mxu3AjHXOTUVXysi.large",
+    "local_image_filename": "前置摄像头和传感器排线.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 5s\\前置摄像头和传感器排线.jpg"
+  },
+  {
+    "model": "iPhone 5s",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_5s",
+    "part_name": "后壳",
+    "guide_title": "iPhone 5s的后壳更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+5s%E7%9A%84%E5%90%8E%E5%A3%B3%E6%9B%B4%E6%8D%A2/20833",
+    "guide_id": "20833",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/pOgB3MPbo4X3kWLC.large",
+    "local_image_filename": "后壳.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 5s\\后壳.jpg"
+  },
+  {
+    "model": "iPhone 5s",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_5s",
+    "part_name": "后置摄像头",
+    "guide_title": "iPhone 5s 后置摄像头更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+5s+%E5%90%8E%E7%BD%AE%E6%91%84%E5%83%8F%E5%A4%B4%E6%9B%B4%E6%8D%A2/20259",
+    "guide_id": "20259",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/CfsaJxQdEKeZHYFC.large",
+    "local_image_filename": "后置摄像头.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 5s\\后置摄像头.jpg"
+  },
+  {
+    "model": "iPhone 5s",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_5s",
+    "part_name": "听筒",
+    "guide_title": "iPhone 5s 听筒更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+5s+%E5%90%AC%E7%AD%92%E6%9B%B4%E6%8D%A2/21991",
+    "guide_id": "21991",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/UQwKvXOIPDTdBMwR.large",
+    "local_image_filename": "听筒.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 5s\\听筒.jpg"
+  },
+  {
+    "model": "iPhone 5s",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_5s",
+    "part_name": "尾插螺丝（五角螺丝）",
+    "guide_title": "iPhone5s 尾插螺丝更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone5s+%E5%B0%BE%E6%8F%92%E8%9E%BA%E4%B8%9D%E6%9B%B4%E6%8D%A2/26896",
+    "guide_id": "26896",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/kfCGgjBDjPCVlGUV.large",
+    "local_image_filename": "尾插螺丝（五角螺丝）.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 5s\\尾插螺丝（五角螺丝）.jpg"
+  },
+  {
+    "model": "iPhone 5s",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_5s",
+    "part_name": "扬声器",
+    "guide_title": "iPhone 5s 扬声器更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+5s+%E6%89%AC%E5%A3%B0%E5%99%A8%E6%9B%B4%E6%8D%A2/21867",
+    "guide_id": "21867",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/6Pl5hAhecYnZpGir.large",
+    "local_image_filename": "扬声器.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 5s\\扬声器.jpg"
+  },
+  {
+    "model": "iPhone 5s",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_5s",
+    "part_name": "显示屏",
+    "guide_title": "iPhone 5s 显示屏更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+5s+%E6%98%BE%E7%A4%BA%E5%B1%8F%E6%9B%B4%E6%8D%A2/30962",
+    "guide_id": "30962",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/p4NxkKBZ1ChJNb2v.large",
+    "local_image_filename": "显示屏.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 5s\\显示屏.jpg"
+  },
+  {
+    "model": "iPhone 5s",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_5s",
+    "part_name": "电池",
+    "guide_title": "iPhone 5s 电池更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+5s+%E7%94%B5%E6%B1%A0%E6%9B%B4%E6%8D%A2/19239",
+    "guide_id": "19239",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/VY6GjBOeJ2FpVQZp.large",
+    "local_image_filename": "电池.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 5s\\电池.jpg"
+  },
+  {
+    "model": "iPhone 5s",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_5s",
+    "part_name": "电源键",
+    "guide_title": "iPhone 5s 电源键更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+5s+%E7%94%B5%E6%BA%90%E9%94%AE%E6%9B%B4%E6%8D%A2/22172",
+    "guide_id": "22172",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/TAJyHyWjSHVNINul.large",
+    "local_image_filename": "电源键.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 5s\\电源键.jpg"
+  },
+  {
+    "model": "iPhone 5s",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_5s",
+    "part_name": "蓝牙和WiFi天线",
+    "guide_title": "iPhone 5s 蓝牙和WiFi天线更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+5s+%E8%93%9D%E7%89%99%E5%92%8CWiFi%E5%A4%A9%E7%BA%BF%E6%9B%B4%E6%8D%A2/90319",
+    "guide_id": "90319",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/FGkhE3V2yDHCCXYG.large",
+    "local_image_filename": "蓝牙和WiFi天线.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 5s\\蓝牙和WiFi天线.jpg"
+  },
+  {
+    "model": "iPhone 5s",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_5s",
+    "part_name": "逻辑主板",
+    "guide_title": "iPhone 5s 逻辑主板更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+5s+%E9%80%BB%E8%BE%91%E4%B8%BB%E6%9D%BF%E6%9B%B4%E6%8D%A2/20246",
+    "guide_id": "20246",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/6g3WVWqAkhoREBJl.large",
+    "local_image_filename": "逻辑主板.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 5s\\逻辑主板.jpg"
+  },
+  {
+    "model": "iPhone 5s",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_5s",
+    "part_name": "震动器",
+    "guide_title": "iPhone 5s 震动器更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+5s+%E9%9C%87%E5%8A%A8%E5%99%A8%E6%9B%B4%E6%8D%A2/20245",
+    "guide_id": "20245",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/sCPgxHN3tXu5ngQH.large",
+    "local_image_filename": "震动器.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 5s\\震动器.jpg"
+  },
+  {
+    "model": "iPhone 5s",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_5s",
+    "part_name": "音量键",
+    "guide_title": "iPhone 5s 音量键更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+5s+%E9%9F%B3%E9%87%8F%E9%94%AE%E6%9B%B4%E6%8D%A2/21889",
+    "guide_id": "21889",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/TOnVdSKbXQlTZs4P.large",
+    "local_image_filename": "音量键.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 5s\\音量键.jpg"
+  },
+  {
+    "model": "iPhone 5s",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_5s",
+    "part_name": "顶部排线更换",
+    "guide_title": "iPhone 5s 顶部排线更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+5s+%E9%A1%B6%E9%83%A8%E6%8E%92%E7%BA%BF%E6%9B%B4%E6%8D%A2/20280",
+    "guide_id": "20280",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/ALa3KHylcLxLmDsZ.large",
+    "local_image_filename": "顶部排线更换.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 5s\\顶部排线更换.jpg"
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "model": "iPhone 3G",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_3G",
+    "part_name": "Display Assembly",
+    "guide_title": "iPhone 3G Display Assembly Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+3G+Display+Assembly+Replacement/1159?lang=en",
+    "guide_id": "1159",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/SsEhPMTIcQrtATBK.large",
+    "local_image_filename": "Display Assembly.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 3G\\Display Assembly.jpg"
+  },
+  {
+    "model": "iPhone 3G",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_3G",
+    "part_name": "Dock Connector",
+    "guide_title": "iPhone 3G Dock Connector Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+3G+Dock+Connector+Replacement/578?lang=en",
+    "guide_id": "578",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/VgHbKe4DxFyZWDPB.large",
+    "local_image_filename": "Dock Connector.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 3G\\Dock Connector.jpg"
+  },
+  {
+    "model": "iPhone 3G",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_3G",
+    "part_name": "Earpiece Speaker",
+    "guide_title": "iPhone 3G Earpiece Speaker Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+3G+Earpiece+Speaker+Replacement/7453?lang=en",
+    "guide_id": "7453",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/EMLGTVgHHu1aBfmn.large",
+    "local_image_filename": "Earpiece Speaker.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 3G\\Earpiece Speaker.jpg"
+  },
+  {
+    "model": "iPhone 3G",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_3G",
+    "part_name": "Front Panel",
+    "guide_title": "iPhone 3G Glass Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+3G+Glass+Replacement/101579?lang=en",
+    "guide_id": "101579",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/kxSemBJKg4Nx1irm.large",
+    "local_image_filename": "Front Panel.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 3G\\Front Panel.jpg"
+  },
+  {
+    "model": "iPhone 3G",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_3G",
+    "part_name": "Front Panel Assembly",
+    "guide_title": "iPhone 3G Front Panel Assembly Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+3G+Front+Panel+Assembly+Replacement/2028?lang=en",
+    "guide_id": "2028",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/Zvjn6kWEgdlphXMr.large",
+    "local_image_filename": "Front Panel Assembly.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 3G\\Front Panel Assembly.jpg"
+  },
+  {
+    "model": "iPhone 3G",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_3G",
+    "part_name": "GPS Antenna",
+    "guide_title": "iPhone 3G GPS Antenna Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+3G+GPS+Antenna+Replacement/582?lang=en",
+    "guide_id": "582",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/BOyTffUDOpsOmeRS.large",
+    "local_image_filename": "GPS Antenna.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 3G\\GPS Antenna.jpg"
+  },
+  {
+    "model": "iPhone 3G",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_3G",
+    "part_name": "Headphone Jack",
+    "guide_title": "iPhone 3G Headphone Jack Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+3G+Headphone+Jack+Replacement/580?lang=en",
+    "guide_id": "580",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/I6cLP6cHcNTJVLVi.large",
+    "local_image_filename": "Headphone Jack.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 3G\\Headphone Jack.jpg"
+  },
+  {
+    "model": "iPhone 3G",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_3G",
+    "part_name": "Home Button",
+    "guide_title": "iPhone 3G Home Button Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+3G+Home+Button+Replacement/9039?lang=en",
+    "guide_id": "9039",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/IHCOI1OXYKTSQoSO.large",
+    "local_image_filename": "Home Button.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 3G\\Home Button.jpg"
+  },
+  {
+    "model": "iPhone 3G",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_3G",
+    "part_name": "Logic Board",
+    "guide_title": "iPhone 3G Logic Board Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+3G+Logic+Board+Replacement/575?lang=en",
+    "guide_id": "575",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/lQbToOkGxxcOOaUM.large",
+    "local_image_filename": "Logic Board.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 3G\\Logic Board.jpg"
+  },
+  {
+    "model": "iPhone 3G",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_3G",
+    "part_name": "Mute Button",
+    "guide_title": "iPhone 3G Mute Button Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+3G+Mute+Button+Replacement/581?lang=en",
+    "guide_id": "581",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/Jhufp3ZdKvFxovLQ.large",
+    "local_image_filename": "Mute Button.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 3G\\Mute Button.jpg"
+  },
+  {
+    "model": "iPhone 3G",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_3G",
+    "part_name": "Mute Switch",
+    "guide_title": "iPhone 3G Mute Switch Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+3G+Mute+Switch+Replacement/4486?lang=en",
+    "guide_id": "4486",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/LWljbfB5RMO4wWQr.large",
+    "local_image_filename": "Mute Switch.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 3G\\Mute Switch.jpg"
+  },
+  {
+    "model": "iPhone 3G",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_3G",
+    "part_name": "Power Button",
+    "guide_title": "iPhone 3G Power Button Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+3G+Power+Button+Replacement/4484?lang=en",
+    "guide_id": "4484",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/S4EI3y1jpTLTUFnC.large",
+    "local_image_filename": "Power Button.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 3G\\Power Button.jpg"
+  },
+  {
+    "model": "iPhone 3G",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_3G",
+    "part_name": "Rear Case",
+    "guide_title": "iPhone 3G Rear Case Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+3G+Rear+Case+Replacement/583?lang=en",
+    "guide_id": "583",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/4WoRjFVjHsKDmbxD.large",
+    "local_image_filename": "Rear Case.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 3G\\Rear Case.jpg"
+  },
+  {
+    "model": "iPhone 3G",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_3G",
+    "part_name": "SIM Card",
+    "guide_title": "iPhone 3G SIM Card Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+3G+SIM+Card+Replacement/573?lang=en",
+    "guide_id": "573",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/34lUeWllJiop2CAq.large",
+    "local_image_filename": "SIM Card.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 3G\\SIM Card.jpg"
+  },
+  {
+    "model": "iPhone 3G",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_3G",
+    "part_name": "Vibrator",
+    "guide_title": "iPhone 3G Vibrator Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+3G+Vibrator+Replacement/579?lang=en",
+    "guide_id": "579",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/ascbMkVpmCBVOapr.large",
+    "local_image_filename": "Vibrator.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 3G\\Vibrator.jpg"
+  },
+  {
+    "model": "iPhone 3G",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_3G",
+    "part_name": "Volume Button",
+    "guide_title": "iPhone 3G Volume Button Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+3G+Volume+Button+Replacement/4487?lang=en",
+    "guide_id": "4487",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/IM2BoDLXEWZUSRCK.large",
+    "local_image_filename": "Volume Button.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 3G\\Volume Button.jpg"
+  },
+  {
+    "model": "iPhone 3G",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_3G",
+    "part_name": "前面板",
+    "guide_title": "iPhone 3G的前面板更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+3G%E7%9A%84%E5%89%8D%E9%9D%A2%E6%9D%BF%E6%9B%B4%E6%8D%A2/587",
+    "guide_id": "587",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/Nb6HIkK2cjAcpmCZ.large",
+    "local_image_filename": "前面板.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 3G\\前面板.jpg"
+  },
+  {
+    "model": "iPhone 3G",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_3G",
+    "part_name": "屏幕",
+    "guide_title": "iPhone 3G屏幕更换指南",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+3G%E5%B1%8F%E5%B9%95%E6%9B%B4%E6%8D%A2%E6%8C%87%E5%8D%97/574",
+    "guide_id": "574",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/seqxPNb5WZPkrb2C.large",
+    "local_image_filename": "屏幕.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 3G\\屏幕.jpg"
+  },
+  {
+    "model": "iPhone 3G",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_3G",
+    "part_name": "电池",
+    "guide_title": "iPhone 3G 电池更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+3G+%E7%94%B5%E6%B1%A0%E6%9B%B4%E6%8D%A2/577",
+    "guide_id": "577",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/ROdtWppuWQNwNQNL.large",
+    "local_image_filename": "电池.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 3G\\电池.jpg"
+  },
+  {
+    "model": "iPhone 3G",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_3G",
+    "part_name": "相机",
+    "guide_title": "更换iPhone 3G相机",
+    "guide_link": "https://zh.ifixit.com/Guide/%E6%9B%B4%E6%8D%A2iPhone+3G%E7%9B%B8%E6%9C%BA/576",
+    "guide_id": "576",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/5sRmVZ15W3JRfFJa.large",
+    "local_image_filename": "相机.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 3G\\相机.jpg"
+  }
+]

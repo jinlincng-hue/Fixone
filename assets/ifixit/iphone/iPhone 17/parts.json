@@ -1,0 +1,35 @@
+[
+  {
+    "model": "iPhone 17",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_17",
+    "part_name": "屏幕",
+    "guide_title": "iPhone 17 屏幕更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+17+%E5%B1%8F%E5%B9%95%E6%9B%B4%E6%8D%A2/196400",
+    "guide_id": "196400",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/XS41v6eakj2pSGxB.large",
+    "local_image_filename": "屏幕.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 17\\屏幕.jpg"
+  },
+  {
+    "model": "iPhone 17",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_17",
+    "part_name": "电池",
+    "guide_title": "iPhone 17 电池更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+17+%E7%94%B5%E6%B1%A0%E6%9B%B4%E6%8D%A2/196398",
+    "guide_id": "196398",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/2DUQc3oGgMwVqUJ6.large",
+    "local_image_filename": "电池.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 17\\电池.jpg"
+  },
+  {
+    "model": "iPhone 17",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_17",
+    "part_name": "背面玻璃",
+    "guide_title": "iPhone 17背面玻璃更换",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+17%E8%83%8C%E9%9D%A2%E7%8E%BB%E7%92%83%E6%9B%B4%E6%8D%A2/196399",
+    "guide_id": "196399",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/O34J5BdsTQHESqvp.large",
+    "local_image_filename": "背面玻璃.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 17\\背面玻璃.jpg"
+  }
+]

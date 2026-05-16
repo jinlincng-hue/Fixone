@@ -1,0 +1,134 @@
+[
+  {
+    "model": "iPhone 17 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_17_Pro",
+    "part_name": "Battery",
+    "guide_title": "iPhone 17 Pro Battery Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+17+Pro+Battery+Replacement/199458?lang=en",
+    "guide_id": "199458",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/bmsEFqK5vNPSxtdd.large",
+    "local_image_filename": "Battery.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 17 Pro\\Battery.jpg"
+  },
+  {
+    "model": "iPhone 17 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_17_Pro",
+    "part_name": "Front Camera Assembly",
+    "guide_title": "iPhone 17 Pro Front Camera Assembly Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+17+Pro+Front+Camera+Assembly+Replacement/207490?lang=en",
+    "guide_id": "207490",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/5kGDM6N1wf3tOQjW.large",
+    "local_image_filename": "Front Camera Assembly.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 17 Pro\\Front Camera Assembly.jpg"
+  },
+  {
+    "model": "iPhone 17 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_17_Pro",
+    "part_name": "LiDAR Module",
+    "guide_title": "iPhone 17 Pro LiDAR Module Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+17+Pro+LiDAR+Module+Replacement/207485?lang=en",
+    "guide_id": "207485",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/6YNCNMZwCLoAnq1W.large",
+    "local_image_filename": "LiDAR Module.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 17 Pro\\LiDAR Module.jpg"
+  },
+  {
+    "model": "iPhone 17 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_17_Pro",
+    "part_name": "Logic Board",
+    "guide_title": "iPhone 17 Pro Logic Board Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+17+Pro+Logic+Board+Replacement/207488?lang=en",
+    "guide_id": "207488",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/HnIiAfHlCCZntlEW.large",
+    "local_image_filename": "Logic Board.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 17 Pro\\Logic Board.jpg"
+  },
+  {
+    "model": "iPhone 17 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_17_Pro",
+    "part_name": "Loudspeaker",
+    "guide_title": "iPhone 17 Pro Loudspeaker Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+17+Pro+Loudspeaker+Replacement/207494?lang=en",
+    "guide_id": "207494",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/jSFURIVcOTyDxugS.large",
+    "local_image_filename": "Loudspeaker.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 17 Pro\\Loudspeaker.jpg"
+  },
+  {
+    "model": "iPhone 17 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_17_Pro",
+    "part_name": "Lower Microphone",
+    "guide_title": "iPhone 17 Pro Lower Microphone Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+17+Pro+Lower+Microphone+Replacement/207496?lang=en",
+    "guide_id": "207496",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/ZpR1LcCESoUJIvCR.large",
+    "local_image_filename": "Lower Microphone.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 17 Pro\\Lower Microphone.jpg"
+  },
+  {
+    "model": "iPhone 17 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_17_Pro",
+    "part_name": "Rear Camera Assembly",
+    "guide_title": "iPhone 17 Pro Rear Camera Assembly Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+17+Pro+Rear+Camera+Assembly+Replacement/207381?lang=en",
+    "guide_id": "207381",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/LsfYuxVQoLQShOwd.large",
+    "local_image_filename": "Rear Camera Assembly.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 17 Pro\\Rear Camera Assembly.jpg"
+  },
+  {
+    "model": "iPhone 17 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_17_Pro",
+    "part_name": "Screen",
+    "guide_title": "iPhone 17 Pro Screen Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+17+Pro+Screen+Replacement/199459?lang=en",
+    "guide_id": "199459",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/36Do3pXV6YqxNw5l.large",
+    "local_image_filename": "Screen.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 17 Pro\\Screen.jpg"
+  },
+  {
+    "model": "iPhone 17 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_17_Pro",
+    "part_name": "Taptic Engine",
+    "guide_title": "iPhone 17 Pro Taptic Engine Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+17+Pro+Taptic+Engine+Replacement/207495?lang=en",
+    "guide_id": "207495",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/3JaW6OxawfI2xrvG.large",
+    "local_image_filename": "Taptic Engine.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 17 Pro\\Taptic Engine.jpg"
+  },
+  {
+    "model": "iPhone 17 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_17_Pro",
+    "part_name": "Top Speaker",
+    "guide_title": "iPhone 17 Pro Top Speaker Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+17+Pro+Top+Speaker+Replacement/207493?lang=en",
+    "guide_id": "207493",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/SfJBIvDGfFDwFGUN.large",
+    "local_image_filename": "Top Speaker.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 17 Pro\\Top Speaker.jpg"
+  },
+  {
+    "model": "iPhone 17 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_17_Pro",
+    "part_name": "USB-C Port Assembly",
+    "guide_title": "iPhone 17 Pro USB-C Port Assembly Replacement",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+17+Pro+USB-C+Port+Assembly+Replacement/207498?lang=en",
+    "guide_id": "207498",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/SB2ahjmOSW2ATPtN.large",
+    "local_image_filename": "USB-C Port Assembly.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 17 Pro\\USB-C Port Assembly.jpg"
+  },
+  {
+    "model": "iPhone 17 Pro",
+    "model_url": "https://zh.ifixit.com/Device/iPhone_17_Pro",
+    "part_name": "背面玻璃",
+    "guide_title": "iPhone 17 Pro 更换背面玻璃",
+    "guide_link": "https://zh.ifixit.com/Guide/iPhone+17+Pro+%E6%9B%B4%E6%8D%A2%E8%83%8C%E9%9D%A2%E7%8E%BB%E7%92%83/199457",
+    "guide_id": "199457",
+    "image_url": "https://guide-images.cdn.ifixit.com/igi/TLyuSMOmirhUhUEo.large",
+    "local_image_filename": "背面玻璃.jpg",
+    "local_image_path": "J:\\pythonprojects\\iphone_info_pa\\iphone\\iPhone 17 Pro\\背面玻璃.jpg"
+  }
+]
