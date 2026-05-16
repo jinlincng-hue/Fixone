@@ -503,16 +503,206 @@ const videos = [
   }
 ];
 
+const products = [
+  {
+    id: 1,
+    brand: "Apple",
+    model: "iPhone 12",
+    part: "屏幕",
+    title: "iPhone 12 屏幕总成更换配件",
+    platform: "京东",
+    imageUrl: "assets/products/iphone12-screen-1.jpg",
+    price: "价格待填写",
+    tag: "屏幕总成",
+    status: "商品图占位"
+  },
+  {
+    id: 2,
+    brand: "Apple",
+    model: "iPhone 12",
+    part: "电池",
+    title: "iPhone 12 电池更换配件",
+    platform: "淘宝",
+    imageUrl: "assets/products/iphone12-battery-1.jpg",
+    price: "价格待填写",
+    tag: "电池配件",
+    status: "商品图占位"
+  },
+  {
+    id: 3,
+    brand: "Apple",
+    model: "iPhone 12 Pro",
+    part: "屏幕",
+    title: "iPhone 12 Pro 屏幕总成更换配件",
+    platform: "京东",
+    imageUrl: "assets/products/iphone12-screen-1.jpg",
+    price: "价格待填写",
+    tag: "屏幕总成",
+    status: "商品图占位"
+  },
+  {
+    id: 4,
+    brand: "Apple",
+    model: "iPhone 12 Pro",
+    part: "电池",
+    title: "iPhone 12 Pro 电池更换配件",
+    platform: "拼多多",
+    imageUrl: "assets/products/iphone12-battery-1.jpg",
+    price: "价格待填写",
+    tag: "电池配件",
+    status: "商品图占位"
+  },
+  {
+    id: 5,
+    brand: "Apple",
+    model: "iPhone 13",
+    part: "屏幕",
+    title: "iPhone 13 屏幕总成更换配件",
+    platform: "京东",
+    imageUrl: "assets/products/iphone13-screen-1.jpg",
+    price: "价格待填写",
+    tag: "屏幕总成",
+    status: "商品图占位"
+  },
+  {
+    id: 6,
+    brand: "Apple",
+    model: "iPhone 13",
+    part: "电池",
+    title: "iPhone 13 电池更换配件",
+    platform: "京东",
+    imageUrl: "assets/products/iphone13-battery-1.jpg",
+    price: "价格待填写",
+    tag: "电池配件",
+    status: "商品图占位"
+  },
+  {
+    id: 7,
+    brand: "Apple",
+    model: "iPhone 13 Pro",
+    part: "屏幕",
+    title: "iPhone 13 Pro 屏幕总成更换配件",
+    platform: "淘宝",
+    imageUrl: "assets/products/iphone13-screen-1.jpg",
+    price: "价格待填写",
+    tag: "屏幕总成",
+    status: "商品图占位"
+  },
+  {
+    id: 8,
+    brand: "Apple",
+    model: "iPhone 13 Pro",
+    part: "电池",
+    title: "iPhone 13 Pro 电池更换配件",
+    platform: "拼多多",
+    imageUrl: "assets/products/iphone13-battery-1.jpg",
+    price: "价格待填写",
+    tag: "电池配件",
+    status: "商品图占位"
+  },
+  {
+    id: 9,
+    brand: "Apple",
+    model: "iPhone 14 Pro",
+    part: "电池",
+    title: "iPhone 14 Pro 电池更换配件",
+    platform: "京东",
+    imageUrl: "assets/products/iphone13-battery-1.jpg",
+    price: "价格待填写",
+    tag: "电池配件",
+    status: "商品图占位"
+  },
+  {
+    id: 10,
+    brand: "Apple",
+    model: "iPhone 14 Pro Max",
+    part: "屏幕",
+    title: "iPhone 14 Pro Max 屏幕总成更换配件",
+    platform: "京东",
+    imageUrl: "assets/products/iphone13-screen-1.jpg",
+    price: "价格待填写",
+    tag: "屏幕总成",
+    status: "商品图占位"
+  },
+  {
+    id: 11,
+    brand: "Apple",
+    model: "iPhone 15",
+    part: "电池",
+    title: "iPhone 15 电池更换配件",
+    platform: "淘宝",
+    imageUrl: "assets/products/iphone13-battery-1.jpg",
+    price: "价格待填写",
+    tag: "电池配件",
+    status: "商品图占位"
+  },
+  {
+    id: 12,
+    brand: "Apple",
+    model: "iPhone 16 Pro Max",
+    part: "电池",
+    title: "iPhone 16 Pro Max 电池更换配件",
+    platform: "京东",
+    imageUrl: "assets/products/iphone13-battery-1.jpg",
+    price: "价格待填写",
+    tag: "电池配件",
+    status: "商品图占位"
+  },
+  {
+    id: 13,
+    brand: "Apple",
+    model: "iPhone 11",
+    part: "电池",
+    title: "iPhone 11 电池更换配件",
+    platform: "拼多多",
+    imageUrl: "assets/products/iphone12-battery-1.jpg",
+    price: "价格待填写",
+    tag: "电池配件",
+    status: "商品图占位"
+  },
+  {
+    id: 14,
+    brand: "Apple",
+    model: "iPhone X",
+    part: "屏幕",
+    title: "iPhone X 屏幕总成更换配件",
+    platform: "淘宝",
+    imageUrl: "assets/products/iphone12-screen-1.jpg",
+    price: "价格待填写",
+    tag: "屏幕总成",
+    status: "商品图占位"
+  },
+  {
+    id: 15,
+    brand: "Apple",
+    model: "iPhone X",
+    part: "电池",
+    title: "iPhone X 电池更换配件",
+    platform: "京东",
+    imageUrl: "assets/products/iphone12-battery-1.jpg",
+    price: "价格待填写",
+    tag: "电池配件",
+    status: "商品图占位"
+  }
+];
+
 let currentModel = "iPhone 15";
 let currentPart = "屏幕";
 
 const modelList = document.getElementById("modelList");
 const partList = document.getElementById("partList");
 const videoList = document.getElementById("videoList");
+const productList = document.getElementById("productList");
 const currentModelText = document.getElementById("currentModel");
 const currentPartText = document.getElementById("currentPart");
 const pageTitle = document.getElementById("pageTitle");
 const searchInput = document.getElementById("searchInput");
+
+function escapeHtml(value) {
+  const div = document.createElement("div");
+  div.textContent = String(value || "");
+  return div.innerHTML;
+}
 
 function renderModels() {
   modelList.innerHTML = "";
@@ -639,6 +829,66 @@ function renderVideos() {
     .join("");
 }
 
+function renderProducts() {
+  const keyword = searchInput.value.trim().toLowerCase();
+  let matched = products.filter(
+    product => product.model === currentModel && product.part === currentPart
+  );
+
+  if (keyword) {
+    matched = matched.filter(product => {
+      const haystack =
+        `${product.title} ${product.model} ${product.part} ${product.platform}`.toLowerCase();
+      return haystack.includes(keyword);
+    });
+  }
+
+  if (matched.length === 0) {
+    productList.innerHTML = `
+      <article class="product-empty-card">
+        <h3>暂无对应配件商品</h3>
+        <p>等待后续采集京东 / 淘宝 / 拼多多商品图</p>
+      </article>
+    `;
+    return;
+  }
+
+  productList.innerHTML = matched
+    .map(product => {
+      const title = escapeHtml(product.title);
+      const platform = escapeHtml(product.platform);
+      const model = escapeHtml(product.model);
+      const part = escapeHtml(product.part);
+      const price = escapeHtml(product.price);
+      const tag = escapeHtml(product.tag);
+      const imageUrl = encodeURI(product.imageUrl);
+
+      return `
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img
+              class="product-image"
+              src="${imageUrl}"
+              alt="${title}"
+              loading="lazy"
+              onerror="this.parentElement.classList.add('image-error')"
+            >
+            <div class="product-image-placeholder">商品图片待采集</div>
+          </div>
+          <div class="product-info">
+            <h3>${title}</h3>
+            <p>平台：${platform}</p>
+            <p>适配型号：${model}</p>
+            <p>故障部位：${part}</p>
+            <p>价格：${price}</p>
+            <span class="product-tag">${tag}</span>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+}
+
 function updatePage() {
   currentModelText.textContent = currentModel;
   currentPartText.textContent = currentPart;
@@ -647,8 +897,12 @@ function updatePage() {
   renderModels();
   renderParts();
   renderVideos();
+  renderProducts();
 }
 
-searchInput.addEventListener("input", renderVideos);
+searchInput.addEventListener("input", () => {
+  renderVideos();
+  renderProducts();
+});
 
 loadPartThumbs().then(updatePage);
