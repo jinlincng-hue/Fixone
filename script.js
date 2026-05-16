@@ -508,181 +508,57 @@ const products = [
     id: 1,
     brand: "Apple",
     model: "iPhone 12",
-    part: "屏幕",
-    title: "iPhone 12 屏幕总成更换配件",
-    platform: "京东",
-    imageUrl: "assets/products/iphone12-screen-1.jpg",
-    price: "价格待填写",
-    tag: "屏幕总成",
-    status: "商品图占位"
+    part: "电池",
+    title: "诺希 iPhone 12 / 12 Pro 旗舰版 3100mAh 电池",
+    platform: "天猫",
+    imageUrl: "assets/products/iphone12-battery-1.jpg",
+    price: "¥166.5起",
+    compatibleModels: "iPhone 12 / iPhone 12 Pro",
+    sales: "已售8000+",
+    tag: "电池配件",
+    status: "已采集商品图"
   },
   {
     id: 2,
     brand: "Apple",
-    model: "iPhone 12",
+    model: "iPhone 13",
     part: "电池",
-    title: "iPhone 12 电池更换配件",
-    platform: "淘宝",
-    imageUrl: "assets/products/iphone12-battery-1.jpg",
-    price: "价格待填写",
+    title: "德赛原装正品 iPhone 电池",
+    platform: "天猫",
+    imageUrl: "assets/products/iphone13-battery-1.jpg",
+    price: "¥53.84起",
+    compatibleModels: "iPhone X / iPhone 11 / iPhone 12 Pro / iPhone 13 / XR / XS Max / 7 / 8P",
+    sales: "已售6000+",
     tag: "电池配件",
-    status: "商品图占位"
+    status: "已采集商品图"
   },
   {
     id: 3,
     brand: "Apple",
-    model: "iPhone 12 Pro",
+    model: "iPhone 13",
     part: "屏幕",
-    title: "iPhone 12 Pro 屏幕总成更换配件",
-    platform: "京东",
-    imageUrl: "assets/products/iphone12-screen-1.jpg",
-    price: "价格待填写",
+    title: "手机屏幕总成更换配件",
+    platform: "天猫",
+    imageUrl: "assets/products/iphone13-screen-1.jpg",
+    price: "¥290起",
+    compatibleModels: "iPhone 11 / iPhone X / iPhone XR / XS Max / 12PM / iPhone 13 mini 等",
+    sales: "已售8000+",
     tag: "屏幕总成",
-    status: "商品图占位"
+    status: "已采集商品图"
   },
   {
     id: 4,
     brand: "Apple",
-    model: "iPhone 12 Pro",
-    part: "电池",
-    title: "iPhone 12 Pro 电池更换配件",
-    platform: "拼多多",
-    imageUrl: "assets/products/iphone12-battery-1.jpg",
-    price: "价格待填写",
-    tag: "电池配件",
-    status: "商品图占位"
-  },
-  {
-    id: 5,
-    brand: "Apple",
-    model: "iPhone 13",
-    part: "屏幕",
-    title: "iPhone 13 屏幕总成更换配件",
-    platform: "京东",
-    imageUrl: "assets/products/iphone13-screen-1.jpg",
-    price: "价格待填写",
-    tag: "屏幕总成",
-    status: "商品图占位"
-  },
-  {
-    id: 6,
-    brand: "Apple",
-    model: "iPhone 13",
-    part: "电池",
-    title: "iPhone 13 电池更换配件",
-    platform: "京东",
-    imageUrl: "assets/products/iphone13-battery-1.jpg",
-    price: "价格待填写",
-    tag: "电池配件",
-    status: "商品图占位"
-  },
-  {
-    id: 7,
-    brand: "Apple",
-    model: "iPhone 13 Pro",
-    part: "屏幕",
-    title: "iPhone 13 Pro 屏幕总成更换配件",
-    platform: "淘宝",
-    imageUrl: "assets/products/iphone13-screen-1.jpg",
-    price: "价格待填写",
-    tag: "屏幕总成",
-    status: "商品图占位"
-  },
-  {
-    id: 8,
-    brand: "Apple",
-    model: "iPhone 13 Pro",
-    part: "电池",
-    title: "iPhone 13 Pro 电池更换配件",
-    platform: "拼多多",
-    imageUrl: "assets/products/iphone13-battery-1.jpg",
-    price: "价格待填写",
-    tag: "电池配件",
-    status: "商品图占位"
-  },
-  {
-    id: 9,
-    brand: "Apple",
-    model: "iPhone 14 Pro",
-    part: "电池",
-    title: "iPhone 14 Pro 电池更换配件",
-    platform: "京东",
-    imageUrl: "assets/products/iphone13-battery-1.jpg",
-    price: "价格待填写",
-    tag: "电池配件",
-    status: "商品图占位"
-  },
-  {
-    id: 10,
-    brand: "Apple",
     model: "iPhone 14 Pro Max",
     part: "屏幕",
-    title: "iPhone 14 Pro Max 屏幕总成更换配件",
-    platform: "京东",
-    imageUrl: "assets/products/iphone13-screen-1.jpg",
-    price: "价格待填写",
+    title: "iPhone 14 Pro Max 柔性 OLED 屏幕总成",
+    platform: "商品页截图",
+    imageUrl: "assets/products/iphone14promax-screen-1.jpg",
+    price: "¥516.69",
+    compatibleModels: "iPhone 14 Pro Max",
+    sales: "未显示",
     tag: "屏幕总成",
-    status: "商品图占位"
-  },
-  {
-    id: 11,
-    brand: "Apple",
-    model: "iPhone 15",
-    part: "电池",
-    title: "iPhone 15 电池更换配件",
-    platform: "淘宝",
-    imageUrl: "assets/products/iphone13-battery-1.jpg",
-    price: "价格待填写",
-    tag: "电池配件",
-    status: "商品图占位"
-  },
-  {
-    id: 12,
-    brand: "Apple",
-    model: "iPhone 16 Pro Max",
-    part: "电池",
-    title: "iPhone 16 Pro Max 电池更换配件",
-    platform: "京东",
-    imageUrl: "assets/products/iphone13-battery-1.jpg",
-    price: "价格待填写",
-    tag: "电池配件",
-    status: "商品图占位"
-  },
-  {
-    id: 13,
-    brand: "Apple",
-    model: "iPhone 11",
-    part: "电池",
-    title: "iPhone 11 电池更换配件",
-    platform: "拼多多",
-    imageUrl: "assets/products/iphone12-battery-1.jpg",
-    price: "价格待填写",
-    tag: "电池配件",
-    status: "商品图占位"
-  },
-  {
-    id: 14,
-    brand: "Apple",
-    model: "iPhone X",
-    part: "屏幕",
-    title: "iPhone X 屏幕总成更换配件",
-    platform: "淘宝",
-    imageUrl: "assets/products/iphone12-screen-1.jpg",
-    price: "价格待填写",
-    tag: "屏幕总成",
-    status: "商品图占位"
-  },
-  {
-    id: 15,
-    brand: "Apple",
-    model: "iPhone X",
-    part: "电池",
-    title: "iPhone X 电池更换配件",
-    platform: "京东",
-    imageUrl: "assets/products/iphone12-battery-1.jpg",
-    price: "价格待填写",
-    tag: "电池配件",
-    status: "商品图占位"
+    status: "已采集商品图"
   }
 ];
 
@@ -838,7 +714,7 @@ function renderProducts() {
   if (keyword) {
     matched = matched.filter(product => {
       const haystack =
-        `${product.title} ${product.model} ${product.part} ${product.platform}`.toLowerCase();
+        `${product.title} ${product.model} ${product.compatibleModels || ""} ${product.part} ${product.platform} ${product.sales || ""}`.toLowerCase();
       return haystack.includes(keyword);
     });
   }
@@ -857,9 +733,12 @@ function renderProducts() {
     .map(product => {
       const title = escapeHtml(product.title);
       const platform = escapeHtml(product.platform);
-      const model = escapeHtml(product.model);
+      const compatibleModels = escapeHtml(
+        product.compatibleModels || product.model
+      );
       const part = escapeHtml(product.part);
       const price = escapeHtml(product.price);
+      const sales = escapeHtml(product.sales || "未填写");
       const tag = escapeHtml(product.tag);
       const imageUrl = encodeURI(product.imageUrl);
 
@@ -878,9 +757,10 @@ function renderProducts() {
           <div class="product-info">
             <h3>${title}</h3>
             <p>平台：${platform}</p>
-            <p>适配型号：${model}</p>
+            <p>适配型号：${compatibleModels}</p>
             <p>故障部位：${part}</p>
             <p>价格：${price}</p>
+            <p>销量：${sales}</p>
             <span class="product-tag">${tag}</span>
           </div>
         </article>
