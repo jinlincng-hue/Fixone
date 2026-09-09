@@ -1,0 +1,6 @@
+<section class="empty-state">
+  <p><%= message %></p>
+  <% if (actionHref && actionText) { %>
+    <a class="button primary" href="<%= actionHref %>"><%= actionText %></a>
+  <% } %>
+</section>

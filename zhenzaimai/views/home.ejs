@@ -1,0 +1,20 @@
+<%- include("partials/header", { title, page }) %>
+<%- include("partials/login-prompt", { nextUrl: "/" }) %>
+
+<section class="mobile-feed-page shopping-feed">
+  <div class="section-heading feed-heading">
+    <h1>今日好物</h1>
+  </div>
+
+  <div class="product-grid feed-grid">
+    <% todayProducts.forEach((product) => { %>
+      <%- include("partials/product-card", { product }) %>
+    <% }) %>
+  </div>
+
+  <% if (!todayProducts.length) { %>
+    <%- include("partials/empty", { message: "暂时还没有商品。", actionHref: "/account", actionText: "去我的发布" }) %>
+  <% } %>
+</section>
+
+<%- include("partials/footer") %>

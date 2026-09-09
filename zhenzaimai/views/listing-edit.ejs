@@ -1,0 +1,28 @@
+<%- include("partials/header", { title, page }) %>
+<section class="page-hero small-hero">
+  <div>
+    <h1>编辑发布</h1>
+    <p>修改名称、价格、图片和描述。</p>
+  </div>
+  <a class="button outline" href="/listings/<%= listing.id %>">返回详情</a>
+</section>
+
+<section class="form-shell">
+  <% if (error) { %><p class="form-error"><%= error %></p><% } %>
+  <form action="/listings/<%= listing.id %>/edit" method="post" enctype="multipart/form-data" class="stack-form">
+    <div class="form-grid-two publish-name-price">
+      <label>名称
+        <input name="name" required maxlength="120" value="<%= listing.name %>">
+      </label>
+      <label>价格
+        <input name="price" type="number" step="0.01" min="0" inputmode="decimal" required value="<%= listing.price ?? '' %>" placeholder="请输入价格">
+      </label>
+    </div>
+    <%- include("partials/listing-image-upload", { existingImages: existingImages || [] }) %>
+    <label>描述
+      <textarea name="description" rows="6" maxlength="1200" required><%= listing.description || '' %></textarea>
+    </label>
+    <button class="button primary" type="submit">保存修改</button>
+  </form>
+</section>
+<%- include("partials/footer") %>

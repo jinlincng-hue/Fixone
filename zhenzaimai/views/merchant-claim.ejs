@@ -1,0 +1,40 @@
+<%- include("partials/header", { title, page }) %>
+<section class="page-hero small-hero">
+  <div><p class="eyebrow">已有店铺</p><h1>认领已有店铺</h1><p>确认门面和地址，填写与店铺的关系，再提交平台审核。</p></div>
+  <a class="button outline" href="/merchant/apply">返回入驻入口</a>
+</section>
+
+<section class="form-shell claim-shell">
+  <% if (error) { %><p class="form-error"><%= error %></p><% } %>
+  <form action="/merchant/claim" method="get" class="inline-search">
+    <input type="search" name="q" value="<%= query %>" placeholder="搜索店铺名称或地址">
+    <button class="button primary" type="submit">搜索</button>
+  </form>
+  <% if (shops.length) { %>
+    <form action="/merchant/claims" method="post" enctype="multipart/form-data" class="stack-form claim-form">
+      <fieldset class="form-block">
+        <legend>1. 选择要认领的店铺</legend>
+        <div class="claim-shop-list">
+          <% shops.forEach((shop) => { %>
+            <label class="claim-shop-option">
+              <input type="radio" name="shop_id" value="<%= shop.id %>" required>
+              <img src="<%= shop.cover_image || shop.logo_image %>" alt="<%= shop.name %>">
+              <span><strong><%= shop.name %></strong><small><%= shop.address %></small></span>
+            </label>
+          <% }) %>
+        </div>
+      </fieldset>
+      <fieldset class="form-block">
+        <legend>2. 确认店铺关系</legend>
+        <label>您与店铺的关系<input name="relationship" maxlength="120" required placeholder="如店主、合伙人、授权店长"></label>
+        <label>平台邀请码（选填）<input name="invite_code" maxlength="80" placeholder="有邀请码可填写"></label>
+        <label>营业执照（没有邀请码时必填）<input name="license" type="file" accept="image/jpeg,image/png,image/webp"></label>
+        <p class="muted">营业执照仅店主本人和平台管理员可查看。</p>
+      </fieldset>
+      <button class="button primary" type="submit">提交认领审核</button>
+    </form>
+  <% } else { %>
+    <div class="empty-state"><p>没有找到可认领店铺。确认平台未收录后，可以创建新店铺。</p><form action="/merchant/onboarding/create" method="post"><button class="button primary" type="submit">创建新店铺</button></form></div>
+  <% } %>
+</section>
+<%- include("partials/footer") %>

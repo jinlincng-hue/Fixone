@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title ? `${title} - 高桥 · 镇在卖` : "高桥 · 镇在卖" %></title>
+    <link rel="stylesheet" href="/styles.css?v=20260904">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="topbar">
+        <a class="brand" href="/" aria-label="高桥 · 镇在卖首页">
+          <span class="brand-script">高桥</span>
+          <span class="brand-rest"> · 镇在卖</span>
+        </a>
+        <% if (page === 'home') { %>
+          <form class="top-search" action="/search" method="get">
+            <input type="search" name="q" placeholder="搜商品、商家、服务" aria-label="搜索商品、商家、服务">
+            <button type="submit" aria-label="搜索">搜索</button>
+          </form>
+        <% } %>
+      </div>
+    </header>
+    <main>
+      <% if (flash) { %>
+        <div class="flash <%= flash.type %>" data-auto-close-flash><%= flash.message %></div>
+      <% } %>

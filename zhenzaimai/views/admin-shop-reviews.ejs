@@ -1,0 +1,84 @@
+<%- include("partials/header", { title, page }) %>
+<section class="page-hero small-hero">
+  <div>
+    <p class="eyebrow">平台审核</p>
+    <h1>店铺审核与认领</h1>
+    <p>审核实体店资质、店铺认领和乡邻小铺的待审发布内容。</p>
+  </div>
+  <a class="button outline" href="/admin/dashboard">返回管理员后台</a>
+</section>
+
+<section class="admin-review-nav">
+  <a href="#shops">实体店审核</a>
+  <a href="#content">乡邻发布审核</a>
+  <a href="#claims">店铺认领</a>
+</section>
+
+<section class="admin-review-list" id="shops">
+  <div class="section-heading"><h2>认证实体店申请</h2><span><%= shops.length %> 条</span></div>
+  <% if (!shops.length) { %><p class="muted">当前没有需要处理的实体店申请。</p><% } %>
+  <% shops.forEach((shop) => { %>
+    <article class="admin-review-card">
+      <% if (shop.possibleDuplicates.length) { %>
+        <div class="duplicate-shop-note"><strong>可能重复的店铺</strong><% shop.possibleDuplicates.forEach((duplicate) => { %><p><a href="/shops/<%= duplicate.id %>" target="_blank" rel="noreferrer"><%= duplicate.name %></a> · <%= duplicate.address || "地址未填写" %></p><% }) %></div>
+      <% } %>
+      <div class="review-media"><img src="<%= shop.cover_image || shop.logo_image %>" alt="<%= shop.name %>"><div class="review-gallery"><% shop.media.forEach((item) => { %><img src="<%= item.file_path %>" alt="店内实拍"><% }) %></div></div>
+      <div class="review-details">
+        <span class="status-chip <%= shop.review_status %>"><%= statusLabel(shop.review_status) %></span>
+        <h2><%= shop.name %></h2>
+        <p>申请人：<%= shop.applicant_display_name || shop.applicant_username %> · <%= maskPhone(shop.applicant_phone) %></p>
+        <p><%= shop.address || "地址未填写" %></p>
+        <p><strong>认证实体店</strong> · <%= shop.business_scope || "店铺简介待填写" %></p>
+        <p>联系方式：<%= shop.phone || shop.contact_wechat || (shop.allow_consultation ? "站内咨询" : "未填写") %></p>
+        <p>位置：<%= shop.latitude && shop.longitude ? `${shop.latitude}, ${shop.longitude}` : "未选地图点位" %></p>
+        <% if (shop.latitude && shop.longitude) { %><p><a href="https://www.openstreetmap.org/?mlat=<%= shop.latitude %>&mlon=<%= shop.longitude %>#map=18/<%= shop.latitude %>/<%= shop.longitude %>" target="_blank" rel="noreferrer">在地图查看位置</a></p><% } %>
+        <% if (shop.credit_code) { %><p>统一社会信用代码：<%= shop.credit_code %></p><% } %>
+        <% if (shop.applicant_relation) { %><p>申请关系：<%= shop.applicant_relation %></p><% } %>
+        <% if (shop.credentials.length) { %><div class="credential-list"><strong>私有资质</strong><% shop.credentials.forEach((credential) => { %><a href="/admin/shop-credentials/<%= credential.id %>" target="_blank" rel="noreferrer"><%= credential.credential_type === "business_license" ? "营业执照" : "其他资质" %> · <%= credential.original_name || credential.file_name %></a><% }) %></div><% } %>
+        <% if (shop.review_note) { %><p class="review-note">上次审核说明：<%= shop.review_note %></p><% } %>
+      </div>
+      <form action="/admin/shops/<%= shop.id %>/review" method="post" class="review-form">
+        <label>审核说明<textarea name="review_note" rows="4" maxlength="500" placeholder="要求补充或拒绝时必须说明具体原因"><%= shop.review_status === "changes_requested" ? shop.review_note || "" : "" %></textarea></label>
+        <label>需要修改的字段<select name="review_fields" multiple size="6"><option value="basic">基本信息</option><option value="photos">门面与店内实拍</option><option value="location">地址与地图位置</option><option value="contact">联系方式和营业信息</option><option value="services">服务能力</option><option value="qualification">资质认证</option></select></label>
+        <div class="review-actions"><button class="button primary small" type="submit" name="action" value="approve">通过</button><button class="button outline small" type="submit" name="action" value="changes">要求补充</button><button class="button danger small" type="submit" name="action" value="reject">拒绝</button><button class="button light small" type="submit" name="action" value="suspend">暂停</button></div>
+      </form>
+    </article>
+  <% }) %>
+</section>
+
+<section class="admin-review-list" id="content">
+  <div class="section-heading"><h2>乡邻发布审核</h2><span><%= contentReviews.length %> 条</span></div>
+  <p class="muted">乡邻小铺的新农货、闲置和本地服务默认进入此队列；实体店命中敏感类别或平台复审规则的内容也会在此处理。</p>
+  <% if (!contentReviews.length) { %><p class="muted">当前没有待处理的发布内容。</p><% } %>
+  <% contentReviews.forEach((item) => { %>
+    <article class="admin-review-card content-review-card">
+      <div class="review-media"><img src="<%= item.image || "/assets/images/product-placeholder.svg" %>" alt="<%= item.title %>"></div>
+      <div class="review-details">
+        <span class="status-chip <%= item.publication_status %>"><%= statusLabel(item.publication_status) %></span>
+        <h2><%= item.title %></h2>
+        <p>发布人：<%= item.publisher_name || "未知用户" %></p>
+        <p>所属空间：<%= item.shop_name || "未关联小铺" %> · <%= item.business_mode === "home_shop" ? "乡邻小铺" : "认证实体店" %></p>
+        <p>内容类型：<%= item.listing_type === "local_produce" ? "自家农货" : item.listing_type === "secondhand" ? "闲置二手" : item.listing_type === "service" ? "本地服务" : "普通商品" %><%= item.category_name ? ` · ${item.category_name}` : "" %></p>
+        <p><%= item.description || "未填写说明" %></p>
+        <% if (item.review_reason) { %><p class="review-note">审核说明：<%= item.review_reason %></p><% } %>
+      </div>
+      <form action="/admin/content/<%= item.source_type %>/<%= item.id %>/review" method="post" class="review-form">
+        <label>拒绝或下架原因<textarea name="review_reason" rows="4" maxlength="500" placeholder="拒绝时必须填写，发布者修改后可以重新提交"><%= item.publication_status === "rejected" ? item.review_reason || "" : "" %></textarea></label>
+        <div class="review-actions"><button class="button primary small" type="submit" name="action" value="approve">通过并公开</button><button class="button danger small" type="submit" name="action" value="reject">拒绝</button><button class="button light small" type="submit" name="action" value="offline">下架</button></div>
+      </form>
+    </article>
+  <% }) %>
+</section>
+
+<section class="admin-review-list" id="claims">
+  <div class="section-heading"><h2>店铺认领申请</h2><span><%= claims.length %> 条</span></div>
+  <% if (!claims.length) { %><p class="muted">当前没有需要处理的店铺认领申请。</p><% } %>
+  <% claims.forEach((claim) => { %>
+    <article class="admin-review-card claim-review-card">
+      <div class="review-media"><img src="<%= claim.cover_image || "/assets/images/shop-placeholder.svg?v=2" %>" alt="<%= claim.shop_name %>"></div>
+      <div class="review-details"><span class="status-chip <%= claim.status %>"><%= statusLabel(claim.status) %></span><h2><%= claim.shop_name %></h2><p><%= claim.address %></p><p>申请人：<%= claim.applicant_display_name || claim.applicant_username %></p><p>关系：<%= claim.relationship %></p><% if (claim.invite_code) { %><p>邀请码：<%= claim.invite_code %></p><% } %><% if (claim.license_file_name) { %><p><a href="/admin/licenses/<%= claim.license_file_name %>" target="_blank" rel="noreferrer">查看认领营业执照</a></p><% } %><% if (claim.review_note) { %><p class="review-note">上次审核说明：<%= claim.review_note %></p><% } %></div>
+      <form action="/admin/shop-claims/<%= claim.id %>/review" method="post" class="review-form"><label>审核说明<textarea name="review_note" rows="4" maxlength="500" placeholder="要求补充或拒绝时必须说明具体原因"><%= claim.status === "changes_requested" ? claim.review_note || "" : "" %></textarea></label><label>需要修改的字段<select name="review_fields" multiple size="4"><option value="relationship">与店铺的关系</option><option value="invite_code">邀请码</option><option value="license">营业执照</option></select></label><div class="review-actions"><button class="button primary small" type="submit" name="action" value="approve">通过</button><button class="button outline small" type="submit" name="action" value="changes">要求补充</button><button class="button danger small" type="submit" name="action" value="reject">拒绝</button><button class="button light small" type="submit" name="action" value="suspend">暂停</button></div></form>
+    </article>
+  <% }) %>
+</section>
+<%- include("partials/footer") %>

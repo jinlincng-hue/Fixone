@@ -1,0 +1,34 @@
+<%- include("partials/header", { title, page }) %>
+<section class="page-hero small-hero">
+  <div>
+    <h1>便民服务</h1>
+    <p>药店送药、家电维修、送水到家、跑腿代办、电动车维修、五金维修。</p>
+  </div>
+  <a class="button outline" href="/wanted/new?q=便民服务">找不到就问全镇</a>
+</section>
+
+<section class="notice-band">
+  药店第一版只展示认证药店、营业时间、电话和配送范围，不提供在线售药、处方上传或药品支付。
+</section>
+
+<section class="service-grid">
+  <% services.forEach((service) => { %>
+    <article class="service-card">
+      <img src="<%= service.image %>" alt="<%= service.title %>">
+      <div class="item-title-row">
+        <h3><%= service.title %></h3>
+        <% if (service.shop_verified) { %><span class="verify">平台已核验</span><% } %>
+      </div>
+      <p><%= service.description %></p>
+      <dl class="service-meta">
+        <dt>营业时间</dt><dd><%= service.business_hours %></dd>
+        <dt>电话</dt><dd><%= phoneForPage(service.phone) %></dd>
+        <dt>范围</dt><dd><%= service.delivery_area %></dd>
+      </dl>
+    </article>
+  <% }) %>
+</section>
+<% if (!services.length) { %>
+  <%- include("partials/empty", { message: "暂时还没有已核验商家发布便民服务。商家入驻通过后，可在商家后台发布服务。", actionHref: "/merchant/apply", actionText: "商家入驻" }) %>
+<% } %>
+<%- include("partials/footer") %>

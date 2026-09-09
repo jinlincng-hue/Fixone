@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="360" viewBox="0 0 520 360">
+  <rect width="520" height="360" fill="#fff3dd"/>
+  <ellipse cx="190" cy="190" rx="70" ry="86" fill="#f5d7ac"/>
+  <ellipse cx="280" cy="178" rx="72" ry="92" fill="#f2cfa1"/>
+  <ellipse cx="350" cy="205" rx="62" ry="78" fill="#f6ddb8"/>
+  <path d="M90 268 C180 300 340 302 430 270" fill="none" stroke="#9b6c39" stroke-width="18" stroke-linecap="round"/>
+  <text x="38" y="58" font-size="34" font-family="Microsoft YaHei, sans-serif" font-weight="800" fill="#07564d">土鸡蛋</text>
+</svg>

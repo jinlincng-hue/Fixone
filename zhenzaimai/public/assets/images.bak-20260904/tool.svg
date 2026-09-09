@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="360" viewBox="0 0 520 360">
+  <rect width="520" height="360" fill="#fff0df"/>
+  <path d="M155 260 L330 85" stroke="#7a4e2d" stroke-width="24" stroke-linecap="round"/>
+  <path d="M310 70 C360 62 395 86 410 120 L368 162 L318 112Z" fill="#0a6a5f"/>
+  <path d="M138 232 L190 284" stroke="#ff6a1a" stroke-width="26" stroke-linecap="round"/>
+  <text x="38" y="58" font-size="34" font-family="Microsoft YaHei, sans-serif" font-weight="800" fill="#07564d">五金农具</text>
+</svg>

@@ -1,0 +1,40 @@
+<%- include("partials/header", { title, page }) %>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<section class="page-hero map-hero">
+  <div>
+    <h1>高桥镇地图</h1>
+    <p>查看高桥镇中心、附近已核验商家和本地生活服务点位。</p>
+  </div>
+  <a class="button outline" href="https://www.openstreetmap.org/search?query=%E9%95%BF%E6%B2%99%E5%8E%BF%20%E9%AB%98%E6%A1%A5%E9%95%87" target="_blank" rel="noreferrer">在 OpenStreetMap 打开</a>
+</section>
+
+<section class="map-layout">
+  <div class="map-shell">
+    <div id="gaoqiao-map" class="map-canvas" data-center='<%- JSON.stringify(mapCenter) %>' data-markers='<%- JSON.stringify(markers) %>'></div>
+  </div>
+  <aside class="map-panel">
+    <h2>地图说明</h2>
+    <p>地图底图使用 OpenStreetMap，页面保留版权署名。商家点位为 MVP 演示坐标，后续可以在商家资料里增加真实经纬度字段。</p>
+    <div class="map-legend">
+      <span><i class="legend-dot town"></i>镇中心</span>
+      <span><i class="legend-dot shop"></i>商家</span>
+      <span><i class="legend-dot landmark"></i>风貌点</span>
+    </div>
+    <h2>已接入点位</h2>
+    <div class="map-marker-list">
+      <% markers.forEach((marker) => { %>
+        <article>
+          <strong><%= marker.title %></strong>
+          <p><%= marker.description %></p>
+          <% if (marker.verified) { %><span class="verify">平台已核验</span><% } %>
+          <% if (marker.href) { %><a href="<%= marker.href %>">查看详情</a><% } %>
+        </article>
+      <% }) %>
+    </div>
+  </aside>
+</section>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="/map.js"></script>
+<%- include("partials/footer") %>

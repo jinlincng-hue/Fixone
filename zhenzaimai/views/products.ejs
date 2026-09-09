@@ -1,0 +1,28 @@
+<%- include("partials/header", { title, page }) %>
+<section class="page-hero small-hero">
+  <div>
+    <h1><%= selectedCategory ? selectedCategory.name : "附近商品" %></h1>
+    <p>商家新品优先展示平台已核验商户；登录后可查看完整联系电话。</p>
+  </div>
+  <form action="/search" method="get" class="inline-search">
+    <input type="search" name="q" placeholder="搜索商品">
+    <button class="button primary" type="submit">搜索</button>
+  </form>
+</section>
+
+<section class="category-filter">
+  <a href="/products" class="<%= !selectedCategory ? "active" : "" %>">全部</a>
+  <% categories.forEach((category) => { %>
+    <a href="/products?category=<%= category.slug %>" class="<%= selectedCategory && selectedCategory.slug === category.slug ? "active" : "" %>"><%= category.name %></a>
+  <% }) %>
+</section>
+
+<section class="product-grid wide">
+  <% products.forEach((product) => { %>
+    <%- include("partials/product-card", { product }) %>
+  <% }) %>
+</section>
+<% if (!products.length) { %>
+  <%- include("partials/empty", { message: "暂时没有符合条件的商品。", actionHref: "/wanted/new", actionText: "帮我问全镇" }) %>
+<% } %>
+<%- include("partials/footer") %>

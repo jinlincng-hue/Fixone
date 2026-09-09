@@ -1,0 +1,34 @@
+<%- include("partials/header", { title, page }) %>
+<% const publishIntent = typeof intent === "string" ? intent : "sell"; %>
+<section class="publish-choice-page">
+  <header class="account-subpage-header">
+    <a class="back-icon" href="/merchant/dashboard?shop=<%= shop.id %>" aria-label="返回小铺" title="返回小铺">←</a>
+    <div><p class="eyebrow">乡邻小铺</p><h1>发布</h1></div>
+  </header>
+  <div class="publish-kind-tabs publish-intent-tabs" aria-label="选择发布方向">
+    <a class="<%= publishIntent === 'sell' ? 'active' : '' %>" href="/merchant/home-shop/<%= shop.id %>/publish?intent=sell">我要卖出去</a>
+    <a class="<%= publishIntent === 'buy' ? 'active' : '' %>" href="/merchant/home-shop/<%= shop.id %>/publish?intent=buy">我要买进来</a>
+  </div>
+  <% if (error) { %><p class="form-error"><%= error %></p><% } %>
+  <form action="/merchant/home-shop/<%= shop.id %>/publish" method="post" enctype="multipart/form-data" class="stack-form publish-form">
+    <input type="hidden" name="publish_intent" value="<%= publishIntent %>">
+    <fieldset class="form-block">
+      <legend><%= publishIntent === "buy" ? "我想买进来" : "我想卖出去" %></legend>
+      <div class="form-grid-two publish-name-price">
+        <label>名称
+          <input name="name" required maxlength="120" value="<%= values.name || '' %>" placeholder="例如：自家蔬菜、闲置电动车、家电维修">
+        </label>
+        <label>价格
+          <input name="price" type="number" step="0.01" min="0" inputmode="decimal" required value="<%= values.price || '' %>" placeholder="请输入价格">
+        </label>
+      </div>
+      <%- include("partials/listing-image-upload", { existingImages: [] }) %>
+      <label>描述
+        <textarea name="description" rows="6" required maxlength="1200" placeholder="写下商品或需求的详细描述"><%= values.description || '' %></textarea>
+      </label>
+    </fieldset>
+    <p class="muted">乡邻小铺发布内容会先进入平台审核，审核通过后公开展示。</p>
+    <button class="button primary" type="submit"><%= publishIntent === "buy" ? "发布求购" : "提交审核" %></button>
+  </form>
+</section>
+<%- include("partials/footer") %>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="360" viewBox="0 0 520 360">
+  <rect width="520" height="360" fill="#fff0e7"/>
+  <circle cx="190" cy="190" r="78" fill="#de392d"/>
+  <circle cx="300" cy="174" r="86" fill="#f05b36"/>
+  <circle cx="360" cy="224" r="62" fill="#d93428"/>
+  <path d="M290 92 l22 50 l-52 -20 l48 -18 l-20 52" fill="#2f7b50"/>
+  <text x="38" y="58" font-size="34" font-family="Microsoft YaHei, sans-serif" font-weight="800" fill="#07564d">西红柿</text>
+</svg>

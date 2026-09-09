@@ -1,0 +1,43 @@
+<%- include("partials/header", { title, page }) %>
+
+<section class="account-subpage">
+  <header class="account-subpage-header">
+    <a class="back-icon" href="/account" aria-label="返回我的" title="返回我的">←</a>
+    <div><p class="eyebrow">我的交易</p><h1>我发布的</h1></div>
+    <a class="button primary small" href="/publish">发布</a>
+  </header>
+
+  <% if (listings.length) { %>
+    <div class="account-content-list">
+      <% listings.forEach((listing) => { %>
+        <article class="account-content-item">
+          <% if (listing.image) { %><img src="<%= listing.image %>" alt="<%= listing.name %>"><% } else { %><span class="account-content-placeholder">闲置</span><% } %>
+          <div class="account-content-copy">
+            <a href="/listings/<%= listing.id %>"><h2><%= listing.name %></h2></a>
+            <p><%= listing.category_name %> · <%= listing.condition || "成色待补充" %> · <%= listing.village %></p>
+            <% if (listing.type === "farm" && Number(listing.price) === 0) { %>
+              <strong>联系卖家</strong>
+            <% } else { %>
+              <strong><%= yuan(listing.price) %>/<%= listing.unit %></strong>
+            <% } %>
+            <small><%= statusLabel(listing.status) %> · 更新于 <%= formatDate(listing.updated_at) %></small>
+            <div class="account-content-actions">
+              <a class="button light small" href="/listings/<%= listing.id %>/edit">编辑</a>
+              <form action="/listings/<%= listing.id %>/status" method="post" class="inline-form">
+                <input type="hidden" name="status" value="<%= listing.status === "active" ? "inactive" : "active" %>">
+                <button class="button outline small" type="submit"><%= listing.status === "active" ? "下架" : "上架" %></button>
+              </form>
+              <form action="/listings/<%= listing.id %>/delete" method="post" class="inline-form" onsubmit="return confirm('确定删除这条发布吗？删除后无法恢复。');">
+                <button class="button danger small" type="submit">删除</button>
+              </form>
+            </div>
+          </div>
+        </article>
+      <% }) %>
+    </div>
+  <% } else { %>
+    <div class="account-empty"><p>还没有个人发布。</p><a class="button primary" href="/publish">马上发布</a></div>
+  <% } %>
+</section>
+
+<%- include("partials/footer") %>

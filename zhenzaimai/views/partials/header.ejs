@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title ? `${title} - 高桥 · 镇在卖` : "高桥 · 镇在卖" %></title>
+    <meta name="description" content="高桥 · 镇在卖 — 高桥镇本地商品、商家与便民服务平台，邻里互助，就近交易。">
+    <link rel="icon" type="image/png" href="/assets/images/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<%= title ? `${title} - 高桥 · 镇在卖` : '高桥 · 镇在卖' %>">
+    <meta property="og:description" content="高桥镇本地商品、商家与便民服务平台，邻里互助，就近交易。">
+    <meta property="og:image" content="https://gqsaling.acmorning.online/assets/images/logo.png">
+    <meta property="og:url" content="https://gqsaling.acmorning.online">
+    <meta property="og:site_name" content="高桥 · 镇在卖">
+    <meta name="keywords" content="高桥,镇在卖,二手交易,本地商家,便民服务,高桥镇,农产品,闲置,邻里互助">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="高桥 · 镇在卖">
+    <link rel="canonical" href="https://gqsaling.acmorning.online">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "高桥 · 镇在卖",
+      "url": "https://gqsaling.acmorning.online",
+      "description": "高桥镇本地商品、商家与便民服务平台，邻里互助，就近交易。",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://gqsaling.acmorning.online/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <link rel="stylesheet" href="/styles.css?v=20260904h">
+  <script>
+    (function(){
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "dark" || t === "light") {
+          document.documentElement.setAttribute("data-theme", t);
+        }
+      } catch(e) {}
+    })();
+  </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="topbar">
+        <a class="brand" href="/" aria-label="高桥 · 镇在卖首页">
+          <img class="brand-logo" src="/assets/images/logo.png" alt="高桥 · 镇在卖" style="width:32px;height:32px;border-radius:6px;object-fit:cover;margin-right:8px;vertical-align:middle;">
+          <span class="brand-script">高桥</span>
+          <span class="brand-rest"> · 镇在卖</span>
+        </a>
+        <% if (page === 'home') { %>
+          <form class="top-search" action="/search" method="get">
+            <input type="search" name="q" placeholder="搜商品、商家、服务" aria-label="搜索商品、商家、服务">
+            <button type="submit" aria-label="搜索">搜索</button>
+          </form>
+        <% } %>
+      </div>
+    </header>
+    <main>
+      <% if (flash) { %>
+        <div class="flash <%= flash.type %>" data-auto-close-flash><%= flash.message %></div>
+      <% } %>

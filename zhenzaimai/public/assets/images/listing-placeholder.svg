@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="360" viewBox="0 0 520 360">
+  <rect width="520" height="360" fill="#edf7e7"/>
+  <circle cx="260" cy="176" r="88" fill="#ffffff" stroke="#0a6a5f" stroke-width="6"/>
+  <text x="260" y="190" text-anchor="middle" font-size="34" font-family="Microsoft YaHei, sans-serif" font-weight="800" fill="#07564d">本地发布</text>
+</svg>

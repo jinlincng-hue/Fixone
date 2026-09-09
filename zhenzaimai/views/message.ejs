@@ -1,0 +1,43 @@
+<%- include("partials/header", { title, page }) %>
+<section class="error-page">
+  <div class="error-card">
+    <div class="error-code"><%= page === 'error' ? '500' : '404' %></div>
+    <div class="error-icon">
+      <% if (page === 'error') { %>
+        <svg viewBox="0 0 64 64" width="64" height="64" fill="none">
+          <circle cx="32" cy="32" r="28" stroke="#c9361f" stroke-width="3"/>
+          <path d="M20 24 L44 24 M20 32 L44 32 M20 40 L36 40" stroke="#c9361f" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      <% } else { %>
+        <svg viewBox="0 0 64 64" width="64" height="64" fill="none">
+          <circle cx="32" cy="32" r="28" stroke="#0a6a5f" stroke-width="3"/>
+          <circle cx="24" cy="26" r="3" fill="#0a6a5f"/>
+          <circle cx="40" cy="26" r="3" fill="#0a6a5f"/>
+          <path d="M22 40 Q32 48 42 40" stroke="#0a6a5f" stroke-width="3" stroke-linecap="round" fill="none"/>
+          <path d="M46 18 L52 12 M52 18 L46 12" stroke="#f5c842" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      <% } %>
+    </div>
+    <h1 class="error-title"><%= title %></h1>
+    <p class="error-desc"><%= message %></p>
+    <div class="error-actions">
+      <a class="button primary" href="/">返回首页</a>
+      <a class="button outline" href="javascript:history.back()">返回上一页</a>
+    </div>
+  </div>
+</section>
+<style>
+.error-page { min-height: 60vh; display: grid; place-items: center; padding: 40px 20px; }
+.error-card { text-align: center; max-width: 420px; }
+.error-code { font-size: 72px; font-weight: 900; color: var(--teal-900); line-height: 1; margin-bottom: 8px; letter-spacing: -2px; }
+.page-error .error-code, .error-page:has(.error-code) .error-code { background: linear-gradient(135deg, #0a6a5f, #0d8a78); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.error-icon { margin: 16px 0; display: flex; justify-content: center; }
+.error-title { font-size: 22px; font-weight: 700; color: var(--teal-900); margin: 0 0 8px; }
+.error-desc { color: #666; font-size: 15px; line-height: 1.6; margin: 0 0 24px; }
+.error-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+@media (max-width: 480px) {
+  .error-code { font-size: 56px; }
+  .error-title { font-size: 18px; }
+}
+</style>
+<%- include("partials/footer") %>

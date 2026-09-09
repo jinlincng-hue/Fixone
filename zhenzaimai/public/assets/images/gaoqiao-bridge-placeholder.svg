@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="420" viewBox="0 0 600 420">
+  <rect width="600" height="420" fill="#dfeff0"/>
+  <rect y="250" width="600" height="170" fill="#92bfc0"/>
+  <path d="M0 238 C120 170 160 212 260 142 C360 72 456 148 600 86 V260 H0Z" fill="#2f7b50"/>
+  <path d="M85 258 C155 146 280 146 350 258" fill="none" stroke="#f0e1c5" stroke-width="34"/>
+  <path d="M90 258 H350" stroke="#c49f6b" stroke-width="22"/>
+  <path d="M152 258 C188 198 248 198 284 258" fill="#92bfc0"/>
+  <path d="M0 318 C150 280 250 360 400 306 C500 270 560 304 600 290 V420 H0Z" fill="#6aa2a4" opacity=".8"/>
+  <text x="34" y="58" font-size="34" font-family="Microsoft YaHei, sans-serif" font-weight="800" fill="#07564d">高桥风貌</text>
+</svg>

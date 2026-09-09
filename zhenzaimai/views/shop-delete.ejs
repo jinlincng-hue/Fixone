@@ -1,0 +1,21 @@
+<%- include("partials/header", { title, page }) %>
+
+<section class="account-subpage shop-delete-page">
+  <header class="account-subpage-header">
+    <a class="back-icon" href="/account/shops" aria-label="返回我的店铺" title="返回我的店铺">←</a>
+    <div><p class="eyebrow">我的店铺</p><h1>关闭并删除店铺</h1></div>
+  </header>
+
+  <section class="account-form-section danger-panel">
+    <h2><%= shop.name %></h2>
+    <p class="danger-copy">删除后将同时移除这家店铺的商品、闲置、服务、店内照片和店铺资质，操作不能撤销。账号本身不会被注销。</p>
+    <% if (error) { %><p class="form-error"><%= error %></p><% } %>
+    <form action="/account/shops/<%= shop.id %>/delete" method="post" class="stack-form">
+      <label>请输入“删除店铺”确认<input name="confirm_text" required maxlength="20" autocomplete="off" placeholder="删除店铺"></label>
+      <button class="button danger" type="submit">确认删除店铺</button>
+      <a class="button outline" href="/account/shops">返回我的店铺</a>
+    </form>
+  </section>
+</section>
+
+<%- include("partials/footer") %>

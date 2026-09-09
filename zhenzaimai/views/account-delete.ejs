@@ -1,0 +1,20 @@
+<%- include("partials/header", { title, page }) %>
+
+<section class="account-subpage">
+  <header class="account-subpage-header">
+    <a class="back-icon" href="/account/security" aria-label="返回账户安全" title="返回账户安全">←</a>
+    <div><p class="eyebrow">账户安全</p><h1>注销账号</h1></div>
+  </header>
+
+  <section class="account-form-section danger-panel" id="danger">
+    <p class="danger-copy">注销后会删除该账号的个人发布、求购、商家资料、店铺、商品和服务。该操作不可恢复。</p>
+    <% if (profile.role === "admin") { %><p class="muted">最后一个可用管理员账号不能注销，避免平台后台无法进入。</p><% } %>
+    <form action="/account/delete" method="post" class="stack-form delete-account-form">
+      <label>当前密码<input name="password" type="password" required autocomplete="current-password"></label>
+      <label>输入“注销账号”确认<input name="confirm_text" required maxlength="20" placeholder="注销账号"></label>
+      <button class="button danger" type="submit">确认注销账号</button>
+    </form>
+  </section>
+</section>
+
+<%- include("partials/footer") %>

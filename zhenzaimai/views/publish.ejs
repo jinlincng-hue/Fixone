@@ -1,0 +1,36 @@
+<%- include("partials/header", { title, page }) %>
+<% const publishIntent = typeof intent === "string" ? intent : (mode === "wanted" ? "buy" : "sell"); %>
+<section class="page-hero small-hero publish-hero">
+  <div class="publish-hero-copy">
+    <h1>发布</h1>
+    <p>把想卖的东西或想买的东西告诉高桥镇。</p>
+  </div>
+</section>
+
+<section class="form-shell publish-choice-page">
+  <div class="publish-kind-tabs publish-intent-tabs" aria-label="选择发布方向">
+    <a class="<%= publishIntent === 'sell' ? 'active' : '' %>" href="/publish?mode=sell">我要卖出去</a>
+    <a class="<%= publishIntent === 'buy' ? 'active' : '' %>" href="/publish?mode=buy">我要买进来</a>
+  </div>
+  <% if (error) { %><p class="form-error"><%= error %></p><% } %>
+  <form action="/publish" method="post" enctype="multipart/form-data" class="stack-form publish-form" data-publish-form>
+    <input type="hidden" name="publish_intent" value="<%= publishIntent %>">
+    <fieldset class="form-block">
+      <legend><%= publishIntent === "buy" ? "我想买进来" : "我想卖出去" %></legend>
+      <div class="form-grid-two publish-name-price">
+        <label>名称
+          <input name="name" maxlength="120" required value="<%= publishIntent === 'buy' ? (wantedTitle || '') : (listing && listing.name ? listing.name : '') %>" placeholder="例如：土鸡蛋、二手电动车、家电维修">
+        </label>
+        <label>价格
+          <input name="price" type="number" step="0.01" min="0" inputmode="decimal" required value="<%= listing && listing.price ? listing.price : '' %>" placeholder="请输入价格">
+        </label>
+      </div>
+      <%- include("partials/listing-image-upload", { existingImages: [] }) %>
+      <label>描述
+        <textarea name="description" rows="6" maxlength="1200" required placeholder="写下商品或需求的详细描述"><%= listing && listing.description ? listing.description : '' %></textarea>
+      </label>
+    </fieldset>
+    <button class="button primary" type="submit"><%= publishIntent === "buy" ? "发布求购" : "发布" %></button>
+  </form>
+</section>
+<%- include("partials/footer") %>

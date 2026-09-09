@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="360" viewBox="0 0 520 360">
+  <rect width="520" height="360" fill="#eef4f5"/>
+  <circle cx="160" cy="260" r="44" fill="#27323a"/>
+  <circle cx="358" cy="260" r="44" fill="#27323a"/>
+  <path d="M154 252 H250 L310 174 H365" fill="none" stroke="#0a6a5f" stroke-width="22" stroke-linecap="round"/>
+  <path d="M300 174 L292 115" stroke="#27323a" stroke-width="12" stroke-linecap="round"/>
+  <path d="M292 115 H350" stroke="#27323a" stroke-width="12" stroke-linecap="round"/>
+  <rect x="192" y="182" width="88" height="34" rx="10" fill="#ff6a1a"/>
+  <text x="38" y="58" font-size="34" font-family="Microsoft YaHei, sans-serif" font-weight="800" fill="#07564d">二手电动车</text>
+</svg>

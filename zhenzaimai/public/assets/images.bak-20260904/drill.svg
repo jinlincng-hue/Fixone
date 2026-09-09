@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="360" viewBox="0 0 520 360">
+  <rect width="520" height="360" fill="#eaf3f7"/>
+  <rect x="138" y="128" width="180" height="76" rx="18" fill="#1676a8"/>
+  <rect x="306" y="148" width="68" height="28" fill="#2e3c45"/>
+  <path d="M374 162 L440 136 V188Z" fill="#8a969c"/>
+  <rect x="220" y="196" width="62" height="108" rx="16" fill="#0a6a5f"/>
+  <rect x="208" y="292" width="92" height="28" rx="8" fill="#2e3c45"/>
+  <circle cx="184" cy="166" r="24" fill="#ff6a1a"/>
+  <text x="38" y="58" font-size="34" font-family="Microsoft YaHei, sans-serif" font-weight="800" fill="#07564d">电钻</text>
+</svg>

@@ -1,0 +1,18 @@
+<%- include("partials/header", { title, page }) %>
+<section class="page-hero small-hero">
+  <div>
+    <h1><%= heading %></h1>
+    <p><%= intro %></p>
+  </div>
+  <a class="button primary" href="/publish?mode=<%= type %>">发布<%= type === "farm" ? "农产品" : "闲置" %></a>
+</section>
+
+<section class="product-grid wide">
+  <% listings.forEach((listing) => { %>
+    <%- include("partials/listing-card", { listing }) %>
+  <% }) %>
+</section>
+<% if (!listings.length) { %>
+  <%- include("partials/empty", { message: "暂时没有发布内容。", actionHref: "/publish", actionText: "马上发布" }) %>
+<% } %>
+<%- include("partials/footer") %>

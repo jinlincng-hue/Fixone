@@ -1,0 +1,29 @@
+<%- include("partials/header", { title, page }) %>
+
+<section class="mobile-feed-page shop-feed">
+  <div class="section-heading feed-heading">
+    <h1>附近好店</h1>
+    <form action="/shops" method="get" class="compact-feed-search">
+      <input type="search" name="q" value="<%= q %>" placeholder="搜店铺">
+      <button type="submit">搜索</button>
+    </form>
+  </div>
+
+  <nav class="shop-mode-filter compact-filter" aria-label="经营空间筛选">
+    <a class="<%= !mode ? 'active' : '' %>" href="/shops">全部</a>
+    <a class="<%= mode === 'verified_store' ? 'active' : '' %>" href="/shops?mode=verified_store">实体店</a>
+    <a class="<%= mode === 'home_shop' ? 'active' : '' %>" href="/shops?mode=home_shop">乡邻小铺</a>
+  </nav>
+
+  <section class="shop-grid feed-shop-grid">
+    <% shops.forEach((shop) => { %>
+      <%- include("partials/shop-card", { shop }) %>
+    <% }) %>
+  </section>
+
+  <% if (!shops.length) { %>
+    <%- include("partials/empty", { message: "暂时没有找到商家。", actionHref: "/account", actionText: "去我的开店" }) %>
+  <% } %>
+</section>
+
+<%- include("partials/footer") %>

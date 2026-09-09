@@ -1,0 +1,41 @@
+<section class="comment-section" id="comments">
+  <div class="comment-heading">
+    <h2>评论 <span><%= comments.length %></span></h2>
+  </div>
+
+  <% if (currentUser) { %>
+    <form action="/comments" method="post" class="comment-form">
+      <input type="hidden" name="target_type" value="<%= targetType %>">
+      <input type="hidden" name="target_id" value="<%= targetId %>">
+      <textarea name="content" rows="3" maxlength="500" required placeholder="问问商品情况，或分享你的看法"></textarea>
+      <button class="button primary" type="submit">发表评论</button>
+    </form>
+  <% } else { %>
+    <a class="comment-login" href="/auth?next=<%= encodeURIComponent(`${nextUrl}#comments`) %>">登录后参与评论</a>
+  <% } %>
+
+  <div class="comment-list">
+    <% comments.forEach((comment) => { %>
+      <article class="comment-item">
+        <span class="comment-avatar">
+          <% if (comment.avatar_url) { %><img src="<%= comment.avatar_url %>" alt=""><% } else { %><%= comment.author_name.slice(0, 1) %><% } %>
+        </span>
+        <div>
+          <div class="comment-author">
+            <strong><%= comment.author_name %></strong>
+            <span>
+              <time><%= formatDate(comment.created_at) %></time>
+              <% if (currentUser && currentUser.id === comment.user_id) { %>
+                <form action="/comments/<%= comment.id %>/delete" method="post" class="comment-delete-form" onsubmit="return confirm('确定删除这条评论吗？')">
+                  <button type="submit">删除</button>
+                </form>
+              <% } %>
+            </span>
+          </div>
+          <p><%= comment.content %></p>
+        </div>
+      </article>
+    <% }) %>
+    <% if (!comments.length) { %><p class="comment-empty">还没有评论，来聊聊这件商品吧。</p><% } %>
+  </div>
+</section>

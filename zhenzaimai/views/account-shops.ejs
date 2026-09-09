@@ -1,0 +1,35 @@
+<%- include("partials/header", { title, page }) %>
+
+<section class="account-subpage">
+  <header class="account-subpage-header">
+    <a class="back-icon" href="/account" aria-label="返回我的" title="返回我的">←</a>
+    <div><p class="eyebrow">商家服务</p><h1>我的店铺</h1></div>
+    <% if (!ownsShop) { %><a class="button primary small" href="/merchant/apply">我要开店</a><% } %>
+  </header>
+
+  <% if (shops.length) { %>
+    <div class="account-shop-list">
+      <% shops.forEach((shop) => { %>
+        <% const isOwner = shop.user_id === currentUser.id || shop.member_role === "owner"; %>
+        <% const approved = shop.review_status === "approved" && shop.status === "active"; %>
+        <article class="account-shop-item">
+          <img src="<%= shop.cover_image || shop.logo_image || '/assets/images/shop-placeholder.svg?v=2' %>" alt="<%= shop.name %>">
+          <div>
+            <span class="status-chip <%= shop.review_status %>"><%= statusLabel(shop.review_status) %></span>
+            <h2><%= shop.name %></h2>
+            <p><%= isOwner ? "店主" : "协作人" %> · <%= approved ? "可管理商品状态" : "等待审核完成" %></p>
+            <div class="account-content-actions">
+              <% if (approved) { %><a class="button primary small" href="/merchant/dashboard?shop=<%= shop.id %>"><%= isOwner ? "管理店铺" : "编辑商品状态" %></a><% } else if (isOwner) { %><a class="button outline small" href="/merchant/progress">查看进度</a><% } %>
+              <% if (isOwner && approved) { %><a class="button light small" href="/merchant/dashboard?shop=<%= shop.id %>#collaborators">邀请协作人</a><% } %>
+              <% if (isOwner) { %><a class="button danger small" href="/account/shops/<%= shop.id %>/delete">关闭并删除店铺</a><% } %>
+            </div>
+          </div>
+        </article>
+      <% }) %>
+    </div>
+  <% } else { %>
+    <div class="account-empty"><p>还没有创建店铺。</p><a class="button primary" href="/merchant/apply">我要开店</a></div>
+  <% } %>
+</section>
+
+<%- include("partials/footer") %>

@@ -1,0 +1,23 @@
+<article class="item-card">
+  <a class="media-link" href="/listings/<%= listing.id %>">
+    <img src="<%= listing.image %>" alt="<%= listing.name %>">
+  </a>
+  <div class="item-body">
+    <div class="item-title-row">
+      <h3><a href="/listings/<%= listing.id %>"><%= listing.name %></a></h3>
+      <span class="soft-badge"><%= listing.type === "farm" ? "自家农产品" : "个人二手" %></span>
+    </div>
+    <p class="muted"><%= listing.category_name || "本地发布" %> · <%= listing.condition %></p>
+    <% if (listing.type === "farm" && Number(listing.price) === 0) { %>
+      <div class="price">联系卖家</div>
+    <% } else { %>
+      <div class="price"><%= yuan(listing.price) %><small>/<%= listing.unit %></small></div>
+    <% } %>
+    <p class="muted"><%= listing.owner_name %> · <%= listing.village %></p>
+    <div class="tags">
+      <% if (listing.pickup) { %><span>可自提</span><% } %>
+      <% if (listing.delivery) { %><span>可配送</span><% } %>
+      <span><%= listing.stock_status %></span>
+    </div>
+  </div>
+</article>

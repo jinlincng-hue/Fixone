@@ -1,0 +1,16 @@
+    </main>
+    <nav class="bottom-nav" aria-label="主要功能">
+      <a href="/" class="<%= ['home','products','product','category','search','secondhand','farm','services','wanted','map','publish','listing','product-detail','listing-detail'].includes(page) ? 'active' : '' %>"><span aria-hidden="true">购</span><strong>购物</strong></a>
+      <a href="/shops" class="<%= ['shops','shop','merchant-dashboard','merchant-wizard','merchant-progress','merchant-claim','merchant-apply'].includes(page) ? 'active' : '' %>"><span aria-hidden="true">店</span><strong>逛店</strong></a>
+      <a href="/messages" class="<%= page === 'messages' ? 'active' : '' %>"><span aria-hidden="true">●</span><strong>消息</strong></a>
+      <a href="/account" class="<%= ['account','account-listings','account-shops','account-profile','account-settings','account-security','account-wanted','merchant-dashboard'].includes(page) ? 'active' : '' %>"><span aria-hidden="true">我</span><strong>我的</strong></a>
+    </nav>
+    <footer class="site-footer">
+      <div>
+        <strong>高桥 · 镇在卖</strong>
+        <span>只服务高桥镇及周边村庄。本项目为 MVP 演示，联系方式为示例数据。</span>
+      </div>
+    </footer>
+    <script src="/app.js?v=20260904g"></script>
+  </body>
+</html>

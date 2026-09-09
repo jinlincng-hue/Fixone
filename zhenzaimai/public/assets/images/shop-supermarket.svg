@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#f8ead4"/>
+  <rect x="48" y="86" width="544" height="220" rx="8" fill="#fdfdf6" stroke="#d5b789" stroke-width="6"/>
+  <rect x="48" y="62" width="544" height="72" rx="8" fill="#0a6a5f"/>
+  <text x="320" y="112" text-anchor="middle" font-size="42" font-family="Microsoft YaHei, sans-serif" font-weight="800" fill="#fff8e8">百姓生活超市</text>
+  <rect x="88" y="164" width="150" height="142" fill="#dff3e2"/>
+  <rect x="258" y="164" width="124" height="142" fill="#f5d29b"/>
+  <rect x="402" y="164" width="150" height="142" fill="#e4f0fb"/>
+  <circle cx="124" cy="210" r="22" fill="#f46b1f"/>
+  <circle cx="166" cy="204" r="20" fill="#df3b2f"/>
+  <rect x="278" y="200" width="84" height="54" fill="#f7bd33"/>
+  <path d="M432 244 h92 l-12 34 h-68z" fill="#0a6a5f"/>
+</svg>

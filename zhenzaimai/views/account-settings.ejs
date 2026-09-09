@@ -1,0 +1,57 @@
+<%- include("partials/header", { title, page }) %>
+
+<section class="account-subpage">
+  <header class="account-subpage-header">
+    <a class="back-icon" href="/account" aria-label="返回我的" title="返回我的">←</a>
+    <div><p class="eyebrow">账户与设置</p><h1>设置</h1></div>
+  </header>
+
+  <section class="account-home-section">
+    <div class="account-menu-list">
+      <a href="/account/profile"><span class="account-menu-mark stone">账</span><span><strong>账号资料</strong><small><%= profile.wechat_openid ? "微信已绑定" : "微信待绑定" %><%= profile.phone ? " · 手机号已绑定" : " · 手机号未绑定" %></small></span><b>›</b></a>
+      <a href="/account/security"><span class="account-menu-mark stone">安</span><span><strong>账号与安全</strong><small>密码修改和账号注销</small></span><b>›</b></a>
+    </div>
+  </section>
+
+  <section class="account-home-section">
+    <div class="account-section-title"><h2>外观</h2></div>
+    <div class="theme-switcher">
+      <label class="theme-option">
+        <input type="radio" name="theme" value="light">
+        <span class="theme-option-inner">
+          <span class="theme-icon">☀️</span>
+          <span class="theme-label">浅色</span>
+        </span>
+      </label>
+      <label class="theme-option">
+        <input type="radio" name="theme" value="dark">
+        <span class="theme-option-inner">
+          <span class="theme-icon">🌙</span>
+          <span class="theme-label">深色</span>
+        </span>
+      </label>
+      <label class="theme-option">
+        <input type="radio" name="theme" value="auto">
+        <span class="theme-option-inner">
+          <span class="theme-icon">💻</span>
+          <span class="theme-label">跟随系统</span>
+        </span>
+      </label>
+    </div>
+  </section>
+
+  <section class="account-home-section account-session-section">
+    <div class="account-section-title"><h2>登录与会话</h2></div>
+    <div class="account-menu-list">
+      <form action="/account/switch" method="post">
+        <button class="account-menu-button" type="submit"><span class="account-menu-mark amber">切</span><span><strong>切换账号</strong><small>退出当前账号后登录其他账号</small></span><b>›</b></button>
+      </form>
+    </div>
+  </section>
+
+  <form class="account-logout-form" action="/logout" method="post">
+    <button type="submit">退出当前账号</button>
+  </form>
+</section>
+
+<%- include("partials/footer") %>

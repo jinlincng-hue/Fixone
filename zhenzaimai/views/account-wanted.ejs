@@ -1,0 +1,32 @@
+<%- include("partials/header", { title, page }) %>
+
+<section class="account-subpage">
+  <header class="account-subpage-header">
+    <a class="back-icon" href="/account" aria-label="返回我的" title="返回我的">←</a>
+    <div><p class="eyebrow">我的交易</p><h1>全镇求购</h1></div>
+    <a class="button primary small" href="/wanted/new">发布</a>
+  </header>
+
+  <% if (wantedPosts.length) { %>
+    <div class="account-content-list wanted-content-list">
+      <% wantedPosts.forEach((post) => { %>
+        <article class="account-wanted-item">
+          <div><h2><%= post.title %></h2><p><%= post.village %> · 预算 <%= post.budget || "面议" %></p><small>更新于 <%= formatDate(post.updated_at) %></small></div>
+          <form action="/wanted/<%= post.id %>/status" method="post" class="account-wanted-actions">
+            <span class="status-chip <%= post.status %>"><%= statusLabel(post.status) %></span>
+            <select name="status" aria-label="更新求购状态">
+              <option value="seeking" <%= post.status === "seeking" ? "selected" : "" %>>寻找中</option>
+              <option value="found" <%= post.status === "found" ? "selected" : "" %>>已找到</option>
+              <option value="closed" <%= post.status === "closed" ? "selected" : "" %>>已关闭</option>
+            </select>
+            <button class="button light small" type="submit">更新</button>
+          </form>
+        </article>
+      <% }) %>
+    </div>
+  <% } else { %>
+    <div class="account-empty"><p>还没有求购记录。</p><a class="button primary" href="/wanted/new">帮我问全镇</a></div>
+  <% } %>
+</section>
+
+<%- include("partials/footer") %>

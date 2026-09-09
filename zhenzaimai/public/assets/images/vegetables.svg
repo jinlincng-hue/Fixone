@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="360" viewBox="0 0 520 360">
+  <rect width="520" height="360" fill="#eff8e9"/>
+  <path d="M190 286 C130 205 150 118 230 88 C264 164 250 230 190 286Z" fill="#58a842"/>
+  <path d="M270 292 C220 192 252 100 346 82 C370 178 348 246 270 292Z" fill="#2f8a45"/>
+  <path d="M332 280 C300 212 324 146 402 126 C416 204 392 250 332 280Z" fill="#79b957"/>
+  <path d="M128 292 H414" stroke="#9b6c39" stroke-width="18" stroke-linecap="round"/>
+  <text x="38" y="58" font-size="34" font-family="Microsoft YaHei, sans-serif" font-weight="800" fill="#07564d">新鲜蔬菜</text>
+</svg>

@@ -1,0 +1,7 @@
+<%- include("partials/header", { title, page }) %>
+<section class="empty-state tall">
+  <h1><%= title %></h1>
+  <p><%= message %></p>
+  <a class="button primary" href="/">返回首页</a>
+</section>
+<%- include("partials/footer") %>

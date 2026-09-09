@@ -1,0 +1,12 @@
+<%- include("partials/header", { title, page }) %>
+
+<section class="merchant-start-page">
+  <p class="eyebrow">商家服务</p>
+  <h1>我要开店</h1>
+  <p>完成店铺资料并提交审核，通过后即可上传商品、设置营业状态，并邀请协作人共同维护商品状态。</p>
+  <form action="/merchant/onboarding/create" method="post">
+    <button class="button primary" type="submit">开始开店</button>
+  </form>
+</section>
+
+<%- include("partials/footer") %>

@@ -1,0 +1,20 @@
+<%- include("partials/header", { title, page }) %>
+<section class="page-hero small-hero"><div><p class="eyebrow">审核状态</p><h1>店铺审核进度</h1><p>补充资料后可以从原来的步骤继续编辑，之前上传的图片会保留。</p></div><a class="button outline" href="/merchant/apply">商家入驻入口</a></section>
+
+<section class="progress-board">
+  <% if (!shops.length && !claims.length) { %><%- include("partials/empty", { message: "还没有店铺申请或认领申请。", actionHref: "/merchant/apply", actionText: "开始入驻" }) %><% } %>
+  <% shops.forEach((shop) => { %>
+    <article class="progress-card">
+      <img src="<%= shop.cover_image || shop.logo_image %>" alt="<%= shop.name %>">
+      <div><span class="status-chip <%= shop.review_status %>"><%= statusLabel(shop.review_status) %></span><h2><%= shop.name %></h2><p><%= verificationLabel(shop) %> · <%= shop.address || "地址草稿待完善" %></p><% if (shop.review_note) { %><p class="review-note">审核说明：<%= shop.review_note %></p><% } %></div>
+      <div class="progress-actions">
+        <% if (["draft", "changes_requested", "rejected"].includes(shop.review_status)) { %><a class="button primary" href="/merchant/onboarding/<%= shop.id %>/<%= shop.review_start_step %>">继续填写</a><% } %>
+        <% if (shop.review_status === "approved") { %><p class="form-success">店铺创建成功，接下来上传第一件商品。</p><a class="button primary" href="/merchant/dashboard#products">拍照发布商品</a><a class="button outline" href="/merchant/dashboard">进入商家后台</a><a class="button light" href="/shops/<%= shop.id %>">暂时只展示店铺</a><a class="button light" href="/merchant/dashboard#barcode">扫条形码上架</a><% } %>
+      </div>
+    </article>
+  <% }) %>
+  <% claims.forEach((claim) => { %>
+    <article class="progress-card claim-progress"><img src="<%= claim.cover_image || '/assets/images/shop-placeholder.svg?v=2' %>" alt="<%= claim.shop_name %>"><div><span class="status-chip <%= claim.status %>"><%= statusLabel(claim.status) %></span><h2><%= claim.shop_name %></h2><p>认领关系：<%= claim.relationship %></p><% if (claim.review_note) { %><p class="review-note">审核说明：<%= claim.review_note %></p><% } %></div><div class="progress-actions"><% if (claim.status === "approved") { %><a class="button primary" href="/merchant/dashboard">进入商家后台</a><% } else if (claim.status === "changes_requested") { %><a class="button outline" href="/merchant/claim">重新提交认领资料</a><% } %></div></article>
+  <% }) %>
+</section>
+<%- include("partials/footer") %>

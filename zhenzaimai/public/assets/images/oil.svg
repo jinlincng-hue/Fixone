@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="360" viewBox="0 0 520 360">
+  <rect width="520" height="360" fill="#fff7df"/>
+  <rect x="200" y="74" width="120" height="232" rx="18" fill="#f4b02d" stroke="#a96c15" stroke-width="8"/>
+  <rect x="222" y="48" width="76" height="42" rx="8" fill="#0a6a5f"/>
+  <rect x="214" y="162" width="92" height="78" rx="8" fill="#fff4c7"/>
+  <text x="260" y="211" text-anchor="middle" font-size="26" font-family="Microsoft YaHei, sans-serif" font-weight="800" fill="#0a6a5f">菜籽油</text>
+</svg>

@@ -1,0 +1,132 @@
+<%- include("partials/header", { title, page }) %>
+<section class="messages-page">
+  <div class="messages-heading"><h1>消息</h1><span><%= selectedThread ? '聊天' : activeTarget ? '客户列表' : '站内联系' %></span></div>
+
+  <section class="chat-shell <%= selectedThread ? '' : 'list-only' %>">
+    <aside class="chat-list" aria-label="会话列表">
+      <% if (activeTarget) { %>
+        <a class="chat-back-line" href="/messages">‹ 返回消息</a>
+        <article class="chat-thread product-thread active">
+          <img src="<%= activeTarget.image || '/assets/images/product-placeholder.svg' %>" alt="">
+          <span>
+            <strong><%= activeTarget.title %></strong>
+            <small><%= activeTarget.customer_count || customerThreads.length %> 个客户咨询</small>
+            <em><%= activeTarget.last_message || '选择客户开始聊天' %></em>
+          </span>
+        </article>
+        <% if (!customerThreads.length) { %>
+          <article class="message-empty"><span>这个商品暂时没有客户咨询</span><a href="/messages">返回</a></article>
+        <% } %>
+        <% customerThreads.forEach((thread) => { %>
+          <a class="chat-thread customer-thread <%= selectedThread && selectedThread.id === thread.id ? 'active' : '' %>" href="/messages/<%= thread.id %>">
+            <span class="chat-message-avatar"><%= (thread.buyer_name || '客').slice(0, 1) %></span>
+            <span>
+              <strong><%= thread.buyer_name %></strong>
+              <small>咨询：<%= thread.title %></small>
+              <em><%= thread.last_message || '已建立联系，可以开始发消息。' %></em>
+            </span>
+            <time><%= formatDate(thread.last_message_at || thread.updated_at) %></time>
+          </a>
+        <% }) %>
+      <% } else { %>
+        <% if (!productGroups.length && !buyerThreads.length) { %>
+          <article class="message-empty"><span>暂无会话</span><a href="/">去看看商品</a></article>
+        <% } %>
+        <% if (productGroups.length) { %>
+          <p class="chat-section-title">我的商品咨询</p>
+          <% productGroups.forEach((group) => { %>
+            <a class="chat-thread product-thread" href="/messages/item/<%= group.target_type %>/<%= group.target_id %>">
+              <img src="<%= group.image || '/assets/images/product-placeholder.svg' %>" alt="">
+              <span>
+                <strong><%= group.title %></strong>
+                <small><%= group.customer_count %> 个客户咨询</small>
+                <em><%= group.last_message || '进入查看客户列表' %></em>
+              </span>
+              <time><%= formatDate(group.last_message_at || group.updated_at) %></time>
+            </a>
+          <% }) %>
+        <% } %>
+        <% if (buyerThreads.length) { %>
+          <p class="chat-section-title">我咨询的商品</p>
+          <% buyerThreads.forEach((thread) => { %>
+            <a class="chat-thread <%= selectedThread && selectedThread.id === thread.id ? 'active' : '' %>" href="/messages/<%= thread.id %>">
+              <img src="<%= thread.image || '/assets/images/product-placeholder.svg' %>" alt="">
+              <span>
+                <strong><%= thread.title %></strong>
+                <small>卖家：<%= thread.seller_name %></small>
+                <em><%= thread.last_message || '已建立联系，可以开始发消息。' %></em>
+              </span>
+              <time><%= formatDate(thread.last_message_at || thread.updated_at) %></time>
+            </a>
+          <% }) %>
+        <% } %>
+      <% } %>
+    </aside>
+
+    <% if (selectedThread) { %>
+    <article class="chat-panel">
+      <%
+        const isSeller = currentUser.id === selectedThread.seller_user_id;
+        const otherName = isSeller ? selectedThread.buyer_name : selectedThread.seller_name;
+        const targetHref = selectedThread.target_type === 'product' ? `/products/${selectedThread.target_id}` : `/listings/${selectedThread.target_id}`;
+      %>
+        <header class="chat-panel-head">
+          <a class="chat-target" href="<%= targetHref %>">
+            <img src="<%= selectedThread.image || '/assets/images/product-placeholder.svg' %>" alt="">
+            <% if (isSeller) { %>
+              <span><strong><%= otherName %></strong><small>咨询：<%= selectedThread.title %></small></span>
+            <% } else { %>
+              <span><strong><%= selectedThread.title %></strong><small>卖家：<%= otherName %></small></span>
+            <% } %>
+          </a>
+        </header>
+
+        <div class="chat-messages">
+          <% threadMessages.forEach((message, index) => {
+            const previous = threadMessages[index - 1];
+            const previousAt = previous ? new Date(previous.created_at).getTime() : 0;
+            const currentAt = new Date(message.created_at).getTime();
+            const showTime = !previous || !previousAt || !currentAt || currentAt - previousAt > 10 * 60 * 1000;
+          %>
+            <% if (showTime) { %><time class="chat-time-separator"><%= formatDate(message.created_at) %></time><% } %>
+            <div class="chat-bubble-row <%= message.sender_user_id === currentUser.id ? 'mine' : '' %>">
+              <% if (message.sender_user_id !== currentUser.id) { %>
+                <span class="chat-message-avatar"><%= (message.sender_name || '对方').slice(0, 1) %></span>
+              <% } %>
+              <div class="chat-bubble">
+                <p><%= message.content %></p>
+              </div>
+              <% if (message.sender_user_id === currentUser.id) { %>
+                <span class="chat-message-avatar mine-avatar"><%= (currentUser.display_name || currentUser.username || '我').slice(0, 1) %></span>
+              <% } %>
+            </div>
+          <% }) %>
+        </div>
+
+        <form class="chat-compose" action="/messages/<%= selectedThread.id %>" method="post">
+          <textarea name="content" rows="2" maxlength="600" placeholder="输入消息" required></textarea>
+          <button class="button primary" type="submit">发送</button>
+        </form>
+    </article>
+    <% } %>
+  </section>
+
+  <% if (!selectedThread) { %>
+  <details class="message-system-details" id="system">
+    <summary>系统通知</summary>
+    <section class="message-feed">
+      <article class="message-row"><span class="message-avatar platform">镇</span><div><h2>高桥 · 镇在卖</h2><p>欢迎来到高桥镇本地生活平台。发布、联系商家和店铺认证都需要先登录。</p></div><time>刚刚</time></article>
+      <% shopUpdates.forEach((shop) => { %>
+        <article class="message-row"><span class="message-avatar review">审</span><div><h2>店铺审核进度</h2><p><strong><%= shop.name %></strong>：<%= statusLabel(shop.review_status) %><%= shop.review_note ? `，${shop.review_note}` : '' %></p></div><time><%= formatDate(shop.updated_at) %></time></article>
+      <% }) %>
+      <% wantedUpdates.forEach((wanted) => { %>
+        <article class="message-row"><span class="message-avatar wanted">问</span><div><h2>全镇求购提醒</h2><p>你的求购“<%= wanted.title %>”目前为<%= statusLabel(wanted.status) %>。</p></div><time><%= formatDate(wanted.updated_at) %></time></article>
+      <% }) %>
+      <% if (!shopUpdates.length && !wantedUpdates.length) { %>
+        <article class="message-empty"><span>暂无新的系统通知</span><a href="/wanted">看看全镇求购</a></article>
+      <% } %>
+    </section>
+  </details>
+  <% } %>
+</section>
+<%- include("partials/footer") %>

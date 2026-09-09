@@ -1,0 +1,23 @@
+<div class="listing-image-uploader" data-image-upload data-max-images="12">
+  <div class="listing-image-toolbar">
+    <strong>商品图片</strong>
+    <span data-image-count>已添加 <%= (existingImages || []).length %>/12</span>
+  </div>
+  <div class="listing-image-grid" data-image-grid>
+    <% (existingImages || []).forEach((image, index) => { %>
+      <article class="listing-image-card" data-image-card data-existing-image>
+        <img src="<%= image.image_path %>" alt="商品图片<%= index + 1 %>">
+        <span class="image-cover-label" data-cover-label <%= index === 0 ? "" : "hidden" %>>封面</span>
+        <button class="image-remove-button" type="button" data-remove-image aria-label="删除第<%= index + 1 %>张图片">×</button>
+        <input type="hidden" name="keep_images" value="<%= image.image_path %>">
+      </article>
+    <% }) %>
+    <label class="listing-image-add" data-add-image>
+      <input name="images" type="file" accept="image/*" multiple data-image-input>
+      <span aria-hidden="true">+</span>
+      <small>添加图片</small>
+    </label>
+  </div>
+  <p class="listing-image-help">第一张为封面，可分多次添加，最多上传12张图片。</p>
+  <p class="listing-image-message" data-image-message role="status" aria-live="polite"></p>
+</div>

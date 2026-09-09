@@ -1,0 +1,17 @@
+<%- include("partials/header", { title, page }) %>
+
+<section class="account-subpage">
+  <header class="account-subpage-header">
+    <a class="back-icon" href="/account/settings" aria-label="返回设置" title="返回设置">←</a>
+    <div><p class="eyebrow">账户与设置</p><h1>账户安全</h1></div>
+  </header>
+
+  <section class="account-home-section">
+    <div class="account-menu-list">
+      <a href="/account/security/password"><span class="account-menu-mark stone">密</span><span><strong>修改密码</strong><small>更新账号登录密码</small></span><b>›</b></a>
+      <a href="/account/security/delete"><span class="account-menu-mark danger-mark">销</span><span><strong>注销账号</strong><small>永久删除账号和关联内容</small></span><b>›</b></a>
+    </div>
+  </section>
+</section>
+
+<%- include("partials/footer") %>

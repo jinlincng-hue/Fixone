@@ -1,0 +1,46 @@
+<%- include("partials/header", { title, page }) %>
+<section class="page-hero small-hero">
+  <div>
+    <h1>编辑商品</h1>
+    <p>修改价格、库存状态、自提配送方式和商品描述。</p>
+  </div>
+  <a class="button outline" href="/merchant/dashboard#products">返回商家后台</a>
+</section>
+
+<section class="form-shell">
+  <% if (error) { %><p class="form-error"><%= error %></p><% } %>
+  <form action="/merchant/products/<%= product.id %>/edit" method="post" enctype="multipart/form-data" class="stack-form">
+    <div class="form-grid-two">
+      <label>商品名称<input name="name" required maxlength="120" value="<%= product.name %>"></label>
+      <label>分类
+        <select name="category_id">
+          <% categories.forEach((category) => { %>
+            <option value="<%= category.id %>" <%= Number(product.category_id) === category.id ? "selected" : "" %>><%= category.name %></option>
+          <% }) %>
+        </select>
+      </label>
+    </div>
+    <div class="form-grid-two">
+      <label>价格<input name="price" type="number" min="0" step="0.01" required value="<%= product.price %>"></label>
+      <label>计价单位<input name="unit" maxlength="30" value="<%= product.unit %>"></label>
+    </div>
+    <label>规格<input name="spec" maxlength="120" value="<%= product.spec %>"></label>
+    <label>描述<textarea name="description" rows="4" maxlength="1200"><%= product.description %></textarea></label>
+    <div class="form-grid-two">
+      <label>库存状态<input name="stock_status" maxlength="40" value="<%= product.stock_status %>"></label>
+      <label>新旧程度<input name="condition" maxlength="40" value="<%= product.condition %>"></label>
+    </div>
+    <div class="form-grid-two">
+      <label>所属村庄<input name="village" maxlength="80" value="<%= product.village %>"></label>
+      <label>联系电话<input name="contact_phone" maxlength="40" value="<%= product.contact_phone %>"></label>
+    </div>
+    <%- include("partials/listing-image-upload", { existingImages }) %>
+    <div class="check-row">
+      <label><input type="checkbox" name="pickup" <%= product.pickup ? "checked" : "" %>> 支持自提</label>
+      <label><input type="checkbox" name="delivery" <%= product.delivery ? "checked" : "" %>> 支持配送</label>
+    </div>
+    <label>配送范围<input name="delivery_area" maxlength="160" value="<%= product.delivery_area %>"></label>
+    <button class="button primary" type="submit">保存修改</button>
+  </form>
+</section>
+<%- include("partials/footer") %>

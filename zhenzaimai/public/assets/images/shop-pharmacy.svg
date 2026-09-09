@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#eef7f0"/>
+  <rect x="50" y="82" width="540" height="222" rx="8" fill="#ffffff" stroke="#b9d9c4" stroke-width="6"/>
+  <rect x="50" y="58" width="540" height="76" rx="8" fill="#0a8b65"/>
+  <text x="340" y="108" text-anchor="middle" font-size="42" font-family="Microsoft YaHei, sans-serif" font-weight="800" fill="#ffffff">安康大药房</text>
+  <rect x="112" y="168" width="160" height="116" fill="#dff3e2"/>
+  <rect x="360" y="168" width="160" height="116" fill="#dff3e2"/>
+  <rect x="284" y="162" width="70" height="122" rx="8" fill="#f4f8f4"/>
+  <rect x="309" y="180" width="20" height="82" fill="#0a8b65"/>
+  <rect x="278" y="211" width="82" height="20" fill="#0a8b65"/>
+</svg>

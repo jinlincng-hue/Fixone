@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="360" viewBox="0 0 520 360">
+  <rect width="520" height="360" fill="#edf3f6"/>
+  <rect x="170" y="70" width="180" height="250" rx="12" fill="#ffffff" stroke="#b6c3c7" stroke-width="8"/>
+  <circle cx="260" cy="206" r="72" fill="#dbe8ec" stroke="#53656b" stroke-width="10"/>
+  <circle cx="260" cy="206" r="42" fill="#a6cbd4"/>
+  <rect x="198" y="96" width="60" height="20" rx="4" fill="#0a6a5f"/>
+  <circle cx="316" cy="106" r="13" fill="#ff6a1a"/>
+  <text x="38" y="58" font-size="34" font-family="Microsoft YaHei, sans-serif" font-weight="800" fill="#07564d">洗衣机</text>
+</svg>

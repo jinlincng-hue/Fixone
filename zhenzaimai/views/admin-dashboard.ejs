@@ -1,0 +1,225 @@
+<%- include("partials/header", { title, page }) %>
+<section class="page-hero small-hero">
+  <div>
+    <h1>管理员审核后台</h1>
+    <p>人工审核商家入驻，管理商品、个人发布、求购、举报和违规账号。</p>
+  </div>
+  <a class="button primary" href="/admin/shop-reviews">店铺审核与认领</a>
+</section>
+
+<section class="admin-nav">
+  <a href="/admin/shop-reviews">店铺审核与认领</a>
+  <a href="#applications">入驻申请</a>
+  <a href="#products">商品</a>
+  <a href="#services">服务</a>
+  <a href="#listings">个人发布</a>
+  <a href="#wanted">求购</a>
+  <a href="#reports">举报</a>
+  <a href="#users">账号</a>
+</section>
+
+<section class="admin-section" id="applications">
+  <h2>商家入驻申请</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>店铺</th><th>资料</th><th>状态</th><th>审核</th></tr></thead>
+      <tbody>
+        <% applications.forEach((application) => { %>
+          <tr>
+            <td>
+              <strong><%= application.shop_name %></strong>
+              <p class="muted"><%= application.username %> · <%= application.credit_code %></p>
+            </td>
+            <td>
+              <p><%= application.address %></p>
+              <p><%= maskPhone(application.phone) %> · <%= application.business_hours %></p>
+              <p><%= application.business_scope %></p>
+              <a href="/admin/licenses/<%= application.license_image %>" target="_blank" rel="noreferrer">查看营业执照</a>
+            </td>
+            <td>
+              <strong><%= statusLabel(application.status) %></strong>
+              <% if (application.rejection_reason) { %><p class="muted">拒绝：<%= application.rejection_reason %></p><% } %>
+              <% if (application.reviewed_at) { %><p class="muted">审核时间：<%= formatDate(application.reviewed_at) %></p><% } %>
+            </td>
+            <td>
+              <form action="/admin/applications/<%= application.id %>/review" method="post" class="review-form">
+                <label>审核意见<input name="review_note" maxlength="300" value="<%= application.review_note || "" %>"></label>
+                <label>拒绝理由<input name="rejection_reason" maxlength="300" placeholder="拒绝时必填"></label>
+                <button class="button primary small" name="action" value="approve" type="submit">通过</button>
+                <button class="button outline small" name="action" value="reject" type="submit">拒绝</button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="admin-section" id="products">
+  <h2>商品管理</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>商品</th><th>商家</th><th>价格</th><th>状态</th><th>操作</th></tr></thead>
+      <tbody>
+        <% products.forEach((product) => { %>
+          <tr>
+            <td><a href="/products/<%= product.id %>"><%= product.name %></a><p class="muted"><%= product.category_name %></p></td>
+            <td><%= product.shop_name %></td>
+            <td><%= yuan(product.price) %>/<%= product.unit %></td>
+            <td><%= statusLabel(product.status) %></td>
+            <td>
+              <form action="/admin/products/<%= product.id %>/status" method="post" class="status-row">
+                <select name="status">
+                  <option value="active" <%= product.status === "active" ? "selected" : "" %>>上架</option>
+                  <option value="inactive" <%= product.status === "inactive" ? "selected" : "" %>>下架</option>
+                </select>
+                <button class="button light small" type="submit">保存</button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="admin-section" id="services">
+  <h2>便民服务管理</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>服务</th><th>商家</th><th>电话</th><th>状态</th><th>操作</th></tr></thead>
+      <tbody>
+        <% services.forEach((service) => { %>
+          <tr>
+            <td><%= service.title %><p class="muted"><%= service.type %> · <%= service.delivery_area %></p></td>
+            <td><%= service.shop_name || "未关联商家" %></td>
+            <td><%= maskPhone(service.phone) %></td>
+            <td><%= statusLabel(service.status) %></td>
+            <td>
+              <form action="/admin/services/<%= service.id %>/status" method="post" class="status-row">
+                <select name="status">
+                  <option value="active" <%= service.status === "active" ? "selected" : "" %>>上架</option>
+                  <option value="inactive" <%= service.status === "inactive" ? "selected" : "" %>>下架</option>
+                </select>
+                <button class="button light small" type="submit">保存</button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="admin-section" id="listings">
+  <h2>个人发布管理</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>信息</th><th>发布人</th><th>价格</th><th>状态</th><th>操作</th></tr></thead>
+      <tbody>
+        <% listings.forEach((listing) => { %>
+          <tr>
+            <td><a href="/listings/<%= listing.id %>"><%= listing.name %></a><p class="muted"><%= listing.type === "farm" ? "自家农产品" : "个人二手" %></p></td>
+            <td><%= listing.owner_name %> · <%= listing.village %></td>
+            <td><%= yuan(listing.price) %>/<%= listing.unit %></td>
+            <td><%= statusLabel(listing.status) %></td>
+            <td>
+              <form action="/admin/listings/<%= listing.id %>/status" method="post" class="status-row">
+                <select name="status">
+                  <option value="active" <%= listing.status === "active" ? "selected" : "" %>>上架</option>
+                  <option value="inactive" <%= listing.status === "inactive" ? "selected" : "" %>>下架</option>
+                </select>
+                <button class="button light small" type="submit">保存</button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="admin-section" id="wanted">
+  <h2>全镇求购管理</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>需求</th><th>村庄</th><th>联系方式</th><th>状态</th><th>操作</th></tr></thead>
+      <tbody>
+        <% wanted.forEach((post) => { %>
+          <tr>
+            <td><%= post.title %><p class="muted">预算：<%= post.budget || "面议" %></p></td>
+            <td><%= post.village %></td>
+            <td><%= maskPhone(post.contact_phone) %></td>
+            <td><%= statusLabel(post.status) %></td>
+            <td>
+              <form action="/admin/wanted/<%= post.id %>/status" method="post" class="status-row">
+                <select name="status">
+                  <option value="seeking" <%= post.status === "seeking" ? "selected" : "" %>>寻找中</option>
+                  <option value="found" <%= post.status === "found" ? "selected" : "" %>>已找到</option>
+                  <option value="closed" <%= post.status === "closed" ? "selected" : "" %>>已关闭</option>
+                </select>
+                <button class="button light small" type="submit">保存</button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="admin-section" id="reports">
+  <h2>举报管理</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>目标</th><th>原因</th><th>举报人</th><th>状态</th><th>操作</th></tr></thead>
+      <tbody>
+        <% reports.forEach((report) => { %>
+          <tr>
+            <td><%= report.target_type %> #<%= report.target_id %></td>
+            <td><strong><%= report.reason %></strong><p class="muted"><%= report.detail %></p></td>
+            <td><%= report.reporter_name %></td>
+            <td><%= statusLabel(report.status) %></td>
+            <td>
+              <form action="/admin/reports/<%= report.id %>/status" method="post" class="status-row">
+                <select name="status">
+                  <option value="open" <%= report.status === "open" ? "selected" : "" %>>待处理</option>
+                  <option value="resolved" <%= report.status === "resolved" ? "selected" : "" %>>已处理</option>
+                </select>
+                <button class="button light small" type="submit">保存</button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="admin-section" id="users">
+  <h2>账号管理</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>用户</th><th>角色</th><th>村庄</th><th>状态</th><th>操作</th></tr></thead>
+      <tbody>
+        <% users.forEach((user) => { %>
+          <tr>
+            <td><%= user.username %><p class="muted"><%= maskPhone(user.phone) %></p></td>
+            <td><%= user.role %></td>
+            <td><%= user.village %></td>
+            <td><%= user.is_disabled ? "已禁用" : "正常" %></td>
+            <td>
+              <% if (user.id !== currentUser.id) { %>
+                <form action="/admin/users/<%= user.id %>/toggle" method="post">
+                  <button class="button outline small" type="submit"><%= user.is_disabled ? "启用" : "禁用" %></button>
+                </form>
+              <% } %>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</section>
+<%- include("partials/footer") %>

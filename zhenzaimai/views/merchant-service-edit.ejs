@@ -1,0 +1,20 @@
+<%- include("partials/header", { title, page }) %>
+<section class="publish-choice-page">
+  <header class="account-subpage-header"><a class="back-icon" href="/merchant/dashboard?shop=<%= service.shop_id %>#services" aria-label="返回小铺" title="返回小铺">←</a><div><p class="eyebrow"><%= service.business_mode === "home_shop" ? "乡邻小铺" : "店铺服务" %></p><h1>编辑本地服务</h1></div></header>
+  <% if (error) { %><p class="form-error"><%= error %></p><% } %>
+  <% if (service.review_reason) { %><p class="review-note">审核说明：<%= service.review_reason %>。保存后会重新提交审核。</p><% } %>
+  <form action="/merchant/services/<%= service.id %>/edit" method="post" enctype="multipart/form-data" class="stack-form publish-form">
+    <fieldset class="form-block">
+      <legend>本地服务</legend>
+      <label>服务名称<input name="title" required maxlength="120" value="<%= service.title || "" %>"></label>
+      <label>服务介绍<textarea name="description" rows="4" required maxlength="800"><%= service.description || "" %></textarea></label>
+      <label>服务范围<input name="delivery_area" required maxlength="180" value="<%= service.delivery_area || "" %>"></label>
+      <label>可服务时间<input name="business_hours" required maxlength="120" value="<%= service.business_hours || "" %>"></label>
+      <label>联系电话<input name="phone" required maxlength="40" value="<%= service.phone || "" %>"></label>
+      <label>替换图片（不上传会保留原图）<input name="image" type="file" accept="image/png,image/jpeg,image/webp,image/gif"></label>
+    </fieldset>
+    <% if (service.business_mode === "home_shop") { %><p class="muted">修改后会重新进入平台审核。审核只核验发布信息，不代表平台保证服务质量。</p><% } %>
+    <button class="button primary" type="submit">保存并重新提交</button>
+  </form>
+</section>
+<%- include("partials/footer") %>

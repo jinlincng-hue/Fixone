@@ -1,0 +1,39 @@
+<%- include("partials/header", { title, page }) %>
+<section class="page-hero small-hero">
+  <div>
+    <h1>全镇求购</h1>
+    <p>找不到商品或服务，就发布需求，让本地商家和村民看到。</p>
+  </div>
+  <a class="button primary" href="/wanted/new<%= prefill ? `?q=${encodeURIComponent(prefill)}` : "" %>">帮我问全镇</a>
+</section>
+
+<section class="wanted-board">
+  <% posts.forEach((post) => { %>
+    <article class="wanted-card">
+      <div class="item-title-row">
+        <h3><%= post.title %></h3>
+        <span><%= statusLabel(post.status) %></span>
+      </div>
+      <% if (post.image) { %><img class="wanted-card-image" src="<%= post.image %>" alt="<%= post.title %>" loading="lazy"><% } %>
+      <% if (post.description) { %><p class="wanted-description"><%= post.description %></p><% } %>
+      <p>预算：<%= post.budget || "面议" %></p>
+      <p><%= post.owner_name %> · <%= post.village %> · <%= post.needs_delivery ? "需要配送" : "可自提或电话沟通" %></p>
+      <p>联系方式：<%= phoneForPage(post.contact_phone) %></p>
+      <p class="muted">发布时间：<%= formatDate(post.created_at) %></p>
+      <% if (currentUser && (currentUser.role === "admin" || currentUser.id === post.user_id)) { %>
+        <form action="/wanted/<%= post.id %>/status" method="post" class="status-row">
+          <select name="status">
+            <option value="seeking" <%= post.status === "seeking" ? "selected" : "" %>>寻找中</option>
+            <option value="found" <%= post.status === "found" ? "selected" : "" %>>已找到</option>
+            <option value="closed" <%= post.status === "closed" ? "selected" : "" %>>已关闭</option>
+          </select>
+          <button class="button light small" type="submit">更新</button>
+        </form>
+      <% } %>
+    </article>
+  <% }) %>
+</section>
+<% if (!posts.length) { %>
+  <%- include("partials/empty", { message: "还没有求购信息。", actionHref: "/wanted/new", actionText: "发布第一条" }) %>
+<% } %>
+<%- include("partials/footer") %>

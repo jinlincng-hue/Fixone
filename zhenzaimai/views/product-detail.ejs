@@ -1,0 +1,81 @@
+<%- include("partials/header", { title, page }) %>
+<section class="product-view-page">
+  <a class="product-view-back" href="/">‹ 返回购物</a>
+
+  <div class="product-view-layout">
+    <section class="product-gallery-panel" aria-label="商品图片">
+      <% const galleryImages = product.images && product.images.length ? product.images : [{ image_path: product.image }]; %>
+      <div class="product-gallery-strip" data-product-gallery>
+        <% galleryImages.forEach((image, index) => { %>
+          <figure>
+            <button class="product-gallery-open" type="button" data-image-open aria-label="查看<%= product.name %>图片<%= index + 1 %>原图">
+              <img src="<%= image.image_path %>" alt="<%= product.name %>图片<%= index + 1 %>" loading="<%= index === 0 ? 'eager' : 'lazy' %>">
+            </button>
+            <% if (galleryImages.length > 1) { %><span><%= index + 1 %>/<%= galleryImages.length %></span><% } %>
+          </figure>
+        <% }) %>
+      </div>
+      <% if (galleryImages.length > 1) { %><p class="gallery-hint">左右滑动查看更多图片</p><% } %>
+      <dialog class="product-image-dialog" data-image-dialog aria-label="查看商品原图">
+        <button class="product-image-dialog-close" type="button" data-image-dialog-close aria-label="关闭大图">×</button>
+        <img data-image-dialog-image alt="">
+      </dialog>
+    </section>
+
+    <article class="product-summary-card">
+      <div class="product-title-line">
+        <h1><%= product.name %></h1>
+        <div class="price large"><%= yuan(product.price) %><small>/<%= product.unit %></small></div>
+      </div>
+      <div class="product-intro-line">
+        <span class="<%= product.shop_verified ? 'verify' : 'soft-badge' %>"><%= product.shop_verified ? '平台已核验' : (product.category_name || '商品') %></span>
+        <p><%= product.description || '商家暂未填写商品详情。' %></p>
+      </div>
+      <div class="product-quick-tags">
+        <span><%= product.stock_status %></span>
+        <% if (product.pickup) { %><span>支持自提</span><% } %>
+        <% if (product.delivery) { %><span>支持配送</span><% } %>
+      </div>
+
+      <dl class="product-facts">
+        <% if (product.spec) { %><dt>规格</dt><dd><%= product.spec %></dd><% } %>
+        <dt>分类</dt><dd><%= product.category_name || '商品' %></dd>
+        <dt>所在地区</dt><dd><%= product.village %></dd>
+        <dt>更新时间</dt><dd><%= formatDate(product.updated_at) %></dd>
+      </dl>
+
+      <a class="seller-strip" href="/shops/<%= product.shop_id %>">
+        <span class="seller-avatar">店</span>
+        <span><strong><%= product.shop_name %></strong><small>进入店铺查看更多商品</small></span>
+        <b>›</b>
+      </a>
+
+      <div class="product-contact-actions">
+        <% if (currentUser) { %>
+          <a class="button primary" href="/contact/product/<%= product.id %>">联系商家</a>
+        <% } else { %>
+          <a class="button primary" href="/auth?next=<%= encodeURIComponent(`/products/${product.id}`) %>">登录后联系</a>
+        <% } %>
+        <a class="button outline" href="/wanted/new?q=<%= encodeURIComponent(product.name) %>">发布求购</a>
+      </div>
+    </article>
+  </div>
+
+  <%- include("partials/comments", { targetType: "product", targetId: product.id, comments, nextUrl: `/products/${product.id}` }) %>
+
+  <details class="compact-report">
+    <summary>举报该商品</summary>
+    <% if (currentUser) { %>
+      <form action="/reports" method="post" class="stack-form">
+        <input type="hidden" name="target_type" value="product">
+        <input type="hidden" name="target_id" value="<%= product.id %>">
+        <label>举报原因<input name="reason" maxlength="120" required></label>
+        <label>补充说明<textarea name="detail" rows="3" maxlength="800"></textarea></label>
+        <button class="button outline" type="submit">提交举报</button>
+      </form>
+    <% } else { %>
+      <p class="muted">请先登录后提交举报。</p>
+    <% } %>
+  </details>
+</section>
+<%- include("partials/footer") %>

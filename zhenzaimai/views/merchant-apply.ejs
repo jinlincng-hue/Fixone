@@ -1,0 +1,31 @@
+<%- include("partials/header", { title, page }) %>
+<section class="page-hero small-hero">
+  <div>
+    <h1>商家入驻</h1>
+    <p>提交资料后由管理员人工审核，通过后店铺显示“平台已核验”。</p>
+  </div>
+  <a class="button outline" href="/merchant/dashboard">商家管理后台</a>
+</section>
+
+<section class="form-shell">
+  <% if (application) { %>
+    <div class="status-panel">
+      <strong>当前认证状态：<%= statusLabel(application.status) %></strong>
+      <% if (application.status === "rejected") { %><p>拒绝理由：<%= application.rejection_reason %></p><% } %>
+      <% if (application.review_note) { %><p>审核意见：<%= application.review_note %></p><% } %>
+    </div>
+  <% } %>
+  <% if (error) { %><p class="form-error"><%= error %></p><% } %>
+  <form action="/merchant/legacy-apply" method="post" enctype="multipart/form-data" class="stack-form">
+    <label>店铺名称<input name="shop_name" required maxlength="120" value="<%= application ? application.shop_name : "" %>"></label>
+    <label>统一社会信用代码<input name="credit_code" required maxlength="60" value="<%= application ? application.credit_code : "" %>"></label>
+    <label>店铺地址<input name="address" required maxlength="180" value="<%= application ? application.address : "" %>"></label>
+    <label>联系电话<input name="phone" required maxlength="40" value="<%= application ? application.phone : currentUser.phone %>"></label>
+    <label>营业时间<input name="business_hours" maxlength="120" value="<%= application ? application.business_hours : "" %>" placeholder="如 08:00-20:00"></label>
+    <label>经营范围<textarea name="business_scope" rows="3" maxlength="240"><%= application ? application.business_scope : "" %></textarea></label>
+    <label>配送范围<textarea name="delivery_area" rows="3" maxlength="240"><%= application ? application.delivery_area : "" %></textarea></label>
+    <label>营业执照<input name="license" type="file" accept="image/png,image/jpeg,image/webp,image/gif" <%= application ? "" : "required" %>></label>
+    <button class="button primary" type="submit">提交审核</button>
+  </form>
+</section>
+<%- include("partials/footer") %>

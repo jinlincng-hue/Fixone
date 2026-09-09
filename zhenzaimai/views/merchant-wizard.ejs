@@ -1,0 +1,107 @@
+<%- include("partials/header", { title, page }) %>
+<% const categoryIconPaths = {
+  fresh: "/assets/images/category-icons/01-food-fresh.svg",
+  daily: "/assets/images/category-icons/02-daily-necessities.svg",
+  farm: "/assets/images/category-icons/03-local-farm-products.svg",
+  home: "/assets/images/category-icons/04-home-appliances.svg",
+  digital: "/assets/images/category-icons/05-digital-communications.svg",
+  hardware: "/assets/images/category-icons/06-hardware-farm-tools.svg",
+  transport: "/assets/images/category-icons/07-transportation.svg",
+  medical: "/assets/images/category-icons/08-medical-health.svg",
+  restaurant: "/assets/images/category-icons/09-restaurant.svg",
+  "life-service": "/assets/images/category-icons/10-life-service.svg"
+}; %>
+<section class="wizard-shell">
+  <header class="wizard-header">
+    <a class="back-icon" href="/account/shops" aria-label="返回我的店铺" title="返回我的店铺">←</a>
+    <div><p class="eyebrow"><%= shop.business_mode === 'home_shop' ? '乡邻小铺' : '认证实体店' %></p><h1><%= step === 'type' ? '你想怎么卖？' : '创建经营空间' %></h1><p class="wizard-step-count">第 <%= Math.max(1, steps.findIndex((item) => item.key === step) + 1) %> 步，共 <%= steps.length %> 步</p></div>
+  </header>
+
+  <div class="wizard-progress" aria-label="入驻进度">
+    <% steps.forEach((item, index) => { %><span class="<%= item.key === step ? 'active' : '' %>"><b><%= index + 1 %></b><small><%= item.title %></small></span><% }) %>
+  </div>
+  <% if (error) { %><p class="form-error"><%= error %></p><% } %>
+  <% if (shop.review_note && issueFields.length) { %><aside class="review-feedback"><strong>需要确认或补充</strong><p><%= shop.review_note %></p><p><%= issueFields.map((field) => issueFieldLabels[field] || field).join('、') %></p></aside><% } %>
+
+  <section class="wizard-panel">
+    <% if (step === 'type') { %>
+      <form action="/merchant/onboarding/<%= shop.id %>/type" method="post" class="stack-form mode-choice-form">
+        <p class="wizard-copy">先选择经营方式。两种方式使用不同的资料和审核规则，选择后可在提交审核前返回调整。</p>
+        <div class="business-mode-cards">
+          <% Object.entries(businessModes).forEach(([key, mode]) => { %>
+            <label class="business-mode-card <%= shop.business_mode === key ? 'selected' : '' %>">
+              <input type="radio" name="business_mode" value="<%= key %>" <%= shop.business_mode === key ? 'checked' : '' %>>
+              <span class="mode-icon"><%= key === 'verified_store' ? '店' : '邻' %></span>
+              <span><strong><%= mode.title %></strong><small><%= mode.description %></small><em><%= mode.reviewHint %></em></span>
+            </label>
+          <% }) %>
+        </div>
+        <% if (shop.business_mode && ['pending', 'approved', 'suspended'].includes(shop.review_status)) { %>
+          <label class="check-line"><input type="checkbox" name="confirm_mode_change" value="yes"> 我理解切换经营方式会保留已有资料，但需要重新确认并提交审核。</label>
+        <% } %>
+        <button class="button primary" type="submit">下一步</button>
+      </form>
+    <% } %>
+
+    <% if (step === 'basic' && shop.business_mode === 'verified_store') { %>
+      <form action="/merchant/onboarding/<%= shop.id %>/basic" method="post" class="stack-form" data-wizard-form data-autosave data-step="basic" data-autosave-url="/merchant/onboarding/<%= shop.id %>/autosave">
+        <fieldset class="form-block"><legend>实体店基本资料</legend>
+          <label>店铺名称<input name="name" required maxlength="120" value="<%= shop.name === '未命名店铺' ? '' : shop.name %>" placeholder="如高桥便民超市"></label>
+          <label>这家店主要卖什么？</label>
+          <div class="category-choice-grid">
+            <% categories.forEach((category) => { %><label><input type="radio" name="primary_category_id" value="<%= category.id %>" required <%= Number(shop.primary_category_id) === category.id ? 'checked' : '' %>><img src="<%= categoryIconPaths[category.slug] || categoryIconPaths.daily %>" alt=""><span><%= category.name %></span></label><% }) %>
+          </div>
+          <div class="form-grid-two"><label>所在村、街道<input name="village" required maxlength="80" value="<%= shop.village || '' %>" placeholder="如青河村"></label><label>所在镇<input name="town" maxlength="80" value="<%= shop.town || '高桥镇' %>"></label></div>
+          <label>营业状态<select name="business_state"><option value="open" <%= shop.business_state === 'open' ? 'selected' : '' %>>今日营业</option><option value="rest" <%= shop.business_state === 'rest' ? 'selected' : '' %>>今日休息</option><option value="temporary_rest" <%= shop.business_state === 'temporary_rest' ? 'selected' : '' %>>临时休息</option></select></label>
+          <label>店铺简介（选填）<textarea name="description" rows="4" maxlength="1200" data-description-input><%= shop.description || '' %></textarea><span class="field-action"><button class="button light small" type="button" data-description-template data-url="/merchant/onboarding/<%= shop.id %>/description-template">自动生成简介</button></span></label>
+        </fieldset>
+        <div class="wizard-actions"><button class="button light" type="submit" name="action" value="save">保存草稿</button><button class="button primary" type="submit" name="action" value="next">下一步：上传门面</button></div>
+      </form>
+    <% } %>
+
+    <% if (step === 'basic' && shop.business_mode === 'home_shop') { %>
+      <form action="/merchant/onboarding/<%= shop.id %>/basic" method="post" class="stack-form" data-autosave data-step="basic" data-autosave-url="/merchant/onboarding/<%= shop.id %>/autosave">
+        <fieldset class="form-block"><legend>乡邻小铺资料</legend><p class="muted">不需要营业执照、经营分类或家庭详细地址。小铺名称留空时会根据用户名和村名自动生成。</p>
+          <label>小铺名称（选填）<input name="name" maxlength="120" value="<%= shop.name === '未命名店铺' ? '' : shop.name %>" placeholder="如李阿姨家的菜园"></label>
+          <div class="form-grid-two"><label>所在镇<input name="town" maxlength="80" value="<%= shop.town || '高桥镇' %>"></label><label>所在村<input name="village" required maxlength="80" value="<%= shop.village || '' %>" placeholder="如青河村"></label></div>
+          <label>一句话介绍<textarea name="description" rows="4" required maxlength="1200" placeholder="如自家种菜、闲置转让或提供上门维修"><%= shop.description || '' %></textarea></label>
+        </fieldset>
+        <div class="wizard-actions"><button class="button light" type="submit" name="action" value="save">保存草稿</button><button class="button primary" type="submit" name="action" value="next">下一步：上传封面</button></div>
+      </form>
+    <% } %>
+
+    <% if (step === 'photos') { %>
+      <form action="/merchant/onboarding/<%= shop.id %>/photos" method="post" enctype="multipart/form-data" class="stack-form" data-image-compress-form>
+        <fieldset class="form-block"><legend><%= shop.business_mode === 'home_shop' ? '小铺头像或封面' : '门面封面' %></legend><p class="muted"><%= shop.business_mode === 'home_shop' ? '可使用自家农货、服务工具或小铺照片，避免暴露家庭详细位置。' : '必填。建议横向拍摄，上传后按 16:9 预览展示。' %></p><label class="upload-zone"><input name="cover" type="file" accept="image/jpeg,image/png,image/webp" data-compress-image data-preview-target="#cover-preview"><span>拍摄或选择图片</span></label><div id="cover-preview" class="cover-preview"><img src="<%= shop.cover_image || '/assets/images/shop-placeholder.svg?v=2' %>" alt="封面预览"></div></fieldset>
+        <% if (shop.business_mode === 'verified_store') { %><fieldset class="form-block"><legend>店内实拍</legend><p class="muted">最少 2 张，建议拍店内全景、主营商品和服务环境，最多 9 张。可拖动排序。</p><label class="upload-zone"><input name="interior" type="file" accept="image/jpeg,image/png,image/webp" multiple data-compress-image data-preview-target="#interior-preview"><span>拍摄或选择店内实拍</span></label><div id="interior-preview" class="interior-preview"></div><% if (media.length) { %><div class="media-sort-grid" data-media-sort><% media.forEach((item) => { %><article draggable="true" data-media-id="<%= item.id %>"><img src="<%= item.file_path %>" alt="店内实拍"><span>拖动排序</span><form action="/merchant/onboarding/<%= shop.id %>/media/<%= item.id %>/delete" method="post"><button class="icon-button danger-icon" type="submit" aria-label="删除图片">删除</button></form></article><% }) %></div><form action="/merchant/onboarding/<%= shop.id %>/media/order" method="post" class="media-order-form"><input type="hidden" name="media_order" data-media-order value="<%= media.map((item) => item.id).join(',') %>"><button class="button light small" type="submit">保存图片排序</button></form><% } %></fieldset><% } %>
+        <div class="wizard-actions"><button class="button light" type="submit" name="action" value="save">保存草稿</button><button class="button primary" type="submit" name="action" value="next">下一步</button></div>
+      </form>
+    <% } %>
+
+    <% if (step === 'location' && shop.business_mode === 'verified_store') { %>
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+      <form action="/merchant/onboarding/<%= shop.id %>/location" method="post" class="stack-form" data-autosave data-step="location" data-autosave-url="/merchant/onboarding/<%= shop.id %>/autosave"><fieldset class="form-block"><legend>详细地址</legend><div class="form-grid-two"><label>省<input name="province" maxlength="40" value="<%= shop.province || '湖南省' %>"></label><label>市<input name="city" maxlength="40" value="<%= shop.city || '长沙市' %>"></label></div><div class="form-grid-two"><label>区县<input name="district" maxlength="40" value="<%= shop.district || '长沙县' %>"></label><label>镇<input name="town" maxlength="80" value="<%= shop.town || '高桥镇' %>"></label></div><div class="form-grid-two"><label>村或社区<input name="village" maxlength="80" value="<%= shop.village || '' %>"></label><label>详细地址<input name="address_detail" maxlength="200" value="<%= shop.address_detail || '' %>" placeholder="如老街 88 号"></label></div></fieldset><fieldset class="form-block"><legend>地图位置（可稍后完善）</legend><p class="muted" data-map-fallback>地图暂时无法加载，可以稍后完善。</p><div class="map-search-row"><input type="search" data-location-search placeholder="搜索高桥镇附近地点"><button class="button light small" type="button" data-location-search-button>搜索</button><button class="button outline small" type="button" data-current-location>定位</button></div><div data-location-results class="location-results"></div><div class="location-picker" data-location-picker data-lat="<%= shop.latitude || 28.4638705 %>" data-lng="<%= shop.longitude || 113.3307214 %>"></div><div class="form-grid-two"><label>纬度<input name="latitude" data-location-lat inputmode="decimal" value="<%= shop.latitude || '' %>"></label><label>经度<input name="longitude" data-location-lng inputmode="decimal" value="<%= shop.longitude || '' %>"></label></div></fieldset><div class="wizard-actions"><button class="button light" type="submit" name="action" value="save">保存草稿</button><button class="button primary" type="submit" name="action" value="next">下一步：联系方式</button></div></form>
+    <% } %>
+
+    <% if (step === 'contact') { %>
+      <form action="/merchant/onboarding/<%= shop.id %>/contact" method="post" class="stack-form" data-autosave data-step="contact" data-autosave-url="/merchant/onboarding/<%= shop.id %>/autosave"><fieldset class="form-block"><legend>联系方式</legend><p class="muted">账号手机号不会公开，也不是开店前提。请至少填写一种顾客可用的联系方法。</p><div class="form-grid-two"><label>店铺电话或座机<input name="phone" maxlength="40" value="<%= shop.phone || '' %>"></label><label>商家微信<input name="contact_wechat" maxlength="80" value="<%= shop.contact_wechat || '' %>"></label></div><label>首选联系方法<select name="preferred_contact"><option value="phone" <%= shop.preferred_contact === 'phone' ? 'selected' : '' %>>电话</option><option value="wechat" <%= shop.preferred_contact === 'wechat' ? 'selected' : '' %>>商家微信</option><option value="consultation" <%= shop.preferred_contact === 'consultation' ? 'selected' : '' %>>平台站内咨询</option></select></label><div class="check-row"><label><input type="checkbox" name="public_phone" <%= shop.public_phone ? 'checked' : '' %>> 在店铺页公开电话</label><label><input type="checkbox" name="allow_consultation" <%= shop.allow_consultation ? 'checked' : '' %>> 允许站内咨询</label></div></fieldset>
+        <% if (shop.business_mode === 'home_shop') { %><fieldset class="form-block"><legend>常用自提地点</legend><p class="muted">公开页只显示“约定自提点”，不会展示家庭详细地址。</p><label>自提地点<input name="pickup_location" maxlength="160" value="<%= shop.pickup_location || '' %>" placeholder="如青河村村口小卖部旁"></label></fieldset><% } else { %><fieldset class="form-block"><legend>营业信息</legend><div class="weekday-row"><% ['一','二','三','四','五','六','日'].forEach((day) => { %><label><input type="checkbox" name="weekly_schedule" value="<%= day %>" <%= selectedWeekdays.includes(day) ? 'checked' : '' %>> 周<%= day %></label><% }) %></div><div class="form-grid-two"><label>开始时间<input name="opening_time" type="time" value="<%= shop.opening_time || '' %>"></label><label>结束时间<input name="closing_time" type="time" value="<%= shop.closing_time || '' %>"></label></div><div class="check-row"><label><input type="checkbox" name="noon_break" <%= shop.noon_break ? 'checked' : '' %>> 中午休息</label><label>今日状态<select name="business_state"><option value="open" <%= shop.business_state === 'open' ? 'selected' : '' %>>今日营业</option><option value="rest" <%= shop.business_state === 'rest' ? 'selected' : '' %>>今日休息</option><option value="temporary_rest" <%= shop.business_state === 'temporary_rest' ? 'selected' : '' %>>临时休息</option></select></label></div></fieldset><% } %>
+        <div class="wizard-actions"><button class="button light" type="submit" name="action" value="save">保存草稿</button><button class="button primary" type="submit" name="action" value="next">下一步</button></div></form>
+    <% } %>
+
+    <% if (step === 'services' && shop.business_mode === 'verified_store') { %>
+      <form action="/merchant/onboarding/<%= shop.id %>/services" method="post" class="stack-form" data-autosave data-step="services" data-autosave-url="/merchant/onboarding/<%= shop.id %>/autosave"><fieldset class="form-block"><legend>配送服务</legend><div class="tag-check-grid"><% serviceTags.forEach((tag) => { %><label><input type="checkbox" name="service_tags" value="<%= tag %>" <%= selectedServiceTags.includes(tag) ? 'checked' : '' %>> <%= tag %></label><% }) %></div></fieldset><fieldset class="form-block" data-delivery-fields><legend>配送设置</legend><p class="muted">选择送货上门或配送到村后填写；暂未填写也可以保存草稿。</p><label>配送范围<textarea name="delivery_area" rows="3" maxlength="240"><%= shop.delivery_area || '' %></textarea></label><div class="form-grid-two"><label>配送半径（公里）<input name="delivery_radius" type="number" min="0" step="0.1" value="<%= shop.delivery_radius ?? '' %>"></label><label>起送金额（元）<input name="minimum_order" type="number" min="0" step="0.01" value="<%= shop.minimum_order ?? '' %>"></label></div><div class="form-grid-two"><label>配送费（元）<input name="delivery_fee" type="number" min="0" step="0.01" value="<%= shop.delivery_fee ?? '' %>"></label><label>免费配送条件<input name="free_delivery_condition" maxlength="120" value="<%= shop.free_delivery_condition || '' %>"></label></div><label>配送时间说明<input name="delivery_time_note" maxlength="240" value="<%= shop.delivery_time_note || '' %>"></label></fieldset><div class="wizard-actions"><button class="button light" type="submit" name="action" value="save">保存草稿</button><button class="button primary" type="submit" name="action" value="next">下一步：营业执照</button></div></form>
+    <% } %>
+
+    <% if (step === 'qualification' && shop.business_mode === 'verified_store') { %>
+      <form action="/merchant/onboarding/<%= shop.id %>/qualification" method="post" enctype="multipart/form-data" class="stack-form" data-image-compress-form><fieldset class="form-block"><legend>营业执照</legend><p class="muted">营业执照原图仅店主和平台管理员可见。审核通过后顾客端仅显示“平台已核验”。</p><label>经营主体名称（选填）<input name="subject_name" maxlength="120" value="<%= shop.subject_name || '' %>"></label><label>统一社会信用代码<input name="credit_code" maxlength="80" value="<%= shop.credit_code || '' %>"></label><label>申请人与店铺的关系<input name="applicant_relation" maxlength="120" value="<%= shop.applicant_relation || '' %>" placeholder="如店主、经营者"></label><label>营业执照（必填）<input name="license" type="file" accept="image/jpeg,image/png,image/webp" data-compress-image></label><label>其他资质附件（选填，最多 4 张）<input name="attachments" type="file" accept="image/jpeg,image/png,image/webp" multiple data-compress-image></label><% if (credentials.length) { %><div class="credential-list"><strong>已保存的私有资质</strong><% credentials.forEach((credential) => { %><a href="/merchant/onboarding/<%= shop.id %>/credentials/<%= credential.id %>" target="_blank" rel="noreferrer"><%= credential.credential_type === 'business_license' ? '营业执照' : '其他资质' %> · <%= credential.original_name || credential.file_name %></a><% }) %></div><% } %></fieldset><div class="wizard-actions"><button class="button light" type="submit" name="action" value="save">保存草稿</button><button class="button primary" type="submit" name="action" value="next">预览店铺</button></div></form>
+    <% } %>
+
+    <% if (step === 'preview') { %>
+      <section class="customer-preview"><p class="preview-label">顾客看到的页面</p><img class="preview-cover" src="<%= shop.cover_image || shop.logo_image %>" alt="<%= shop.name %>"><div class="preview-body"><div class="item-title-row"><h2><%= shop.name %></h2><span class="verify"><%= verificationLabel %></span></div><p><strong><%= shop.business_mode === 'home_shop' ? '乡邻小铺' : '实体门店' %></strong></p><p><%= shop.description || '店铺简介待补充。' %></p><% if (shop.business_mode === 'verified_store') { %><p><strong><%= shop.business_state === 'open' ? '今日营业' : shop.business_state === 'rest' ? '今日休息' : '临时休息' %></strong> · <%= shop.business_hours || '营业时间待补充' %></p><p><%= shop.address || '地址待补充' %></p><% } else { %><p><%= shop.village || '所在村待补充' %> · 约定自提点：<%= shop.pickup_location || '请联系卖家确认' %></p><p>具体位置请联系卖家</p><% } %><div class="preview-actions"><button class="button outline" type="button" disabled><%= shop.preferred_contact === 'wechat' ? '联系商家微信' : shop.preferred_contact === 'consultation' ? '站内咨询' : '拨打联系电话' %></button></div><% if (shop.business_mode === 'verified_store' && media.length) { %><div class="preview-media"><% media.forEach((item) => { %><img src="<%= item.file_path %>" alt="店内实拍"><% }) %></div><% } %></div></section><div class="wizard-actions preview-submit"><a class="button light" href="/merchant/onboarding/<%= shop.id %>/basic">返回修改</a><a class="button outline" href="/merchant/onboarding/<%= shop.id %>/type">经营方式</a><form action="/merchant/onboarding/<%= shop.id %>/submit" method="post"><button class="button primary" type="submit"><%= shop.business_mode === 'home_shop' ? '创建乡邻小铺' : '提交审核' %></button></form></div>
+    <% } %>
+  </section>
+</section>
+<script src="/shop-wizard.js"></script>
+<% if (step === 'location' && shop.business_mode === 'verified_store') { %><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="/location-picker.js"></script><% } %>
+<%- include("partials/footer") %>
