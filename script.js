@@ -1,4 +1,13 @@
 const DEFAULT_QUERY = "电饭煲 不加热";
+const HONGJIANG_LEARNING_API =
+  window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost"
+    ? "http://127.0.0.1:3107/api/volunteer/learning-records"
+    : "https://hongjiang.fixone.cloud/api/volunteer/learning-records";
+const HONGJIANG_ALLOWED_PARENT_ORIGINS = new Set([
+  "https://hongjiang.fixone.cloud",
+  "http://127.0.0.1:5173",
+  "http://localhost:5173",
+]);
 
 function qs(selector, root = document) {
   return root.querySelector(selector);
@@ -23,6 +32,25 @@ async function fetchJson(url) {
   if (!response.ok) throw new Error(`无法读取 ${url}`);
   return response.json();
 }
+
+function getHongjiangVolunteerToken() {
+  try {
+    return sessionStorage.getItem("hongjiangVolunteerToken") || "";
+  } catch (error) {
+    return "";
+  }
+}
+
+window.addEventListener("message", (event) => {
+  if (!HONGJIANG_ALLOWED_PARENT_ORIGINS.has(event.origin)) return;
+  const data = event.data || {};
+  if (data.type !== "hongjiang-volunteer-token" || !data.token) return;
+  try {
+    sessionStorage.setItem("hongjiangVolunteerToken", String(data.token));
+  } catch (error) {
+    console.warn("无法暂存红匠志愿者登录状态:", error);
+  }
+});
 
 function normalizeText(value) {
   return String(value || "")
@@ -1217,6 +1245,111 @@ function filterProductsByPart(products, repairPart) {
   });
 }
 
+function setupHongjiangWatchTracking(video, context) {
+  if (!video) return;
+
+  let pendingSeconds = 0;
+  let lastWallTime = Date.now();
+  let lastVideoTime = Number(video.currentTime) || 0;
+  let reporting = false;
+  let missingTokenNotified = false;
+
+  function resetTick() {
+    lastWallTime = Date.now();
+    lastVideoTime = Number(video.currentTime) || 0;
+  }
+
+  async function reportLearningTime() {
+    const seconds = Math.floor(pendingSeconds / 60) * 60;
+    if (seconds < 60 || reporting) return;
+
+    const token = getHongjiangVolunteerToken();
+    if (!token) {
+      if (!missingTokenNotified && context.message) {
+        context.message.textContent = "登录红匠志愿者后，观看时长会同步到我的排行。";
+        missingTokenNotified = true;
+      }
+      return;
+    }
+
+    pendingSeconds -= seconds;
+    reporting = true;
+    try {
+      const response = await fetch(HONGJIANG_LEARNING_API, {
+        method: "POST",
+        headers: {
+          "Authorization": "Bearer " + token,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          source: "fixone",
+          projectId: context.project?.id,
+          projectTitle: context.project?.title || "fixone维修教学",
+          clipTitle: context.videoItem?.title || context.videoItem?.clipTitle || context.project?.title || "维修教学视频",
+          durationSeconds: seconds,
+        }),
+      });
+      if (!response.ok) {
+        pendingSeconds += seconds;
+        if (response.status === 401 && context.message) {
+          context.message.textContent = "红匠登录已过期，重新进入培训后可继续同步学习时长。";
+        }
+        return;
+      }
+      const result = await response.json().catch(() => null);
+      if (context.message && result?.credited_minutes) {
+        context.message.textContent = "已同步学习时长 " + result.credited_minutes + " 分钟。";
+      }
+    } catch (error) {
+      pendingSeconds += seconds;
+      console.warn("同步红匠学习时长失败:", error);
+    } finally {
+      reporting = false;
+    }
+  }
+
+  function collectWatchTime() {
+    if (video.paused || video.ended || video.readyState < 2) {
+      resetTick();
+      return;
+    }
+
+    const now = Date.now();
+    const currentTime = Number(video.currentTime) || 0;
+    const wallSeconds = (now - lastWallTime) / 1000;
+    const mediaSeconds = currentTime - lastVideoTime;
+
+    if (wallSeconds > 0 && wallSeconds < 10 && mediaSeconds > 0) {
+      pendingSeconds += Math.min(wallSeconds, mediaSeconds, 5);
+      reportLearningTime();
+    }
+
+    lastWallTime = now;
+    lastVideoTime = currentTime;
+  }
+
+  video.addEventListener("play", resetTick);
+  video.addEventListener("seeking", resetTick);
+  video.addEventListener("timeupdate", collectWatchTime);
+  video.addEventListener("pause", () => {
+    collectWatchTime();
+    reportLearningTime();
+  });
+  video.addEventListener("ended", () => {
+    collectWatchTime();
+    reportLearningTime();
+  });
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      collectWatchTime();
+      reportLearningTime();
+    } else {
+      resetTick();
+    }
+  });
+  resetTick();
+}
+
 async function initRepairPlayerPage() {
   const params = new URLSearchParams(window.location.search);
   const projectId = params.get("projectId");
@@ -1264,6 +1397,7 @@ async function initRepairPlayerPage() {
     video.src = videoItem.videoUrl;
     if (message) message.textContent = "点击播放器开始学习。";
     setupHevcDetection(video, qs("#hevcWarning"));
+    setupHongjiangWatchTracking(video, { project, videoItem, message });
     initVideoComments(project.id);
   } catch (error) {
     console.error("加载播放页失败:", error);
