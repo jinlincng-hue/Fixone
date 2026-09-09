@@ -1,0 +1,25 @@
+<%- include("partials/header", { title, page }) %>
+<section class="page-hero small-hero">
+  <div>
+    <h1><%= category.name %></h1>
+    <p>查看FixOne配件库本地商家商品、个人二手和自家农产品。</p>
+  </div>
+  <a class="button outline" href="/wanted/new?q=<%= encodeURIComponent(category.name) %>">帮我问全镇</a>
+</section>
+
+<% if (products.length) { %>
+  <div class="section-heading"><h2>商家商品</h2></div>
+  <section class="product-grid wide">
+    <% products.forEach((product) => { %><%- include("partials/product-card", { product }) %><% }) %>
+  </section>
+<% } %>
+<% if (listings.length) { %>
+  <div class="section-heading"><h2>个人发布</h2></div>
+  <section class="product-grid wide">
+    <% listings.forEach((listing) => { %><%- include("partials/listing-card", { listing }) %><% }) %>
+  </section>
+<% } %>
+<% if (!products.length && !listings.length) { %>
+  <%- include("partials/empty", { message: "这个分类暂时没有信息。", actionHref: `/wanted/new?q=${encodeURIComponent(category.name)}`, actionText: "帮我问全镇" }) %>
+<% } %>
+<%- include("partials/footer") %>

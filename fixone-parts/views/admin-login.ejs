@@ -1,0 +1,19 @@
+<%- include("partials/auth-start", { title }) %>
+<section class="simple-auth-shell">
+  <article class="simple-auth-card admin-login-card">
+    <p class="eyebrow">FixOne配件库</p>
+    <h1>管理员登录</h1>
+    <p class="muted">仅平台管理员可进入后台审核和管理页面。</p>
+
+    <% if (notice) { %><p class="form-success"><%= notice %></p><% } %>
+    <% if (error) { %><p class="form-error"><%= error %></p><% } %>
+
+    <form action="/login" method="post" class="stack-form">
+      <input type="hidden" name="next" value="<%= nextUrl %>">
+      <label>管理员账号<input name="username" required autocomplete="username"></label>
+      <label>密码<input name="password" type="password" required autocomplete="current-password"></label>
+      <button class="button primary" type="submit">登录后台</button>
+    </form>
+  </article>
+</section>
+<%- include("partials/auth-end") %>

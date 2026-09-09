@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#d8edf2"/>
+      <stop offset="1" stop-color="#fff8e8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="520" fill="url(#sky)"/>
+  <path d="M0 210 C180 120 300 170 430 116 C580 52 680 138 820 92 C960 44 1060 96 1200 70 L1200 520 L0 520Z" fill="#2e7a54" opacity=".38"/>
+  <path d="M0 245 C200 176 365 226 520 164 C690 96 855 194 1010 142 C1100 112 1168 126 1200 122 L1200 520 L0 520Z" fill="#174f42" opacity=".28"/>
+  <rect x="90" y="220" width="260" height="185" fill="#f5d29b"/>
+  <rect x="116" y="260" width="208" height="145" fill="#c88338"/>
+  <path d="M70 218 L220 135 L370 218Z" fill="#7a4831"/>
+  <rect x="420" y="206" width="300" height="200" fill="#f0c48a"/>
+  <rect x="450" y="255" width="245" height="151" fill="#b76c30"/>
+  <path d="M390 205 L570 116 L750 205Z" fill="#6e4532"/>
+  <rect x="780" y="225" width="260" height="180" fill="#f6ead4"/>
+  <rect x="810" y="270" width="200" height="135" fill="#d9a161"/>
+  <path d="M755 224 L910 150 L1065 224Z" fill="#8b5c43"/>
+  <path d="M0 405 H1200 V520 H0Z" fill="#d9c6a6"/>
+  <path d="M0 444 C260 400 432 462 610 420 C780 382 940 446 1200 404 V520 H0Z" fill="#b9c89c" opacity=".8"/>
+  <text x="882" y="362" font-size="62" font-family="Microsoft YaHei, sans-serif" font-weight="800" fill="#d95d16">FixOne配件库展示</text>
+</svg>

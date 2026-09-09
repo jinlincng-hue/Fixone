@@ -1,7 +1,0 @@
-<article class="shop-card">
-  <a class="shop-media" href="/shops/<%= shop.id %>"><img src="<%= shop.cover_image || shop.logo_image %>" alt="<%= shop.name %>"></a>
-  <div class="shop-content">
-    <div class="item-title-row"><h3><a href="/shops/<%= shop.id %>"><%= shop.name %></a></h3><% if (shop.business_mode === 'home_shop') { %><span class="verify neighbour">乡邻小铺</span><% } else if (shop.verified) { %><span class="verify">平台已核验</span><% } %></div>
-    <% if (shop.business_mode === 'home_shop') { %><p class="muted"><%= shop.village || '高桥镇' %> · 乡邻发布</p><p><%= shop.description || '本地乡邻小铺' %></p><p class="delivery-note">约定自提点：<%= shop.pickup_location || '具体位置请联系卖家' %></p><% } else { %><p class="muted"><%= shop.address %></p><p><%= shop.business_scope %></p><div class="shop-meta"><span><%= shop.business_hours %></span><span><%= phoneForPage(shop.phone) %></span></div><p class="delivery-note"><%= shop.delivery_area %></p><% } %>
-  </div>
-</article>

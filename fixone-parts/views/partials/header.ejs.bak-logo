@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title ? `${title} - FixOne配件库` : "FixOne配件库" %></title>
+    <link rel="stylesheet" href="/styles.css?v=20260904">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="topbar">
+        <a class="brand" href="/" aria-label="FixOne配件库首页">
+          <span class="brand-script">FixOne</span>
+          <span class="brand-rest"> · 配件库</span>
+        </a>
+        <% if (page === 'home') { %>
+          <form class="top-search" action="/search" method="get">
+            <input type="search" name="q" placeholder="搜商品、商家、服务" aria-label="搜索商品、商家、服务">
+            <button type="submit" aria-label="搜索">搜索</button>
+          </form>
+        <% } %>
+      </div>
+    </header>
+    <main>
+      <% if (flash) { %>
+        <div class="flash <%= flash.type %>" data-auto-close-flash><%= flash.message %></div>
+      <% } %>

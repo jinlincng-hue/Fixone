@@ -1,0 +1,22 @@
+<%- include("partials/auth-start", { title }) %>
+<section class="simple-auth-shell">
+  <article class="simple-auth-card">
+    <p class="eyebrow">FixOne配件库</p>
+    <h1>注册账号</h1>
+    <p class="muted">注册后使用账号密码登录，需要开店时再提交商家认证。</p>
+
+    <% if (notice) { %><p class="form-success"><%= notice %></p><% } %>
+    <% if (error) { %><p class="form-error"><%= error %></p><% } %>
+
+    <form action="/register" method="post" class="stack-form">
+      <input type="hidden" name="next" value="<%= nextUrl %>">
+      <label>用户名<input name="username" required minlength="2" maxlength="60" autocomplete="username"></label>
+      <label>所在村或社区<input name="village" required maxlength="80" placeholder="如青河村"></label>
+      <label>设置密码<input name="password" type="password" required minlength="8" autocomplete="new-password"></label>
+      <button class="button primary" type="submit">注册</button>
+    </form>
+
+    <p class="auth-switch">已有账号？<a href="/auth?next=<%= encodeURIComponent(nextUrl) %>">去登录</a></p>
+  </article>
+</section>
+<%- include("partials/auth-end") %>

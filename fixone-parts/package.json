@@ -1,0 +1,29 @@
+{
+  "name": "fixone-parts",
+  "version": "1.0.0",
+  "description": "FixOne配件库 本地商品、商家与便民服务 MVP",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22.5"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "db:init": "node scripts/init-db.js",
+    "db:reset": "node scripts/init-db.js --reset",
+    "test": "node --test tests/*.test.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "multer": "^2.0.2",
+    "sharp": "^0.35.4"
+  },
+  "devDependencies": {
+    "supertest": "^7.0.0"
+  }
+}
