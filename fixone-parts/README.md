@@ -32,7 +32,7 @@ npm run dev
 访问：
 
 ```text
-http://localhost:3000
+http://localhost:3001
 ```
 
 重建本地数据库：
@@ -150,7 +150,7 @@ cp .env.example .env
 
 ```text
 NODE_ENV=production
-PORT=3000
+PORT=3001
 DB_PATH=data/fixone-parts.sqlite
 SESSION_SECRET=请填写足够长的随机字符串
 ```
@@ -186,12 +186,12 @@ pm2 save
 ```nginx
 server {
     listen 80;
-    server_name fixone-parts.example.com;
+    server_name parts.fixone.cloud;
 
     client_max_body_size 3m;
 
     location / {
-        proxy_pass http://127.0.0.1:3000;
+        proxy_pass http://127.0.0.1:3001;
         proxy_http_version 1.1;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
