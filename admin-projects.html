@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fixone视修工坊 - 管理审核</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png?v=20260724-logo1x1">
+  <link rel="shortcut icon" href="favicon.ico?v=20260724-logo1x1">
+  <link rel="stylesheet" href="style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fixone视修工坊 - 管理审核">
+  <meta property="og:description" content="水电、门窗、家电、手机维修教学视频，快速解决常见故障。">
+  <meta property="og:image" content="https://fixone.cloud/assets/fixone-og-v2.jpg">
+  <meta property="og:url" content="https://fixone.cloud/admin-projects.html">
+  <meta name="wechat:title" content="Fixone视修工坊 - 管理审核">
+  <meta name="wechat:description" content="水电视修 · 快速解决问题">
+  <meta name="wechat:image" content="https://fixone.cloud/assets/fixone-og-v2.jpg">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+</head>
+<body class="soft-page" id="adminPage">
+  <header class="page-topbar">
+    <a href="index.html" class="mini-logo"><img src="assets/logo.svg" alt="Fixone"></a>
+    <a class="ghost-link" href="index.html">返回首页</a>
+  </header>
+
+  <main class="page-shell">
+    <section class="results-heading">
+      <span class="results-kicker">Admin Review</span>
+      <h1>维修教学视频审核</h1>
+      <p>新上传的视频在这里审核。通过后会进入首页搜索和播放页。</p>
+    </section>
+    <section class="glass-panel">
+      <div class="section-head">
+        <div>
+          <h2>视频列表</h2>
+          <p>按提交时间倒序显示。</p>
+        </div>
+        <button class="secondary-button" type="button" id="refreshAdminProjects">刷新</button>
+      </div>
+      <div id="adminProjectList" class="admin-project-list"></div>
+    </section>
+  </main>
+
+  <script src="data/users.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

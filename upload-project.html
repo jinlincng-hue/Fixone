@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fixone视修工坊 - 发布视频</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png?v=20260724-logo1x1">
+  <link rel="shortcut icon" href="favicon.ico?v=20260724-logo1x1">
+  <link rel="stylesheet" href="style.css?v=20260721-edit-delete">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fixone视修工坊 - 发布视频">
+  <meta property="og:description" content="水电、门窗、家电、手机维修教学视频，快速解决常见故障。">
+  <meta property="og:image" content="https://fixone.cloud/assets/fixone-og-v2.jpg">
+  <meta property="og:url" content="https://fixone.cloud/upload-project.html">
+  <meta name="wechat:title" content="Fixone视修工坊 - 发布视频">
+  <meta name="wechat:description" content="水电视修 · 快速解决问题">
+  <meta name="wechat:image" content="https://fixone.cloud/assets/fixone-og-v2.jpg">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+</head>
+<body class="soft-page" id="uploadPage">
+  <header class="page-topbar">
+    <a href="index.html" class="mini-logo"><img src="assets/logo.svg" alt="Fixone"></a>
+    <nav class="topbar-links">
+      <a class="ghost-link" href="profile.html">个人中心</a>
+      <a class="ghost-link" href="index.html">返回首页</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="glass-panel" id="uploadLocked">
+      <span class="results-kicker">Upload</span>
+      <h1>请先登录后再发布维修教学视频</h1>
+      <a class="primary-button" href="profile.html">前往个人中心登录</a>
+    </section>
+
+    <form class="glass-panel clean-form fixone-publish-form hidden" id="uploadForm">
+      <div class="form-title">
+        <span class="results-kicker">Publish</span>
+        <h1>发布维修教学视频</h1>
+        <p>上传一个完整维修教学视频，填写基础信息后提交审核。</p>
+      </div>
+
+      <input id="uploaderUsername" name="uploader_username" type="hidden">
+      <input id="uploaderName" name="uploader_name" type="hidden">
+
+      <label class="video-plus-uploader" id="videoDropZone">
+        <input id="singleVideoInput" name="video_file" type="file" accept=".mp4,.mov,.webm,video/mp4,video/quicktime,video/webm" required>
+        <span class="video-plus-mark">+</span>
+        <strong id="videoUploadTitle">上传视频</strong>
+        <small id="videoUploadHint">点击或拖拽上传 mp4 / mov / webm</small>
+      </label>
+
+      <div class="upload-video-preview-wrap hidden" id="uploadVideoPreviewWrap">
+        <video class="upload-video-preview" id="uploadVideoPreview" controls playsinline preload="metadata"></video>
+        <button class="change-video-button" id="changeVideoButton" type="button">更换视频</button>
+      </div>
+
+      <label>
+        <span>标题</span>
+        <input name="title" type="text" placeholder="例如：电饭煲不加热维修教程" required>
+      </label>
+
+      <label>
+        <span>简介</span>
+        <textarea name="description" rows="4" placeholder="简单说明这条维修教学视频讲什么、适合谁学习。" required></textarea>
+      </label>
+
+      <label>
+        <span>维修大类</span>
+        <select name="category" required>
+          <option value="">请选择</option>
+          <option>水电维修</option>
+          <option>门窗维修</option>
+          <option>家电维修</option>
+          <option>手机维修</option>
+          <option>其他</option>
+        </select>
+      </label>
+
+      <label>
+        <span>设备名称和型号</span>
+        <input name="device_model" type="text" placeholder="例如：苏泊尔电饭煲 CFXB40 / iPhone 16 Pro Max" required>
+      </label>
+
+      <button class="primary-button" id="submitUploadButton" type="submit">提交审核并上传</button>
+      <div class="upload-progress hidden" id="uploadProgress" aria-live="polite">
+        <div class="upload-progress-head">
+          <span id="uploadProgressText">准备上传</span>
+          <strong id="uploadProgressPercent">0%</strong>
+        </div>
+        <div class="upload-progress-track">
+          <span id="uploadProgressBar"></span>
+        </div>
+      </div>
+      <p class="form-message" id="uploadMessage"></p>
+    </form>
+  </main>
+
+  <script src="data/users.js"></script>
+  <script src="script.js?v=20260724-change-video"></script>
+</body>
+</html>

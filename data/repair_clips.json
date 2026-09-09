@@ -1,0 +1,12 @@
+{
+  "clips": [
+    {
+      "id": "bilibili-iphone16pm-battery-demo",
+      "flowId": "iphone16pm-battery",
+      "platform": "B站",
+      "title": "iPhone 16 Pro Max 更换电池样例视频",
+      "description": "用于 MVP 展示的视频卡片。后续可替换为真实 B 站 BV 号、封面和时长。",
+      "url": "https://www.bilibili.com/"
+    }
+  ]
+}

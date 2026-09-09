@@ -1,0 +1,31 @@
+{
+  "products": [
+    {
+      "id": "battery-a",
+      "flowId": "iphone16pm-battery",
+      "source": "方案 A",
+      "title": "iPhone 16 Pro Max 标准容量电池",
+      "price": "¥129",
+      "description": "适合日常维修演示，包含电池胶和基础防水胶。",
+      "tags": ["标准容量", "含胶条", "性价比"]
+    },
+    {
+      "id": "battery-b",
+      "flowId": "iphone16pm-battery",
+      "source": "方案 B",
+      "title": "iPhone 16 Pro Max 高循环电芯套装",
+      "price": "¥168",
+      "description": "面向更稳定的循环寿命，附带拆机撬片和螺丝垫。",
+      "tags": ["高循环", "工具包", "稳妥"]
+    },
+    {
+      "id": "battery-c",
+      "flowId": "iphone16pm-battery",
+      "source": "方案 C",
+      "title": "iPhone 16 Pro Max 精修电池完整包",
+      "price": "¥199",
+      "description": "包含电池、防水胶、底部螺丝、屏蔽罩螺丝和清洁片。",
+      "tags": ["完整包", "备件齐", "推荐"]
+    }
+  ]
+}

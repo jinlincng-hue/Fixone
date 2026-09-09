@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fixone视修工坊 - 个人中心</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png?v=20260724-logo1x1">
+  <link rel="shortcut icon" href="favicon.ico?v=20260724-logo1x1">
+  <link rel="stylesheet" href="style.css?v=20260902-forgot-password">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fixone视修工坊 - 个人中心">
+  <meta property="og:description" content="水电、门窗、家电、手机维修教学视频，快速解决常见故障。">
+  <meta property="og:image" content="https://fixone.cloud/assets/fixone-og-v2.jpg">
+  <meta property="og:url" content="https://fixone.cloud/profile.html">
+  <meta name="wechat:title" content="Fixone视修工坊 - 个人中心">
+  <meta name="wechat:description" content="水电视修 · 快速解决问题">
+  <meta name="wechat:image" content="https://fixone.cloud/assets/fixone-og-v2.jpg">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+</head>
+<body class="soft-page" id="profilePage">
+
+  <!-- ===== LOGIN OVERLAY (shown when not logged in) ===== -->
+  <div id="loginOverlay" class="login-overlay hidden">
+    <header class="page-topbar">
+      <a href="index.html" class="mini-logo"><img src="assets/fixone-logo.svg" alt="Fixone"></a>
+      <a class="ghost-link" href="index.html">返回首页</a>
+    </header>
+    <main class="page-shell auth-shell">
+      <section class="glass-panel" id="loginCard">
+        <span class="results-kicker">个人中心</span>
+        <h1>member 登录</h1>
+        <p>使用账号登录 Fixone。</p>
+        <form class="clean-form" id="loginForm" autocomplete="off">
+          <label><span>账号 / 邮箱</span><input id="loginUsername" type="text" autocomplete="off" placeholder="请输入账号或邮箱" required></label>
+          <label><span>密码</span><div class="pw-wrap"><input id="loginPassword" type="password" autocomplete="new-password" placeholder="请输入密码" required><button class="pw-toggle" type="button" data-target="loginPassword" title="显示密码"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div></label>
+          <button class="primary-button" type="submit">登录</button>
+          <p class="form-message" id="loginMessage"></p>
+        </form>
+        <p class="security-note"><a id="showForgotLink" style="color:#0757ff;cursor:pointer;">忘记密码？</a>&nbsp;&nbsp;没有账号？<a id="showRegLink" style="color:#0757ff;cursor:pointer;font-weight:700;">去注册</a></p>
+      </section>
+
+      <section class="glass-panel hidden" id="forgotCard">
+        <span class="results-kicker">找回密码</span>
+        <h1>重置密码</h1>
+        <p>输入账号，验证码将发送到绑定的邮箱。</p>
+        <form class="clean-form" id="forgotForm" autocomplete="off">
+          <label><span>账号 / 邮箱</span><input id="forgotUsername" type="text" autocomplete="off" placeholder="请输入账号或邮箱" required></label>
+          <label><span>邮箱验证码</span><div class="code-row"><input id="forgotCode" type="text" maxlength="6" placeholder="6位验证码" required><button class="code-send-button" type="button" id="sendResetCodeBtn">发送验证码</button></div></label>
+          <label><span>新密码</span><div class="pw-wrap"><input id="forgotPassword" type="password" autocomplete="new-password" placeholder="至少6位" required><button class="pw-toggle" type="button" data-target="forgotPassword" title="显示密码"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div></label>
+          <button class="primary-button" type="submit">重置密码</button>
+          <p class="form-message" id="forgotMessage"></p>
+        </form>
+        <p class="security-note">想起密码了？<a id="backToLoginLink" style="color:#0757ff;cursor:pointer;font-weight:700;">去登录</a></p>
+      </section>
+
+      <section class="glass-panel hidden" id="regCard">
+        <span class="results-kicker">Join</span>
+        <h1>注册 Fixone</h1>
+        <p>创建账号开始上传维修视频。</p>
+        <form class="clean-form" id="regForm" autocomplete="off">
+          <label><span>账号</span><input id="regUsername" type="text" autocomplete="off" placeholder="至少3个字符" required></label>
+          <label><span>昵称</span><input id="regDisplayName" type="text" autocomplete="off" placeholder="你的显示名称" required></label>
+          <label><span>邮箱</span><input id="regEmail" type="email" autocomplete="off" placeholder="用于找回密码，如 123456@qq.com" required></label>
+          <label><span>密码</span><div class="pw-wrap"><input id="regPassword" type="password" autocomplete="new-password" placeholder="至少6位" required><button class="pw-toggle" type="button" data-target="regPassword" title="显示密码"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div></label>
+          <button class="primary-button" type="submit">注册</button>
+          <p class="form-message" id="regMessage"></p>
+        </form>
+        <p class="security-note">已有账号？<a id="showLoginLink" style="color:#0757ff;cursor:pointer;font-weight:700;">去登录</a></p>
+      </section>
+    </main>
+  </div>
+
+  <!-- ===== PROFILE MAIN VIEW (shown after login) ===== -->
+  <div class="fixone-profile-container hidden" id="profileContainer">
+    <header class="fixone-banner">
+      <a href="index.html" class="fixone-banner-logo"><img src="assets/fixone-logo.svg" alt="Fixone"></a>
+    </header>
+    <section class="fixone-user-info-wrapper">
+      <div class="fixone-info-inner">
+        <div class="fixone-avatar-container"><img src="" alt="用户头像" id="userAvatar"></div>
+        <div class="fixone-user-detail">
+          <div class="name-row"><span class="user-nickname" id="profileNickname">加载中...</span><span class="fixone-badge hidden" id="verifiedBadge">认证维修师</span></div>
+          <p class="user-sign" id="profileUsername">@username</p>
+          <div class="user-stats" id="userStatsRow"><span><b id="statUploads">0</b> 已上传项目</span></div>
+        </div>
+        <div class="fixone-action-buttons">
+          <button type="button" class="btn-primary-blue" id="goToUploadBtn"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M11 15h2v-4h3l-4-4-4 4h3v4zM20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V6h16v12z"/></svg>发布视频</button>
+          <button type="button" class="btn-secondary-blue" id="goToUploadProductBtn"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>上架新配件</button>
+          <button type="button" class="btn-logout" id="logoutBtn">退出</button>
+          <button type="button" class="btn-delete-account" id="deleteAccountBtn">注销账号</button>
+        </div>
+      </div>
+    </section>
+    <div class="fixone-main-layout">
+      <aside class="fixone-nav-aside">
+        <ul class="fixone-nav-menu">
+          <li class="menu-item" data-target="home"><a>主页</a></li>
+          <li class="menu-item active" data-target="videos"><a>我的视频</a></li>
+          <li class="menu-item" data-target="products"><a>我的商品</a></li>
+          <li class="menu-item" data-target="settings"><a>设置</a></li>
+        </ul>
+      </aside>
+      <main class="fixone-content-main">
+        <div class="profile-tab-content" id="tabVideos">
+          <div class="content-head"><h2>已上传的维修视频 <span class="count-badge" id="videoCount">(0)</span></h2></div>
+          <div class="fixone-grid" id="myUploadsGrid"><div class="empty-holder">正在加载视频记录...</div></div>
+        </div>
+        <div class="profile-tab-content hidden" id="tabProducts">
+          <div class="content-head"><h2>我关联的配件仓库 <span class="count-badge" id="productCount">(0)</span></h2></div>
+          <div class="fixone-grid" id="myProductsGrid"><div class="empty-holder">暂无自主商家上架配件，当前展示官方托管配件。</div></div>
+        </div>
+        <div class="profile-tab-content hidden" id="tabSettings">
+          <div class="content-head"><h2>账号设置</h2></div>
+          <section class="glass-panel settings-card">
+            <h3>绑定邮箱</h3>
+            <p class="settings-hint" id="emailStatusText">正在加载...</p>
+            <form class="clean-form" id="bindEmailForm" autocomplete="off">
+              <label><span>登录密码</span><div class="pw-wrap"><input id="bindEmailPassword" type="password" autocomplete="new-password" placeholder="输入当前密码以确认身份" required><button class="pw-toggle" type="button" data-target="bindEmailPassword" title="显示密码"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div></label>
+              <label><span>邮箱</span><input id="bindEmailInput" type="email" autocomplete="off" placeholder="用于找回密码，如 123456@qq.com" required></label>
+              <label><span>邮箱验证码</span><div class="code-row"><input id="bindEmailCode" type="text" maxlength="6" placeholder="6位验证码" required><button class="code-send-button" type="button" id="sendBindCodeBtn">发送验证码</button></div></label>
+              <button class="primary-button" type="submit">确认绑定</button>
+              <p class="form-message" id="bindEmailMessage"></p>
+            </form>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="data/users.js"></script>
+  <script src="script.js?v=20260902-forgot-password"></script>
+</body>
+</html>

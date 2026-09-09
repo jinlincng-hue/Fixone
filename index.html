@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html><!-- from github server 8888 -->
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fixone视修工坊</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png?v=20260724-logo1x1">
+  <link rel="shortcut icon" href="favicon.ico?v=20260724-logo1x1">
+  <link rel="stylesheet" href="style.css?v=20260730-thumb-loading">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fixone视修工坊 - 专业维修指南">
+  <meta property="og:description" content="水电视修、门窗、家电、手机维修教学视频，快速解决常见故障。">
+  <meta property="og:image" content="https://fixone.cloud/assets/fixone-og-v2.jpg">
+  <meta property="og:url" content="https://fixone.cloud">
+  <meta name="wechat:title" content="Fixone视修工坊">
+  <meta name="wechat:description" content="水电视修 · 快速解决问题">
+  <meta name="wechat:image" content="https://fixone.cloud/assets/fixone-og-v2.jpg">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+</head>
+<body>
+  <main class="app">
+    <section class="home-hero" aria-label="Fixone 首页">
+      <div class="home-bg" aria-hidden="true">
+        <span class="home-bg-orb home-bg-orb-large"></span>
+        <span class="home-bg-orb home-bg-orb-small"></span>
+        <span class="home-bg-orb home-bg-orb-tiny"></span>
+        <span class="home-bg-star star-a"></span>
+        <span class="home-bg-star star-b"></span>
+        <span class="home-bg-star star-c"></span>
+        <span class="home-bg-star star-d"></span>
+      </div>
+
+      <button class="home-profile-button" id="homeProfileButton" type="button" aria-label="个人中心">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="7.8" r="3.6"></circle>
+          <path d="M5 20.2c.8-4 3.3-6.1 7-6.1s6.2 2.1 7 6.1"></path>
+        </svg>
+      </button>
+
+      <div class="home-content">
+        <div class="home-logo-wrap">
+          <img class="home-logo" src="assets/logo.svg" alt="Fixone">
+          <p class="home-tagline"><span>专业维修指南 · 快速解决问题</span></p>
+        </div>
+
+        <form class="home-search-panel" id="searchForm" role="search">
+          <span class="home-search-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle cx="10.8" cy="10.8" r="6.6"></circle>
+              <path d="m16.2 16.2 4.1 4.1"></path>
+            </svg>
+          </span>
+          <input class="home-search-input" id="searchInput" type="search" value="" placeholder="电饭煲不加热 / 水龙头漏水 / 门锁卡顿" autocomplete="off" aria-label="搜索维修内容">
+          <div class="home-search-actions">
+            <span class="home-ai-wrap">
+              <span class="home-ai-tip">ai辅助诊断故障</span>
+              <button class="home-ai-button" id="aiButton" type="button" aria-label="AI辅助诊断">AI</button>
+            </span>
+            <button class="home-search-button" type="submit" aria-label="搜索">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="10.8" cy="10.8" r="6.6"></circle>
+                <path d="m16.2 16.2 4.1 4.1"></path>
+              </svg>
+            </button>
+          </div>
+        </form>
+
+        <button class="parts-warehouse-card" id="warehouseButton" type="button">
+          <span class="parts-warehouse-icon" aria-hidden="true"><span></span></span>
+          <span class="parts-warehouse-content">
+            <strong>配件仓库</strong>
+            <small>海量配件 · 品类齐全 · 极速发货</small>
+          </span>
+          <span class="parts-warehouse-button">进入仓库 <span aria-hidden="true">›</span></span>
+        </button>
+        <div class="home-two-col hidden" id="searchLayout">
+          <aside class="home-warehouse-side">
+            <div class="home-warehouse-card" id="warehouseButtonSide">
+              <span class="parts-warehouse-icon" aria-hidden="true"><span></span></span>
+              <div class="parts-warehouse-content">
+                <strong>配件仓库</strong>
+                <small>海量配件<br>品类齐全<br>极速发货</small>
+              </div>
+              <span class="parts-warehouse-button">进入仓库 ›</span>
+            </div>
+          </aside>
+          <main class="home-results-main">
+            <div class="home-results-card" id="searchResults">
+              <div class="search-result-empty">搜索中...</div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="data/users.js"></script>
+  <script src="script.js?v=20260730-thumb-loading"></script>
+</body>
+</html>

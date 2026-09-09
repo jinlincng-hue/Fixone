@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fixone视修工坊 - 维修教学</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png?v=20260724-logo1x1">
+  <link rel="shortcut icon" href="favicon.ico?v=20260724-logo1x1">
+  <link rel="stylesheet" href="style.css">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Fixone视修工坊 - 维修教学">
+  <meta property="og:description" content="水电、门窗、家电、手机维修教学视频，快速解决常见故障。">
+  <meta property="og:image" content="https://fixone.cloud/assets/fixone-og-v2.jpg">
+  <meta property="og:url" content="https://fixone.cloud">
+  <meta name="wechat:title" content="Fixone视修工坊 - 维修教学">
+  <meta name="wechat:description" content="水电视修 · 快速解决问题">
+  <meta name="wechat:image" content="https://fixone.cloud/assets/fixone-og-v2.jpg">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+</head>
+<body class="soft-page" id="playerPage">
+  <header class="page-topbar">
+    <a href="index.html" class="mini-logo"><img src="assets/logo.svg" alt="Fixone"></a>
+    <a class="ghost-link" href="index.html">返回首页</a>
+  </header>
+
+  <main class="page-shell" id="playerShell">
+    <section class="single-player-card">
+      <div class="tutorial-header">
+        <span class="badge-status" id="playerCategory">维修教学</span>
+        <h1 id="playerProjectTitle">加载中...</h1>
+        <p id="playerProjectMeta" class="meta-text"></p>
+      </div>
+
+      <div class="video-wrapper">
+        <div id="hevcWarning" class="hevc-warning hidden"></div>
+        <video id="repairVideo" controls playsinline preload="metadata"></video>
+        <div id="playerMessage" class="player-toast">正在初始化视频...</div>
+      </div>
+
+      <section class="video-description-card">
+        <h2>视频简介</h2>
+        <p id="playerProjectDescription"></p>
+      </section>
+
+      <section class="video-comments-card" aria-labelledby="videoCommentsTitle">
+        <div class="comments-heading">
+          <div>
+            <span class="comments-eyebrow">交流讨论</span>
+            <h2 id="videoCommentsTitle">评论区 <small id="videoCommentCount">0</small></h2>
+          </div>
+          <span class="comments-login-state" id="videoCommentLoginState"></span>
+        </div>
+
+        <form class="comment-form" id="videoCommentForm">
+          <label class="sr-only" for="videoCommentInput">发表评论</label>
+          <textarea
+            id="videoCommentInput"
+            maxlength="500"
+            rows="4"
+            placeholder="分享你的维修经验或提问……"
+          ></textarea>
+          <div class="comment-form-footer">
+            <span id="videoCommentMessage" class="comment-message">文明交流，共同进步</span>
+            <button type="submit" class="comment-submit">发表评论</button>
+          </div>
+        </form>
+
+        <div class="comment-list" id="videoCommentList">
+          <div class="comment-empty">评论加载中...</div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="data/users.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
