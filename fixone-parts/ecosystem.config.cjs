@@ -3,7 +3,7 @@ module.exports = {
     {
       name: "fixone-parts",
       script: "src/server.js",
-      interpreter: "node",
+      interpreter: process.env.PM2_INTERPRETER || "node",
       instances: 1,
       exec_mode: "fork",
       env: {
