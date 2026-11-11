@@ -27,10 +27,19 @@ function escapeAttribute(value) {
   return escapeHtml(value).replace(/"/g, "&quot;");
 }
 
-async function fetchJson(url) {
-  const response = await fetch(url);
-  if (!response.ok) throw new Error(`无法读取 ${url}`);
-  return response.json();
+function getAuthorizationHeader() {
+  const user = getCurrentUser();
+  return user?.sessionToken ? { Authorization: `Bearer ${user.sessionToken}` } : {};
+}
+
+async function fetchJson(url, options = {}) {
+  const response = await fetch(url, {
+    ...options,
+    headers: { ...getAuthorizationHeader(), ...(options.headers || {}) }
+  });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok) throw new Error(data.message || `无法读取 ${url}`);
+  return data;
 }
 
 function getHongjiangVolunteerToken() {
@@ -215,7 +224,6 @@ async function handleHomeSearch(emptyMsg) {
 function initHomePage() {
   const form = qs("#searchForm");
   const searchInput = qs("#searchInput");
-  const aiButton = qs("#aiButton");
   const warehouseButton = qs("#warehouseButton");
 
   // 放大镜 / 回车 → 搜索用户输入
@@ -228,13 +236,6 @@ function initHomePage() {
     if (event.key !== "Enter") return;
     event.preventDefault();
     handleHomeSearch("未找到相关维修视频，换个关键词试试？");
-  });
-
-  // AI气泡 → 预设热门搜索
-  aiButton?.addEventListener("click", function () {
-    var input = qs("#searchInput");
-    if (input) input.value = DEFAULT_QUERY;
-    handleHomeSearch("AI推荐的项目暂未上架，货仓正在补货中～");
   });
 
   // 进入仓库 → 配件浏览
@@ -323,23 +324,8 @@ async function handleLoginSubmit(event) {
     message.className = "form-message success";
     renderProfilePanel();
   } catch (error) {
-    // Fallback to hardcoded users if API unavailable
-    var user = getFixoneUsers().find(function (item) {
-      return item.username === username && item.password === password;
-    });
-    if (!user) {
-      message.textContent = "账号或密码不正确。";
-      message.className = "form-message error";
-      return;
-    }
-    setCurrentUser({
-      username: user.username,
-      displayName: user.displayName,
-      role: user.role
-    });
-    message.textContent = "登录成功。";
-    message.className = "form-message success";
-    renderProfilePanel();
+    message.textContent = error.message || "登录失败，请稍后重试。";
+    message.className = "form-message error";
   }
 }
 
@@ -524,8 +510,8 @@ async function handleSendBindCode() {
   try {
     var response = await fetch("/api/account/email/code", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username: currentUser.username, password: password, email: email })
+      headers: { "Content-Type": "application/json", ...getAuthorizationHeader() },
+      body: JSON.stringify({ password: password, email: email })
     });
     var result = await response.json();
     message.textContent = result.message;
@@ -558,8 +544,8 @@ async function handleBindEmailSubmit(event) {
   try {
     var response = await fetch("/api/account/email", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username: currentUser.username, password: password, email: email, code: code })
+      headers: { "Content-Type": "application/json", ...getAuthorizationHeader() },
+      body: JSON.stringify({ password: password, email: email, code: code })
     });
     var result = await response.json();
     message.textContent = result.message;
@@ -584,7 +570,7 @@ async function loadMyUploads() {
   if (!currentUser || !list) return;
 
   try {
-    const data = await fetchJson(`/api/my-projects?username=${encodeURIComponent(currentUser.username)}`);
+    const data = await fetchJson("/api/my-projects");
     const projects = data.projects || [];
 
     if (!projects.length) {
@@ -609,7 +595,7 @@ async function loadMyUploads() {
     // 绑定删除按钮事件
     qsa(".delete-project-btn", list).forEach((btn) => {
       btn.addEventListener("click", () => {
-        handleDeleteProject(btn.dataset.projectId, currentUser.username);
+        handleDeleteProject(btn.dataset.projectId);
       });
     });
   } catch (error) {
@@ -626,7 +612,7 @@ async function loadMyUploadsGrid() {
   if (!currentUser || !grid) return;
 
   try {
-    const data = await fetchJson(`/api/my-projects?username=${encodeURIComponent(currentUser.username)}`);
+    const data = await fetchJson("/api/my-projects");
     const projects = data.projects || [];
 
     if (countBadge) countBadge.textContent = "(" + projects.length + ")";
@@ -668,7 +654,7 @@ async function loadMyUploadsGrid() {
       btn.addEventListener("click", (event) => {
         event.preventDefault();
         event.stopPropagation();
-        handleDeleteProject(btn.dataset.projectId, currentUser.username);
+        handleDeleteProject(btn.dataset.projectId);
       });
     });
   } catch (error) {
@@ -742,7 +728,7 @@ function updateProductCount() {
   badge.textContent = "(" + cards.length + ")";
 }
 // 确认并删除项目
-async function handleDeleteProject(projectId, username) {
+async function handleDeleteProject(projectId) {
   if (!confirm(`确定要删除该维修教学视频吗？\n\n项目 ID: ${projectId}\n\n此操作不可恢复，视频文件将从服务器永久移除。`)) {
     return;
   }
@@ -753,8 +739,9 @@ async function handleDeleteProject(projectId, username) {
   if (grid) grid.innerHTML = `<div class="empty-holder">正在删除...</div>`;
 
   try {
-    const response = await fetch(`/api/repair-video-projects/${encodeURIComponent(projectId)}?username=${encodeURIComponent(username)}`, {
-      method: "DELETE"
+    const response = await fetch(`/api/repair-video-projects/${encodeURIComponent(projectId)}`, {
+      method: "DELETE",
+      headers: getAuthorizationHeader()
     });
     const result = await response.json();
 
@@ -833,8 +820,8 @@ function initProfilePage() {
     try {
       var response = await fetch("/api/account", {
         method: "DELETE",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username: currentUser.username, password: password })
+        headers: { "Content-Type": "application/json", ...getAuthorizationHeader() },
+        body: JSON.stringify({ password: password })
       });
       var result = await response.json();
       if (result.success) {
@@ -1009,6 +996,7 @@ function uploadRepairVideo(formData, options = {}) {
     const method = editId ? "PATCH" : "POST";
     const url = editId ? `/api/repair-video-projects/${encodeURIComponent(editId)}` : "/api/repair-video-projects";
     xhr.open(method, url);
+    Object.entries(getAuthorizationHeader()).forEach(([name, value]) => xhr.setRequestHeader(name, value));
 
     xhr.upload.addEventListener("progress", (event) => {
       if (!event.lengthComputable) {
@@ -1118,12 +1106,12 @@ async function initUploadEditMode(currentUser) {
   const message = qs("#uploadMessage");
 
   try {
-    const data = await fetchJson(`/api/repair-video-projects/${encodeURIComponent(editId)}/detail?username=${encodeURIComponent(currentUser.username)}`);
+    const data = await fetchJson(`/api/repair-video-projects/${encodeURIComponent(editId)}/detail`);
     const project = data.project;
 
     form.dataset.editProjectId = project.id;
     if (title) title.textContent = "重新编辑维修教学视频";
-    if (desc) desc.textContent = "可修改标题、简介、维修大类和设备型号；如需重传视频，再点击上方区域选择新视频。";
+    if (desc) desc.textContent = "";
     if (submitButton) submitButton.textContent = "提交修改并等待审核";
     if (input) input.required = false;
 
@@ -1187,7 +1175,7 @@ async function loadAdminProjects() {
       </div>
       <div class="admin-actions">
         ${statusBadge(project.status)}
-        <a class="ghost-link" href="repair-player.html?projectId=${escapeAttribute(project.id)}&admin=true" target="_blank" style="margin-right:8px;">预览</a>
+        <a class="ghost-link" href="repair-player.html?projectId=${escapeAttribute(project.id)}" target="_blank" style="margin-right:8px;">预览</a>
         <button class="primary-button project-status-btn" type="button" data-status="approved" data-project-id="${escapeAttribute(project.id)}">通过</button>
         <button class="ghost-button project-status-btn" type="button" data-status="rejected" data-project-id="${escapeAttribute(project.id)}">拒绝</button>
         <button class="ghost-button project-status-btn" type="button" data-status="needs_reupload" data-project-id="${escapeAttribute(project.id)}">要求重传</button>
@@ -1203,7 +1191,7 @@ async function loadAdminProjects() {
 async function updateProjectStatus(projectId, status) {
   const response = await fetch(`/api/admin/repair-video-projects/${encodeURIComponent(projectId)}/status`, {
     method: "PATCH",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json", ...getAuthorizationHeader() },
     body: JSON.stringify({ status })
   });
   const result = await response.json();
@@ -1215,7 +1203,6 @@ async function updateProjectStatus(projectId, status) {
 }
 
 function initAdminPage() {
-  // MVP 暂不做管理员登录；正式上线前必须加入管理员登录鉴权。
   qs("#refreshAdminProjects")?.addEventListener("click", () => loadAdminProjects());
   loadAdminProjects().catch((error) => {
     qs("#adminProjectList").innerHTML = `<div class="empty-state">${escapeHtml(error.message)}</div>`;
@@ -1362,7 +1349,7 @@ async function initRepairPlayerPage() {
   }
 
   try {
-    const data = await fetchJson("/api/repair-video-projects/" + encodeURIComponent(projectId) + "/playlist" + (params.get("admin") === "true" ? "?admin=true" : ""));
+    const data = await fetchJson("/api/repair-video-projects/" + encodeURIComponent(projectId) + "/playlist");
     const project = data.project;
     const videoItem = (data.clips || [])[0];
     const titleEl = qs("#playerProjectTitle");

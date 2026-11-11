@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "server": "node server/server.js"
+    "server": "node server/server.js",
+    "grant:admin": "node server/grant-admin.js"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",

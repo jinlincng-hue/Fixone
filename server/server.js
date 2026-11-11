@@ -23,6 +23,7 @@ import {
   getUserByUsernameOrEmail,
   updateUserEmail,
   updateUserPassword,
+  deleteUserSessions,
   insertResetCode,
   findValidResetCode,
   markResetCodeUsed,
@@ -74,6 +75,25 @@ function authenticatedUser(req) {
   if (!token) return null;
   const tokenHash = crypto.createHash("sha256").update(token).digest("hex");
   return getUserBySessionHash(tokenHash) || null;
+}
+
+function requireAuthenticatedUser(req, res) {
+  const user = authenticatedUser(req);
+  if (!user) {
+    res.status(401).json({ success: false, message: "登录已过期，请重新登录" });
+    return null;
+  }
+  return user;
+}
+
+function requireAdminUser(req, res) {
+  const user = requireAuthenticatedUser(req, res);
+  if (!user) return null;
+  if (user.role !== "admin") {
+    res.status(403).json({ success: false, message: "仅管理员可以执行此操作" });
+    return null;
+  }
+  return user;
 }
 
 async function sendCodeEmail(to, code, purposeLabel) {
@@ -327,8 +347,14 @@ app.post("/api/repair-video-projects", (req, res) => {
     try {
       if (uploadError) throw uploadError;
 
-      const uploaderName = requireText(req.body, "uploader_name", "上传者姓名");
-      const uploaderUsername = requireText(req.body, "uploader_username", "上传者账号");
+      const user = requireAuthenticatedUser(req, res);
+      if (!user) {
+        cleanupProjectFolder(tempUploadId);
+        return;
+      }
+
+      const uploaderName = user.display_name;
+      const uploaderUsername = user.username;
       const title = requireText(req.body, "title", "标题");
       const description = requireText(req.body, "description", "简介");
       const category = requireText(req.body, "category", "维修大类");
@@ -377,7 +403,7 @@ app.post("/api/repair-video-projects", (req, res) => {
 });
 
 app.get("/api/repair-video-projects/:id/detail", (req, res) => {
-  const username = String(req.query.username || "").trim();
+  const user = authenticatedUser(req);
   const project = getProjectById(req.params.id);
 
   if (!project) {
@@ -385,7 +411,7 @@ app.get("/api/repair-video-projects/:id/detail", (req, res) => {
     return;
   }
 
-  if (project.uploader_username !== username && project.status !== "approved") {
+  if (project.status !== "approved" && (!user || (project.uploader_username !== user.username && user.role !== "admin"))) {
     res.status(403).json({ success: false, message: "无权查看该视频" });
     return;
   }
@@ -406,8 +432,12 @@ app.patch("/api/repair-video-projects/:id", (req, res) => {
         throw new Error("项目不存在");
       }
 
-      const uploaderUsername = requireText(req.body, "uploader_username", "上传者账号");
-      if (project.uploader_username !== uploaderUsername) {
+      const user = requireAuthenticatedUser(req, res);
+      if (!user) {
+        cleanupProjectFolder(tempUploadId);
+        return;
+      }
+      if (project.uploader_username !== user.username) {
         res.status(403).json({ success: false, message: "无权编辑他人的视频" });
         cleanupProjectFolder(tempUploadId);
         return;
@@ -464,10 +494,12 @@ app.patch("/api/repair-video-projects/:id", (req, res) => {
 });
 
 app.get("/api/admin/repair-video-projects", (req, res) => {
+  if (!requireAdminUser(req, res)) return;
   res.json({ projects: getAllProjects() });
 });
 
 app.get("/api/admin/repair-video-projects/:id/clips", (req, res) => {
+  if (!requireAdminUser(req, res)) return;
   const project = getProjectById(req.params.id);
   if (!project) {
     res.status(404).json({ message: "项目不存在" });
@@ -489,6 +521,7 @@ app.get("/api/admin/repair-video-projects/:id/clips", (req, res) => {
 });
 
 app.patch("/api/admin/repair-video-projects/:id/status", (req, res) => {
+  if (!requireAdminUser(req, res)) return;
   const allowedStatuses = new Set(["approved", "rejected", "needs_reupload", "pending"]);
   const status = String(req.body.status || "");
   if (!allowedStatuses.has(status)) {
@@ -507,6 +540,7 @@ app.patch("/api/admin/repair-video-projects/:id/status", (req, res) => {
 });
 
 app.patch("/api/admin/repair-video-projects/:id/approve-all", (req, res) => {
+  if (!requireAdminUser(req, res)) return;
   const project = getProjectById(req.params.id);
   if (!project) {
     res.status(404).json({ success: false, message: "项目不存在" });
@@ -522,13 +556,13 @@ app.patch("/api/admin/uploaded-clips/:id/status", (req, res) => {
 });
 
 app.get("/api/repair-video-projects/:projectId/playlist", (req, res) => {
-  const isAdmin = req.query.admin === "true";
+  const user = authenticatedUser(req);
   const project = getProjectById(req.params.projectId);
   if (!project) {
     res.status(404).json({ message: "项目不存在" });
     return;
   }
-  if (!isAdmin && project.status !== "approved") {
+  if (project.status !== "approved" && user?.role !== "admin") {
     res.json({ project, clips: [], message: "该视频尚未审核通过" });
     return;
   }
@@ -599,24 +633,22 @@ app.post("/api/repair-video-projects/:projectId/comments", (req, res) => {
 });
 
 app.get("/api/my-projects", (req, res) => {
-  const username = String(req.query.username || "").trim();
-  if (!username) {
-    res.status(400).json({ message: "缺少用户名参数" });
-    return;
-  }
-  res.json({ projects: getProjectsByUploader(username) });
+  const user = requireAuthenticatedUser(req, res);
+  if (!user) return;
+  res.json({ projects: getProjectsByUploader(user.username) });
 });
 
 app.delete("/api/repair-video-projects/:id", (req, res) => {
   const projectId = req.params.id;
-  const username = String(req.query.username || "").trim();
+  const user = requireAuthenticatedUser(req, res);
+  if (!user) return;
 
   const project = getProjectById(projectId);
   if (!project) {
     res.status(404).json({ success: false, message: "项目不存在" });
     return;
   }
-  if (project.uploader_username !== username) {
+  if (project.uploader_username !== user.username) {
     res.status(403).json({ success: false, message: "无权删除他人的项目" });
     return;
   }
@@ -775,6 +807,7 @@ app.post("/api/password-reset/confirm", (req, res) => {
 
     updateUserPassword(user.username, bcrypt.hashSync(password, 10));
     markResetCodeUsed(record.id);
+    deleteUserSessions(user.username);
 
     res.json({ success: true, message: "密码已重置，请使用新密码登录" });
   } catch (error) {
@@ -785,15 +818,16 @@ app.post("/api/password-reset/confirm", (req, res) => {
 // ===== 绑定/换绑邮箱：第一步，验证密码并发验证码 =====
 app.post("/api/account/email/code", async (req, res) => {
   try {
-    const username = String(req.body.username || "").trim();
     const password = String(req.body.password || "");
     const email = String(req.body.email || "").trim().toLowerCase();
+    const currentUser = requireAuthenticatedUser(req, res);
+    if (!currentUser) return;
 
     if (!isValidEmail(email)) {
       return res.status(400).json({ success: false, message: "请填写正确的邮箱地址" });
     }
 
-    const user = getUserByUsername(username);
+    const user = getUserByUsername(currentUser.username);
     if (!user) {
       return res.status(404).json({ success: false, message: "账号不存在" });
     }
@@ -822,16 +856,17 @@ app.post("/api/account/email/code", async (req, res) => {
 // ===== 绑定/换绑邮箱：第二步，验证码确认 =====
 app.post("/api/account/email", (req, res) => {
   try {
-    const username = String(req.body.username || "").trim();
     const password = String(req.body.password || "");
     const email = String(req.body.email || "").trim().toLowerCase();
     const code = String(req.body.code || "").trim();
+    const currentUser = requireAuthenticatedUser(req, res);
+    if (!currentUser) return;
 
     if (!isValidEmail(email) || !code) {
       return res.status(400).json({ success: false, message: "请填写邮箱和验证码" });
     }
 
-    const user = getUserByUsername(username);
+    const user = getUserByUsername(currentUser.username);
     if (!user) {
       return res.status(404).json({ success: false, message: "账号不存在" });
     }
@@ -855,14 +890,15 @@ app.post("/api/account/email", (req, res) => {
 
 app.delete("/api/account", (req, res) => {
   try {
-    const username = String(req.body.username || "").trim();
     const password = String(req.body.password || "");
+    const currentUser = requireAuthenticatedUser(req, res);
+    if (!currentUser) return;
 
-    if (!username || !password) {
-      return res.status(400).json({ success: false, message: "账号和密码不能为空" });
+    if (!password) {
+      return res.status(400).json({ success: false, message: "请输入密码确认" });
     }
 
-    const user = getUserByUsername(username);
+    const user = getUserByUsername(currentUser.username);
     if (!user) {
       return res.status(404).json({ success: false, message: "账号不存在" });
     }
@@ -872,7 +908,8 @@ app.delete("/api/account", (req, res) => {
       return res.status(401).json({ success: false, message: "密码不正确" });
     }
 
-    deleteUserAndProjects(username);
+    getProjectsByUploader(user.username).forEach((project) => cleanupProjectFolder(project.id));
+    deleteUserAndProjects(user.username);
     res.json({ success: true, message: "账号及所有数据已永久删除" });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message || "注销失败" });

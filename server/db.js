@@ -404,6 +404,10 @@ export function insertUserSession({ tokenHash, username }) {
   `);
 }
 
+export function deleteUserSessions(username) {
+  runSql(`DELETE FROM user_sessions WHERE username = ${q(username)}`);
+}
+
 export function getUserBySessionHash(tokenHash) {
   return getSql(`
     SELECT users.*
@@ -425,6 +429,10 @@ export function updateUserPassword(username, passwordHash) {
   runSql(`
     UPDATE users SET password_hash = ${q(passwordHash)} WHERE username = ${q(username)}
   `);
+}
+
+export function updateUserRole(username, role) {
+  runSql(`UPDATE users SET role = ${q(role)} WHERE username = ${q(username)}`);
 }
 
 export function insertResetCode({ username, email, code, purpose }) {

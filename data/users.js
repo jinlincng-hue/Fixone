@@ -1,44 +1,4 @@
-/*
- * MVP 测试账号说明：
- * 当前账号系统仅用于 Fixone MVP 前端演示。正式上线前不能明文保存密码，
- * 必须改成后端加密存储、登录鉴权、会话管理和权限校验。
- */
-const FIXONE_TEST_USERS = [
-  {
-    role: "member",
-    displayName: "曾锦玲",
-    username: "fixzengjinling",
-    password: "zengjinling01"
-  },
-  {
-    role: "member",
-    displayName: "王琦",
-    username: "fixwangqi",
-    password: "wangqi01"
-  },
-  {
-    role: "member",
-    displayName: "闫淑亭",
-    username: "fixyanshuting",
-    password: "yanshuting01"
-  },
-  {
-    role: "member",
-    displayName: "湛睿",
-    username: "fixzhanrui",
-    password: "zhanrui01"
-  },
-  {
-    role: "member",
-    displayName: "杨双双",
-    username: "fixyangshuangshuang",
-    password: "yangshuangshuang01"
-  }
-];
-
-function getFixoneUsers() {
-  return FIXONE_TEST_USERS.slice();
-}
+/* Browser-side session cache only. Passwords remain exclusively on the server. */
 
 function getCurrentUser() {
   try {
